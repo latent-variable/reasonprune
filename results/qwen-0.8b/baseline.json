@@ -1,42 +1,54 @@
 {
  "kinds": {
+  "know.author": {
+   "acc": 0.72,
+   "n": 25
+  },
   "know.capital": {
-   "acc": 0.6666666666666666,
-   "n": 3
+   "acc": 0.8108108108108109,
+   "n": 37
   },
   "know.currency": {
+   "acc": 0.8571428571428571,
+   "n": 21
+  },
+  "know.element": {
    "acc": 1.0,
-   "n": 2
+   "n": 24
   },
   "know.state_capital": {
-   "acc": 0.6666666666666666,
-   "n": 3
+   "acc": 0.625,
+   "n": 24
+  },
+  "reason.arith1": {
+   "acc": 0.48148148148148145,
+   "n": 54
   },
   "reason.arith2": {
-   "acc": 0.0,
-   "n": 2
+   "acc": 0.05660377358490566,
+   "n": 53
   },
   "reason.hop2": {
-   "acc": 1.0,
-   "n": 2
+   "acc": 0.7166666666666667,
+   "n": 60
   },
   "reason.openbook": {
-   "acc": 1.0,
-   "n": 2
+   "acc": 0.9577464788732394,
+   "n": 71
   },
   "reason.order": {
-   "acc": 1.0,
-   "n": 1
+   "acc": 0.7230769230769231,
+   "n": 65
   },
   "reason.tool": {
    "acc": 1.0,
-   "n": 1
+   "n": 57
   }
  },
- "knowledge_acc": 0.75,
- "reasoning_acc": 0.75,
- "n_items": 16,
- "seconds": 3.4,
+ "knowledge_acc": 0.8015267175572519,
+ "reasoning_acc": 0.6777777777777778,
+ "n_items": 491,
+ "seconds": 73.2,
  "records": [
   {
    "id": "know.currency.0012",
@@ -79,43 +91,2418 @@
    "ok": true
   },
   {
-   "id": "reason.openbook.0034",
-   "pred": "Askenholm",
+   "id": "know.capital.0043",
+   "pred": "The capital city of Belgium is **Brussels**.\n\nIt is the largest city in the European Union and serves as the seat of the Belgian government, the European Parliament, and the Council of Europe.",
    "ok": true
   },
   {
-   "id": "reason.hop2.0038",
-   "pred": "office",
+   "id": "know.element.0018",
+   "pred": "Fe",
    "ok": true
   },
   {
-   "id": "reason.arith2.0078",
-   "pred": "108",
+   "id": "know.element.0046",
+   "pred": "Cd",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0005",
+   "pred": "The capital city of Egypt is **Cairo**.\n\nIt is the largest city in Egypt and serves as the country's political, economic, and cultural center. While the Nile River is the primary river flowing through the region, Cairo is located on the banks of the river and is the administrative hub of the country.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0016",
+   "pred": "Cr",
+   "ok": true
+  },
+  {
+   "id": "know.element.0026",
+   "pred": "Sn",
+   "ok": true
+  },
+  {
+   "id": "know.element.0000",
+   "pred": "H",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0010",
+   "pred": "Atlanta",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0036",
+   "pred": "Minneapolis",
    "ok": false
   },
   {
-   "id": "reason.order.0095",
+   "id": "know.element.0007",
+   "pred": "The chemical symbol for the element Magnesium is **Mg**.\n\nIt is derived from the Latin word *magnum*, meaning \"large,\" which refers to the element's atomic mass.",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0033",
+   "pred": "The capital of the U.S. state of Montana is **Bismarck**.\n\nIt is the largest city in the state and serves as the state's capital, along with the county seat of Bismarck County.",
+   "ok": false
+  },
+  {
+   "id": "know.currency.0042",
+   "pred": "Lakshmi",
+   "ok": false
+  },
+  {
+   "id": "know.author.0000",
+   "pred": "Jane Austen",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0069",
+   "pred": "The capital city of Cambodia is **Phnom Penh**.\n\nIt is the largest city in the country and serves as the political, economic, and cultural center of the nation.",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0026",
+   "pred": "Argentine Peso",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0028",
+   "pred": "Sichuan",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0023",
+   "pred": "The capital of the U.S. state of Iowa is **Des Moines**.\n\nIt serves as the state's capital and is the largest city in Iowa.",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0043",
+   "pred": "The capital of the U.S. state of Delaware is **Dover**.\n\nDover is the largest city in Delaware and serves as the state's capital. It is also the county seat of Delaware County, New Jersey.",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0030",
+   "pred": "Little Rock",
+   "ok": true
+  },
+  {
+   "id": "know.author.0031",
+   "pred": "The novel *Beloved* was written by **Toni Morrison**.\n\nPublished in 1987, it is a groundbreaking work of fiction that explores the trauma of slavery, the haunting presence of a past that has haunted the present, and the struggle for racial justice. It is widely considered one of the most",
+   "ok": true
+  },
+  {
+   "id": "know.element.0017",
+   "pred": "The chemical symbol for the element **Manganese** is **Mn**.\n\nIt is the fourth letter of the alphabet (M) and the first letter of the Roman numeral IV. The symbol is derived from the Latin word *magnus*, meaning \"large,\" which refers to the element's high atomic mass.",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0002",
+   "pred": "Buffalo",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0026",
+   "pred": "Oklahoma City",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0042",
+   "pred": "Rochester",
+   "ok": false
+  },
+  {
+   "id": "know.currency.0008",
+   "pred": "Won",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0019",
+   "pred": "The capital city of South Korea is **Seoul**.\n\nIt is the largest city in South Korea and serves as the country's political, economic, and cultural center. Seoul is also the headquarters of the South Korean government and the largest city in the world by population.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0010",
+   "pred": "Buenos Aires",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0004",
+   "pred": "Springfield",
+   "ok": true
+  },
+  {
+   "id": "know.author.0004",
+   "pred": "F. Scott Fitzgerald",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0038",
+   "pred": "Zagreb",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0018",
+   "pred": "Nashville",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0042",
+   "pred": "Basel",
+   "ok": false
+  },
+  {
+   "id": "know.currency.0004",
+   "pred": "Mexican Peso",
+   "ok": true
+  },
+  {
+   "id": "know.author.0010",
+   "pred": "Gabriel Garc\u00eda M\u00e1rquez",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0001",
+   "pred": "The official currency of the United Kingdom is the **pound sterling** (symbol: **\u00a3**).\n\nIt is the legal tender of the United Kingdom and its overseas territories, as well as the United Kingdom's overseas territories. While the UK has historically used the British pound sterling, it is important to note that the",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0018",
+   "pred": "Wellington",
+   "ok": true
+  },
+  {
+   "id": "know.author.0034",
+   "pred": "F. Scott Fitzgerald",
+   "ok": false
+  },
+  {
+   "id": "know.element.0001",
+   "pred": "The chemical symbol for the element Helium is **He**.\n\nIt is the first letter of the alphabet (A\u2013Z) and is commonly used to represent the element in chemical formulas.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0042",
+   "pred": "B",
+   "ok": true
+  },
+  {
+   "id": "know.element.0015",
+   "pred": "The chemical symbol for the element **Titanium** is **Ti**.\n\nIt is the fourth letter of the alphabet (T) and the first letter of the Roman numeral IV. The symbol is derived from the Latin word *titanus*, meaning \"rock-hard,\" which describes the element's high melting point and hardness",
+   "ok": true
+  },
+  {
+   "id": "know.author.0005",
+   "pred": "The novel *To Kill a Mockingbird* was written by **Harper Lee**.\n\nShe is best known for her Pulitzer Prize-winning novel, which was first published in 1960. The story is set in the American South during the 1930s and focuses on the trial of the",
+   "ok": true
+  },
+  {
+   "id": "know.author.0013",
+   "pred": "The novel *Wuthering Heights* was written by **Emily Bront\u00eb**.\n\nShe is best known for her work in the Gothic novel genre, particularly her three major novels: *Wuthering Heights*, *Jane Eyre*, and *Clara Bowes*. Published in 1847, the",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0021",
+   "pred": "The capital of the U.S. state of Wisconsin is **Madison**.\n\nMadison is located in the northeastern part of the state, in the Lake Superior region, and serves as the seat of government for the entire state.",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0014",
+   "pred": "Thai Baht",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0020",
+   "pred": "Hanoi",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0062",
+   "pred": "Nur-Sultan",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0011",
+   "pred": "The capital of the U.S. state of Michigan is **Ann Arbor**.\n\nAnn Arbor is the largest city in the state and serves as the administrative center of the city. It is also the county seat of **Marshall County**, which is the largest county in Michigan.",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0045",
+   "pred": "The capital of the U.S. state of West Virginia is **Charleston**.\n\nLocated in the Appalachian region of the state, Charleston is the largest city in West Virginia and serves as the state's capital. It is also the county seat of West Virginia.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0063",
+   "pred": "The capital city of Afghanistan is **Kabul**.\n\nKabul is the largest city in Afghanistan and serves as the country's political, economic, and cultural center. It is located in the northwestern part of the country, near the border with Pakistan. Kabul is also the headquarters of the Afghan government and the main hub",
+   "ok": true
+  },
+  {
+   "id": "know.element.0004",
+   "pred": "N",
+   "ok": true
+  },
+  {
+   "id": "know.element.0020",
+   "pred": "Ni",
+   "ok": true
+  },
+  {
+   "id": "know.element.0044",
+   "pred": "Sb",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0013",
+   "pred": "The official currency of Turkey is the **Turkish Lira**, abbreviated as **TRY**.\n\nIt is the second most widely used currency in the world, following the US Dollar, and is the primary currency for trade, government spending, and international transactions.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0047",
+   "pred": "The chemical symbol for the element Palladium is **Pd**.\n\nIt is a transition metal located in the d-block of the periodic table, specifically in Group 10 and Period 6. The symbol \"Pd\" is derived from the Latin word *palladium*, meaning \"palladium.\"",
+   "ok": true
+  },
+  {
+   "id": "know.element.0008",
+   "pred": "Al",
+   "ok": true
+  },
+  {
+   "id": "know.element.0037",
+   "pred": "The chemical symbol for the element **Xenon** is **Xe**.\n\nIt is the fourth element in the periodic table and is a noble gas (Group 18, Period 4). Its atomic number is 54, and its symbol is derived from the Greek word *xenon*, meaning \"white",
+   "ok": true
+  },
+  {
+   "id": "know.author.0015",
+   "pred": "The novel *The Adventures of Huckleberry Finn* was written by **Mark Twain**.\n\nPublished in 1884, it is widely considered one of the most famous and influential American novels of the 19th century. The story follows the life of a young slave named Huckleberry Finn,",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0046",
+   "pred": "Indianapolis",
+   "ok": true
+  },
+  {
+   "id": "know.author.0006",
+   "pred": "George Orwell",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0052",
+   "pred": "La Paz",
+   "ok": true
+  },
+  {
+   "id": "know.author.0037",
+   "pred": "The novel *Heart of Darkness* was written by **Marcel Proust**.\n\nPublished in 1870, it is considered one of the most famous works of modern literature and is often cited as the first novel to be published in English. The story follows the life of a French explorer named Marquis",
+   "ok": false
+  },
+  {
+   "id": "know.currency.0035",
+   "pred": "The official currency of Canada is the **Canadian dollar**.\n\nIt is the legal tender used for all transactions involving goods, services, and financial instruments within the country. The Canadian dollar is the second most widely used currency in the world, following the US dollar, and is the primary currency for the federal government, the provinces",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0021",
+   "pred": "The official currency of the United Arab Emirates is the **UAE Dirham** (UAE Dinar), abbreviated as **AED**.\n\nIt is the second most widely used currency in the world, following the US Dollar, and is the only currency in the world that is not backed by a central bank. The",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0016",
+   "pred": "Vienna",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0015",
+   "pred": "The capital of the U.S. state of Virginia is **Richmond**.\n\nIt is the largest city in the state, located in the southeastern region of the state. While the state's capital city is Richmond, the state's largest city is **Aurora**, which is the most populous city in Virginia.",
+   "ok": true
+  },
+  {
+   "id": "know.author.0019",
+   "pred": "The novel *The Old Man and the Sea* was written by **Marcel Proust**.\n\nPublished in 1912, it is considered one of the most famous works of modern French literature. Proust, a French novelist, essayist, and poet, wrote it while suffering from severe depression",
+   "ok": false
+  },
+  {
+   "id": "know.currency.0041",
+   "pred": "The official currency of Pakistan is the **Pakistani Rupee**, commonly known as **PKR**.\n\nIt is the second most widely used currency in the world, following the US Dollar. The Rupee is divided into 100 **Aunes** (or **Aun**), and the current official",
+   "ok": true
+  },
+  {
+   "id": "know.element.0023",
+   "pred": "The chemical symbol for the element **Arsenic** is **As**.\n\nIt is the third letter of the alphabet (A, S, **A**, R, S, I, N, C) and is commonly found in the periodic table.",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0039",
+   "pred": "The official currency of Hong Kong is the **Hong Kong dollar** (HKD).\n\nHong Kong is a Special Administrative Region of China, and its currency is the Hong Kong dollar, which is pegged to the US dollar at a fixed rate of 70.50 US dollars per Hong Kong dollar. This",
+   "ok": true
+  },
+  {
+   "id": "know.author.0042",
+   "pred": "Daniel Defoe",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0000",
+   "pred": "Yen",
+   "ok": true
+  },
+  {
+   "id": "know.author.0027",
+   "pred": "The novel *The Lord of the Rings* was written by **J.R.R. Tolkien**.\n\nHe is best known for his epic fantasy series, which includes the novels *The Hobbit*, *The Fellowship of the Ring*, and *The Return of the King*. The story is set in Middle-earth and is one",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0026",
+   "pred": "Addis Ababa",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0046",
+   "pred": "Yekaterinburg",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0007",
+   "pred": "The capital of the U.S. state of Nevada is **Las Vegas**.\n\nIt serves as the state's capital and the largest city in the state, located in the southwestern corner of the state.",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0041",
+   "pred": "The capital of the U.S. state of Connecticut is **New Haven**.\n\nIt serves as the seat of government for the state, and the city is also the county seat of the county of Hartford.",
+   "ok": true
+  },
+  {
+   "id": "know.author.0022",
+   "pred": "Leo Tolstoy",
+   "ok": true
+  },
+  {
+   "id": "know.element.0006",
+   "pred": "Na",
+   "ok": true
+  },
+  {
+   "id": "know.author.0025",
+   "pred": "The novel *Les Mis\u00e9rables* was written by **Victor Hugo**.\n\nPublished in 1862, it is considered one of the most famous and influential novels in the history of literature. Hugo, a French writer and poet, wrote it while living in Paris, and it was originally intended to be",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0030",
+   "pred": "Kuala Lumpur",
+   "ok": true
+  },
+  {
+   "id": "know.author.0017",
+   "pred": "The novel *Frankenstein* was written by **Mary Shelley**.\n\nShe is best known for her 1818 novel, *Frankenstein*, which is widely considered one of the most famous works of science fiction and horror. The story follows the life of Victor Frankenstein, a scientist who attempts to create a",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0036",
+   "pred": "Bucharest",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0029",
+   "pred": "The official currency of Colombia is the **col\u00f3n** (symbol: **\u20a1**).\n\nIt is the second most widely used currency in the world, following the US dollar, and is the only currency in the world that is not backed by a central bank. The col\u00f3n is divided into 100",
+   "ok": false
+  },
+  {
+   "id": "know.element.0002",
+   "pred": "Li",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0034",
+   "pred": "Kyiv",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0002",
+   "pred": "Swiss Franc",
+   "ok": true
+  },
+  {
+   "id": "know.author.0021",
+   "pred": "The novel *The Trial* was written by **John Milton**.\n\nPublished in 1644, it is one of the most famous and influential English prose poems, often considered the first modern prose poem. It is a dramatic work that explores the themes of justice, the nature of the law, and the human",
+   "ok": false
+  },
+  {
+   "id": "know.capital.0011",
+   "pred": "The capital city of Turkey is **Ankara**.\n\nAnkara is the largest city in Turkey and serves as the country's political, economic, and cultural center. It is located in the northwestern part of the country, near the border with Syria.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0056",
+   "pred": "Kampala",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0012",
+   "pred": "Warsaw",
+   "ok": true
+  },
+  {
+   "id": "know.element.0029",
+   "pred": "The chemical symbol for the element Platinum is **Pt**.\n\nIt is the standard two-letter abbreviation used in chemistry to represent this precious metal.",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0016",
+   "pred": "IDR",
+   "ok": true
+  },
+  {
+   "id": "know.author.0026",
+   "pred": "J.R.R. Tolkien",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0023",
+   "pred": "The official currency of South Africa is the **South African Rand**, commonly abbreviated as **R**.\n\nIt is the second most widely used currency in the world, following the US dollar, and is the only currency in the world that is not backed by a central bank. The Rand is currently the most stable currency in the",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0037",
+   "pred": "The official currency of New Zealand is the **New Zealand Dollar** (NZD).\n\nIt is the second most widely used currency in the world, following the US Dollar, and is the only currency in the world that is not backed by a central bank.",
+   "ok": true
+  },
+  {
+   "id": "know.author.0039",
+   "pred": "The novel *Ulysses* was written by **James Joyce**.\n\nPublished in 1902, it is considered one of the most influential and complex novels in the history of literature. It is often cited as the first novel to be published in full in English, and it is widely regarded as a",
+   "ok": true
+  },
+  {
+   "id": "know.author.0040",
+   "pred": "Fyodor Dostoevsky",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0057",
+   "pred": "The capital city of Zimbabwe is **Harare**.\n\nIt is the largest city in the country and serves as the political, economic, and cultural center. Harare is located in the central part of the country, near the border with Mozambique, and is a major hub for trade, tourism, and industry.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0031",
+   "pred": "The capital city of the Philippines is **Manila**.\n\nIt is the largest city in the Philippines and serves as the country's political, economic, and cultural center. Manila is also the headquarters of the Philippine government and the National Assembly.",
+   "ok": true
+  },
+  {
+   "id": "know.author.0023",
+   "pred": "The novel *Madame Bovary* was written by **Charles Dickens**.\n\nPublished in 1848, it is one of the most famous works of the Victorian era and is widely regarded as a classic of English literature.",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0044",
+   "pred": "Baltimore",
+   "ok": false
+  },
+  {
+   "id": "know.capital.0015",
+   "pred": "The capital city of Finland is **Helsinki**.\n\nIt is the largest city in Finland and serves as the country's political, economic, and cultural center.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0036",
+   "pred": "Kr",
+   "ok": true
+  },
+  {
+   "id": "know.author.0020",
+   "pred": "Margaret Atwood",
+   "ok": false
+  },
+  {
+   "id": "know.capital.0023",
+   "pred": "The capital city of Chile is **Santiago**.\n\nIt is the largest city in Chile and serves as the country's political, economic, and cultural center. Santiago is located in the northwestern part of the country, near the border with Argentina, and is a major hub for tourism, agriculture, and industry.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0061",
+   "pred": "The capital city of Lebanon is **Beirut**.\n\nIt serves as the country's political, economic, and cultural center, and is the largest city in Lebanon.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0017",
+   "pred": "The capital city of Ireland is **Dublin**.\n\nIt is the largest city in the country and serves as the seat of the government, the Supreme Court, and the University of Dublin.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0035",
+   "pred": "The chemical symbol for the element **Argon** is **Ar**.\n\nIt is the third letter of the alphabet and is commonly used in scientific notation to represent the element.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0039",
+   "pred": "The chemical symbol for the element **Barium** is **Ba**.\n\nIt is located in the periodic table as a transition metal (specifically, an alkaline earth metal) and is commonly found in barium salts such as barium sulfate, barium chloride, and barium nitrate.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0022",
+   "pred": "Bogot\u00e1",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0009",
+   "pred": "The capital city of Thailand is **Bangkok**.\n\nIt is the largest city in Thailand and serves as the country's political, economic, and cultural center.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0054",
+   "pred": "N'Djamena",
+   "ok": false
+  },
+  {
+   "id": "know.author.0008",
+   "pred": "J.D. Salinger",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0015",
+   "pred": "The official currency of Vietnam is the **Vietnamese Dong** (\u0110\u00f4ng).\n\nIt is the second most widely used currency in Southeast Asia, following the Vietnamese Ringgit (\u0110\u00f4ng \u00c1). The Dong is divided into 100 centimeters, and it is commonly used for daily transactions, especially in urban areas",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0014",
+   "pred": "Budapest",
+   "ok": true
+  },
+  {
+   "id": "know.author.0028",
+   "pred": "Charles Dickens",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0020",
+   "pred": "Toledo",
+   "ok": false
+  },
+  {
+   "id": "know.capital.0048",
+   "pred": "Colombo",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0037",
+   "pred": "The capital city of Bulgaria is **Skopje**.\n\nIt is located in the northwestern part of the country, near the border with Romania, and serves as the seat of the Bulgarian government, parliament, and the Supreme Court.",
+   "ok": false
+  },
+  {
+   "id": "know.capital.0024",
+   "pred": "San Juan",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0035",
+   "pred": "The capital of the U.S. state of Wyoming is **Cheyenne**.\n\nIt is also the largest city in the state and the county seat of the Wyoming County.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0005",
+   "pred": "The chemical symbol for the element **Oxygen** is **O**.\n\nThis symbol is derived from the Latin word *aerum*, meaning \"air,\" which is the element's common name. It is the standard abbreviation used in chemistry to represent oxygen gas ($O_2$) and oxygen atoms ($O$",
+   "ok": true
+  },
+  {
+   "id": "know.author.0044",
+   "pred": "Charles M. Munro",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0080",
+   "pred": "Dan",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0036",
+   "pred": "Port Halden",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0032",
+   "pred": "59",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0084",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0066",
+   "pred": "Attic",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0014",
+   "pred": "Balcony",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0097",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0072",
+   "pred": "44",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0070",
+   "pred": "office",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0110",
    "pred": "Elena",
    "ok": true
   },
   {
-   "id": "reason.hop2.0043",
+   "id": "reason.hop2.0114",
    "pred": "balcony",
    "ok": true
   },
   {
-   "id": "reason.tool.0018",
-   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"fahrenheit\"}}",
+   "id": "reason.tool.0060",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"fahrenheit\"}}",
    "ok": true
   },
   {
-   "id": "reason.arith2.0119",
+   "id": "reason.tool.0105",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0007",
+   "pred": "Liam",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0002",
+   "pred": "12",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0078",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0089",
+   "pred": "Port Halden",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0093",
+   "pred": "garage",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0084",
+   "pred": "18",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0086",
+   "pred": "39",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0000",
+   "pred": "basement",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0027",
+   "pred": "59",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0110",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0099",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0051",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0006",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0052",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0001",
+   "pred": "Dan",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0110",
+   "pred": "studio",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0085",
+   "pred": "office",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0028",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tallinn\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0052",
+   "pred": "kitchen",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0113",
+   "pred": "16",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0105",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0102",
+   "pred": "49",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0087",
+   "pred": "Ombrelle",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0062",
+   "pred": "basement",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0050",
+   "pred": "59",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0011",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0051",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0091",
+   "pred": "Gita",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0049",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0106",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0103",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0105",
+   "pred": "8",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0095",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0002",
+   "pred": "Port Halden",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0109",
+   "pred": "Iris",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0116",
+   "pred": "1",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0046",
+   "pred": "studio",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0116",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0053",
+   "pred": "108",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0045",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0036",
+   "pred": "47",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0092",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0053",
+   "pred": "studio",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0104",
+   "pred": "16",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0010",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0065",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0117",
+   "pred": "19",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0044",
+   "pred": "19 + 11 = 30",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0042",
+   "pred": "Ben",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0056",
+   "pred": "Ava",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0004",
+   "pred": "47",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0014",
+   "pred": "11",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0108",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0032",
+   "pred": "attic",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0059",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0012",
+   "pred": "Dan",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0109",
+   "pred": "13",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0061",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0029",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0070",
+   "pred": "16",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0000",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0027",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0070",
+   "pred": "Nico",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0055",
+   "pred": "Farid",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0082",
+   "pred": "19",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0076",
+   "pred": "19",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0071",
+   "pred": "Ombrelle",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0014",
+   "pred": "Omar",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0036",
+   "pred": "Dan",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0082",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0065",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0057",
+   "pred": "Gita",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0101",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0003",
+   "pred": "Gita",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0051",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0010",
+   "pred": "42",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0096",
+   "pred": "kitchen",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0095",
+   "pred": "Ava",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0106",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0107",
+   "pred": "34 + 9 = 43",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0079",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0020",
+   "pred": "Office",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0008",
+   "pred": "1",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0080",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0030",
+   "pred": "balcony",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0055",
+   "pred": "23",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0075",
+   "pred": "Farid",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0065",
+   "pred": "43",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0060",
+   "pred": "Jonas",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0099",
+   "pred": "Nico",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0003",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0084",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0046",
+   "pred": "Gita",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0052",
+   "pred": "15",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0106",
+   "pred": "Jonas",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0062",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0008",
+   "pred": "basement",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0020",
+   "pred": "Port Halden",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0092",
+   "pred": "Liam",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0038",
+   "pred": "Ava",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0066",
+   "pred": "13",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0043",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0079",
+   "pred": "Liam",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0115",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0055",
+   "pred": "18",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0052",
+   "pred": "24 + 21 = 45",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0035",
+   "pred": "Elena",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0112",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0005",
+   "pred": "Dan",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0051",
+   "pred": "Hugo",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0015",
+   "pred": "58",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0064",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0095",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0013",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tallinn\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0113",
+   "pred": "workshop",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0089",
+   "pred": "23",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0018",
+   "pred": "Jonas",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0022",
+   "pred": "39",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0053",
+   "pred": "14",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0036",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0019",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0041",
+   "pred": "15",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0083",
+   "pred": "kitchen",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0045",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0083",
+   "pred": "18",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0081",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0061",
    "pred": "100",
    "ok": false
   },
   {
-   "id": "reason.openbook.0059",
+   "id": "reason.openbook.0080",
    "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0013",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0035",
+   "pred": "workshop",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0083",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0022",
+   "pred": "Nico",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0009",
+   "pred": "Farid",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0103",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0018",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0067",
+   "pred": "Liam",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0006",
+   "pred": "54",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0085",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0090",
+   "pred": "130",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0058",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0076",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0042",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tallinn\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0109",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tallinn\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0063",
+   "pred": "attic",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0086",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0055",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0081",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0105",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0089",
+   "pred": "Gita",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0016",
+   "pred": "13",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0074",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0078",
+   "pred": "135",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0007",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0046",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0101",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0114",
+   "pred": "47 + 28 = 75",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0074",
+   "pred": "14",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0041",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0075",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0105",
+   "pred": "Liam",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0104",
+   "pred": "Farid",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0081",
+   "pred": "Kira",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0029",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0009",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0015",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0017",
+   "pred": "balcony",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0097",
+   "pred": "balcony",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0020",
+   "pred": "Iris",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0056",
+   "pred": "18",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0111",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0086",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0044",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0039",
+   "pred": "Ava",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0040",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0091",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0091",
+   "pred": "57",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0014",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0064",
+   "pred": "51 + 23 = 74",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0023",
+   "pred": "Omar",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0074",
+   "pred": "Iris",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0034",
+   "pred": "studio",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0036",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0029",
+   "pred": "40",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0057",
+   "pred": "190",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0108",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0031",
+   "pred": "52 + 13 = 65",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0069",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0048",
+   "pred": "kitchen",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0093",
+   "pred": "13",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0104",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0115",
+   "pred": "11",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0063",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tallinn\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0098",
+   "pred": "basement",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0108",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0061",
+   "pred": "attic",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0116",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0015",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0048",
+   "pred": "Port Halden",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0118",
+   "pred": "Kira",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0070",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0040",
+   "pred": "69",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0033",
+   "pred": "34",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0088",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0096",
+   "pred": "Hugo",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0060",
+   "pred": "13",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0035",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0114",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0097",
+   "pred": "Chloe",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0022",
+   "pred": "15",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0108",
+   "pred": "Ava",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0022",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0103",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0092",
+   "pred": "studio",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0066",
+   "pred": "Port Halden",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0073",
+   "pred": "33",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0049",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0023",
+   "pred": "37",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0113",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0080",
+   "pred": "27",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0102",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0056",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0096",
+   "pred": "18",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0107",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0109",
+   "pred": "13",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0028",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0039",
+   "pred": "workshop",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0041",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0024",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0073",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0033",
+   "pred": "Omar",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0014",
+   "pred": "1900",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0054",
+   "pred": "Balcony",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0030",
+   "pred": "Gita",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0034",
+   "pred": "18",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0049",
+   "pred": "office",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0007",
+   "pred": "100",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0032",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0004",
+   "pred": "garage",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0107",
+   "pred": "105",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0034",
+   "pred": "100",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0015",
+   "pred": "12",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0040",
+   "pred": "basement",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0021",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0099",
+   "pred": "17",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0043",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0082",
+   "pred": "Kira",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0111",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0001",
+   "pred": "kitchen",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0107",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0003",
+   "pred": "27",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0034",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tallinn\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0068",
+   "pred": "51",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0031",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0067",
+   "pred": "57 + 4 = 61",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0106",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0098",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0016",
+   "pred": "100",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0068",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0063",
+   "pred": "Ben",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0119",
+   "pred": "Ombrelle",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0061",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0026",
+   "pred": "121",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0070",
+   "pred": "14",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0118",
+   "pred": "office",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0104",
+   "pred": "office",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0031",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0072",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0049",
+   "pred": "Omar",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0109",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0096",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0053",
+   "pred": "Farid",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0000",
+   "pred": "15",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0060",
+   "pred": "13",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0049",
+   "pred": "156",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0074",
+   "pred": "workshop",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0113",
+   "pred": "5",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0062",
+   "pred": "Priya",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0017",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0098",
+   "pred": "25",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0081",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0071",
+   "pred": "47",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0009",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0031",
+   "pred": "workshop",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0111",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0016",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0002",
+   "pred": "Dan",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0072",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0100",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0064",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0042",
+   "pred": "18",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0012",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0100",
+   "pred": "Elena",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0025",
+   "pred": "studio",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0004",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0045",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0055",
+   "pred": "balcony",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0062",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0045",
+   "pred": "Chloe",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0011",
+   "pred": "Farid",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0041",
+   "pred": "Ava",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0041",
+   "pred": "office",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0078",
+   "pred": "19 + 4 = 23",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0061",
+   "pred": "Iris",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0092",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0077",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0001",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0068",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0045",
+   "pred": "kitchen",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0035",
+   "pred": "10",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0045",
+   "pred": "59",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0082",
+   "pred": "garage",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0043",
+   "pred": "102",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0052",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0058",
+   "pred": "Elena",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0033",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0101",
+   "pred": "Gita",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0037",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0088",
+   "pred": "128",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0115",
+   "pred": "23",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0033",
+   "pred": "Hallway",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0003",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0034",
+   "pred": "Liam",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0087",
+   "pred": "studio",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0043",
+   "pred": "Ava",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0010",
+   "pred": "Farid",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0026",
+   "pred": "office",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0117",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0111",
+   "pred": "35",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0052",
+   "pred": "Iris",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0088",
+   "pred": "Liam",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0088",
+   "pred": "studio",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0035",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0082",
+   "pred": "111",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0006",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0076",
+   "pred": "garage",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0038",
+   "pred": "studio",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0071",
+   "pred": "15",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0110",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0008",
+   "pred": "Gita",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0032",
+   "pred": "Jonas",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0064",
+   "pred": "balcony",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0001",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0054",
+   "pred": "18",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0079",
+   "pred": "workshop",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0097",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0054",
+   "pred": "12",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0053",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
    "ok": true
   }
  ],

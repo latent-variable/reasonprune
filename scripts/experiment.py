@@ -141,16 +141,72 @@ def cmd_sweep(args):
             mx.clear_cache()
 
 
+def cmd_score_moe(args):
+    from reasonprune.evalharness import format_prompt
+    from reasonprune.moe import collect_expert_saliency
+    model, tokenizer = load_model(args.model)
+    know = load_items(DATA_DIR / "knowledge.calib.jsonl")
+    reason = load_items(DATA_DIR / "reasoning.calib.jsonl")
+    t0 = time.time()
+    s_know = collect_expert_saliency(model, tokenizer, know, format_prompt)
+    print(f"knowledge expert saliency in {time.time()-t0:.0f}s", flush=True)
+    t0 = time.time()
+    s_reason = collect_expert_saliency(model, tokenizer, reason, format_prompt)
+    print(f"reasoning expert saliency in {time.time()-t0:.0f}s", flush=True)
+    save_scores(out_dir(args.model) / "expert_scores.npz",
+                i_know=s_know, i_reason=s_reason)
+    d = differential(s_know, s_reason)
+    print(f"experts: {s_know.shape}; differential p50/p95/p99 = "
+          f"{np.percentile(d, 50):.3f}/{np.percentile(d, 95):.3f}/"
+          f"{np.percentile(d, 99):.3f}")
+
+
+def cmd_sweep_moe(args):
+    from reasonprune.moe import apply_expert_mask, instrument_moe
+    scores = load_scores(out_dir(args.model) / "expert_scores.npz")
+    results_path = out_dir(args.model) / "sweep_moe.jsonl"
+    done = set()
+    if results_path.exists():
+        for line in results_path.read_text().splitlines():
+            c = json.loads(line)["config"]
+            done.add((c["strategy"], c["frac"]))
+    model, tokenizer = load_model(args.model)
+    wrappers = instrument_moe(model)
+    n_layers, n_experts = scores["i_know"].shape
+    for strategy in args.strategies.split(","):
+        for frac in [float(f) for f in args.fracs.split(",")]:
+            if (strategy, frac) in done:
+                print(f"skip {strategy}@{frac} (done)")
+                continue
+            mask = build_mask(strategy, frac, scores)
+            n = apply_expert_mask(model, mask)
+            print(f"=== {strategy} frac={frac}: masked {n}/{mask.size} experts",
+                  flush=True)
+            res = full_eval(model, tokenizer, args.limit, args.max_tokens)
+            res["config"] = {"model": args.model, "strategy": strategy,
+                             "frac": frac, "n_pruned": n, "unit": "expert"}
+            del res["records"]
+            with results_path.open("a") as f:
+                f.write(json.dumps(res) + "\n")
+            print(f"knowledge={res['knowledge_acc']:.3f} "
+                  f"reasoning={res['reasoning_acc']:.3f} "
+                  f"ppl={res.get('ppl_neutral')}", flush=True)
+    # Clear masks at the end so a reused process isn't left pruned.
+    apply_expert_mask(model, np.zeros((n_layers, n_experts), dtype=bool))
+
+
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("cmd", choices=["baseline", "score", "sweep"])
+    p.add_argument("cmd", choices=["baseline", "score", "sweep",
+                                   "score-moe", "sweep-moe"])
     p.add_argument("--model", default="qwen-0.8b")
     p.add_argument("--limit", type=int, default=None)
     p.add_argument("--max-tokens", type=int, default=64)
     p.add_argument("--strategies", default="diff,know,lowmag,random")
     p.add_argument("--fracs", default="0.1,0.2,0.3")
     args = p.parse_args()
-    {"baseline": cmd_baseline, "score": cmd_score, "sweep": cmd_sweep}[args.cmd](args)
+    {"baseline": cmd_baseline, "score": cmd_score, "sweep": cmd_sweep,
+     "score-moe": cmd_score_moe, "sweep-moe": cmd_sweep_moe}[args.cmd](args)
 
 
 if __name__ == "__main__":
