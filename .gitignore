@@ -1,2 +1,6 @@
 .agents/
 .claude/
+models/
+results/**/records*
+__pycache__/
+*.egg-info/

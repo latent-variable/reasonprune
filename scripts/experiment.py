@@ -73,7 +73,7 @@ def cmd_baseline(args):
     res = full_eval(model, tokenizer, args.limit, args.max_tokens,
                     args.bench_limit)
     res["config"] = {"model": args.model, "strategy": "baseline", "frac": 0.0}
-    path = out_dir(args.model) / "baseline.json"
+    path = out_dir(args.model) / f"baseline{args.suffix}.json"
     path.write_text(json.dumps(res, indent=1))
     print(json.dumps({k: v for k, v in res.items() if k != "records"}, indent=1))
 
@@ -118,7 +118,7 @@ def build_mask(strategy: str, frac: float, scores: dict) -> np.ndarray:
 
 def cmd_sweep(args):
     scores = load_scores(out_dir(args.model) / "scores.npz")
-    results_path = out_dir(args.model) / "sweep.jsonl"
+    results_path = out_dir(args.model) / f"sweep{args.suffix}.jsonl"
     done = set()
     if results_path.exists():
         for line in results_path.read_text().splitlines():
@@ -170,7 +170,7 @@ def cmd_score_moe(args):
 def cmd_sweep_moe(args):
     from reasonprune.moe import apply_expert_mask, instrument_moe
     scores = load_scores(out_dir(args.model) / "expert_scores.npz")
-    results_path = out_dir(args.model) / "sweep_moe.jsonl"
+    results_path = out_dir(args.model) / f"sweep_moe{args.suffix}.jsonl"
     done = set()
     if results_path.exists():
         for line in results_path.read_text().splitlines():
@@ -213,6 +213,7 @@ def main():
     p.add_argument("--max-tokens", type=int, default=64)
     p.add_argument("--strategies", default="diff,know,lowmag,random")
     p.add_argument("--fracs", default="0.1,0.2,0.3")
+    p.add_argument("--suffix", default="", help="results filename suffix")
     args = p.parse_args()
     {"baseline": cmd_baseline, "score": cmd_score, "sweep": cmd_sweep,
      "score-moe": cmd_score_moe, "sweep-moe": cmd_sweep_moe}[args.cmd](args)
