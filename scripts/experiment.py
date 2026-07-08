@@ -54,7 +54,8 @@ def eval_sets(limit: int | None, bench_limit: int = 0):
     items = know + reason
     if bench_limit:
         for f in sorted((DATA_DIR / "bench").glob("*.jsonl")):
-            items += load_items(f)[:bench_limit]
+            items += [it for it in load_items(f)[:bench_limit]
+                      if not it.meta.get("calib_only")]
     return items
 
 
