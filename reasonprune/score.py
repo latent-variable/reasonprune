@@ -27,15 +27,22 @@ def forward_collect(model, tokenizer, items: list[Item],
                     include_answer: bool = True,
                     max_len: int = 1024) -> int:
     """Teacher-forced forward passes over prompt(+gold answer) to fill stats."""
+    import sys
+
     n_tokens = 0
-    for it in items:
+    for i, it in enumerate(items):
         text = format_prompt(tokenizer, it.prompt)
         if include_answer:
             text = text + it.answer
         tokens = tokenizer.encode(text)[:max_len]
         model(mx.array(tokens)[None])
-        mx.eval([w.sum_abs for w in wrappers])
+        # Evaluate ALL accumulated stats: anything left lazy chains a growing
+        # graph across items and leaks unboundedly (SIGKILLed the 27B runs).
+        mx.eval([w.sum_abs for w in wrappers] + [w.sum_sq for w in wrappers])
         n_tokens += len(tokens)
+        if (i + 1) % 25 == 0:
+            print(f"  calib {i+1}/{len(items)} ({n_tokens} tok, "
+                  f"peak {mx.get_peak_memory()/1e9:.1f}GB)", flush=True)
     return n_tokens
 
 
