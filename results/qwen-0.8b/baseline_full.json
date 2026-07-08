@@ -1,0 +1,3523 @@
+{
+ "kinds": {
+  "know.author": {
+   "acc": 0.72,
+   "n": 25
+  },
+  "know.capital": {
+   "acc": 0.8108108108108109,
+   "n": 37
+  },
+  "know.currency": {
+   "acc": 0.8571428571428571,
+   "n": 21
+  },
+  "know.element": {
+   "acc": 1.0,
+   "n": 24
+  },
+  "know.state_capital": {
+   "acc": 0.625,
+   "n": 24
+  },
+  "know.trivia": {
+   "acc": 0.12,
+   "n": 100
+  },
+  "reason.arith1": {
+   "acc": 0.48148148148148145,
+   "n": 54
+  },
+  "reason.arith2": {
+   "acc": 0.05660377358490566,
+   "n": 53
+  },
+  "reason.gsm8k": {
+   "acc": 0.51,
+   "n": 100
+  },
+  "reason.hop2": {
+   "acc": 0.7166666666666667,
+   "n": 60
+  },
+  "reason.openbook": {
+   "acc": 0.9577464788732394,
+   "n": 71
+  },
+  "reason.order": {
+   "acc": 0.7230769230769231,
+   "n": 65
+  },
+  "reason.tool": {
+   "acc": 1.0,
+   "n": 57
+  }
+ },
+ "knowledge_acc": 0.5064935064935064,
+ "reasoning_acc": 0.6413043478260869,
+ "n_items": 691,
+ "seconds": 234.2,
+ "records": [
+  {
+   "id": "know.currency.0012",
+   "pred": "Z\u0142oty",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0038",
+   "pred": "Singapore Dollar",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0033",
+   "pred": "The capital city of Bangladesh is **Dhaka**.\n\nIt is the largest city in the country and serves as the political, economic, and cultural center of the nation. Dhaka is located in the northern part of the country, near the border with China, and is the most populous city in Bangladesh.",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0009",
+   "pred": "The capital of the U.S. state of Colorado is **Denver**.\n\nDenver serves as the state's capital and the largest city in the state, along with the state's second-largest city, Pueblo.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0055",
+   "pred": "The capital city of Tanzania is **Dar es Salaam**.\n\nIt is the largest city in Tanzania and serves as the country's political, economic, and cultural center.",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0024",
+   "pred": "Toledo",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0012",
+   "pred": "Columbus",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0029",
+   "pred": "The capital city of Indonesia is **Jakarta**.\n\nIt is the largest city in Indonesia and serves as the country's political, economic, and cultural center.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0043",
+   "pred": "The capital city of Belgium is **Brussels**.\n\nIt is the largest city in the European Union and serves as the seat of the Belgian government, the European Parliament, and the Council of Europe.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0018",
+   "pred": "Fe",
+   "ok": true
+  },
+  {
+   "id": "know.element.0046",
+   "pred": "Cd",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0005",
+   "pred": "The capital city of Egypt is **Cairo**.\n\nIt is the largest city in Egypt and serves as the country's political, economic, and cultural center. While the Nile River is the primary river flowing through the region, Cairo is located on the banks of the river and is the administrative hub of the country.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0016",
+   "pred": "Cr",
+   "ok": true
+  },
+  {
+   "id": "know.element.0026",
+   "pred": "Sn",
+   "ok": true
+  },
+  {
+   "id": "know.element.0000",
+   "pred": "H",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0010",
+   "pred": "Atlanta",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0036",
+   "pred": "Minneapolis",
+   "ok": false
+  },
+  {
+   "id": "know.element.0007",
+   "pred": "The chemical symbol for the element Magnesium is **Mg**.\n\nIt is derived from the Latin word *magnum*, meaning \"large,\" which refers to the element's atomic mass.",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0033",
+   "pred": "The capital of the U.S. state of Montana is **Bismarck**.\n\nIt is the largest city in the state and serves as the state's capital, along with the county seat of Bismarck County.",
+   "ok": false
+  },
+  {
+   "id": "know.currency.0042",
+   "pred": "Lakshmi",
+   "ok": false
+  },
+  {
+   "id": "know.author.0000",
+   "pred": "Jane Austen",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0069",
+   "pred": "The capital city of Cambodia is **Phnom Penh**.\n\nIt is the largest city in the country and serves as the political, economic, and cultural center of the nation.",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0026",
+   "pred": "Argentine Peso",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0028",
+   "pred": "Sichuan",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0023",
+   "pred": "The capital of the U.S. state of Iowa is **Des Moines**.\n\nIt serves as the state's capital and is the largest city in Iowa.",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0043",
+   "pred": "The capital of the U.S. state of Delaware is **Dover**.\n\nDover is the largest city in Delaware and serves as the state's capital. It is also the county seat of Delaware County, New Jersey.",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0030",
+   "pred": "Little Rock",
+   "ok": true
+  },
+  {
+   "id": "know.author.0031",
+   "pred": "The novel *Beloved* was written by **Toni Morrison**.\n\nPublished in 1987, it is a groundbreaking work of fiction that explores the trauma of slavery, the haunting presence of a past that has haunted the present, and the struggle for racial justice. It is widely considered one of the most",
+   "ok": true
+  },
+  {
+   "id": "know.element.0017",
+   "pred": "The chemical symbol for the element **Manganese** is **Mn**.\n\nIt is the fourth letter of the alphabet (M) and the first letter of the Roman numeral IV. The symbol is derived from the Latin word *magnus*, meaning \"large,\" which refers to the element's high atomic mass.",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0002",
+   "pred": "Buffalo",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0026",
+   "pred": "Oklahoma City",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0042",
+   "pred": "Rochester",
+   "ok": false
+  },
+  {
+   "id": "know.currency.0008",
+   "pred": "Won",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0019",
+   "pred": "The capital city of South Korea is **Seoul**.\n\nIt is the largest city in South Korea and serves as the country's political, economic, and cultural center. Seoul is also the headquarters of the South Korean government and the largest city in the world by population.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0010",
+   "pred": "Buenos Aires",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0004",
+   "pred": "Springfield",
+   "ok": true
+  },
+  {
+   "id": "know.author.0004",
+   "pred": "F. Scott Fitzgerald",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0038",
+   "pred": "Zagreb",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0018",
+   "pred": "Nashville",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0042",
+   "pred": "Basel",
+   "ok": false
+  },
+  {
+   "id": "know.currency.0004",
+   "pred": "Mexican Peso",
+   "ok": true
+  },
+  {
+   "id": "know.author.0010",
+   "pred": "Gabriel Garc\u00eda M\u00e1rquez",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0001",
+   "pred": "The official currency of the United Kingdom is the **pound sterling** (symbol: **\u00a3**).\n\nIt is the legal tender of the United Kingdom and its overseas territories, as well as the United Kingdom's overseas territories. While the UK has historically used the British pound sterling, it is important to note that the",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0018",
+   "pred": "Wellington",
+   "ok": true
+  },
+  {
+   "id": "know.author.0034",
+   "pred": "F. Scott Fitzgerald",
+   "ok": false
+  },
+  {
+   "id": "know.element.0001",
+   "pred": "The chemical symbol for the element Helium is **He**.\n\nIt is the first letter of the alphabet (A\u2013Z) and is commonly used to represent the element in chemical formulas.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0042",
+   "pred": "B",
+   "ok": true
+  },
+  {
+   "id": "know.element.0015",
+   "pred": "The chemical symbol for the element **Titanium** is **Ti**.\n\nIt is the fourth letter of the alphabet (T) and the first letter of the Roman numeral IV. The symbol is derived from the Latin word *titanus*, meaning \"rock-hard,\" which describes the element's high melting point and hardness",
+   "ok": true
+  },
+  {
+   "id": "know.author.0005",
+   "pred": "The novel *To Kill a Mockingbird* was written by **Harper Lee**.\n\nShe is best known for her Pulitzer Prize-winning novel, which was first published in 1960. The story is set in the American South during the 1930s and focuses on the trial of the",
+   "ok": true
+  },
+  {
+   "id": "know.author.0013",
+   "pred": "The novel *Wuthering Heights* was written by **Emily Bront\u00eb**.\n\nShe is best known for her work in the Gothic novel genre, particularly her three major novels: *Wuthering Heights*, *Jane Eyre*, and *Clara Bowes*. Published in 1847, the",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0021",
+   "pred": "The capital of the U.S. state of Wisconsin is **Madison**.\n\nMadison is located in the northeastern part of the state, in the Lake Superior region, and serves as the seat of government for the entire state.",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0014",
+   "pred": "Thai Baht",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0020",
+   "pred": "Hanoi",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0062",
+   "pred": "Nur-Sultan",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0011",
+   "pred": "The capital of the U.S. state of Michigan is **Ann Arbor**.\n\nAnn Arbor is the largest city in the state and serves as the administrative center of the city. It is also the county seat of **Marshall County**, which is the largest county in Michigan.",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0045",
+   "pred": "The capital of the U.S. state of West Virginia is **Charleston**.\n\nLocated in the Appalachian region of the state, Charleston is the largest city in West Virginia and serves as the state's capital. It is also the county seat of West Virginia.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0063",
+   "pred": "The capital city of Afghanistan is **Kabul**.\n\nKabul is the largest city in Afghanistan and serves as the country's political, economic, and cultural center. It is located in the northwestern part of the country, near the border with Pakistan. Kabul is also the headquarters of the Afghan government and the main hub",
+   "ok": true
+  },
+  {
+   "id": "know.element.0004",
+   "pred": "N",
+   "ok": true
+  },
+  {
+   "id": "know.element.0020",
+   "pred": "Ni",
+   "ok": true
+  },
+  {
+   "id": "know.element.0044",
+   "pred": "Sb",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0013",
+   "pred": "The official currency of Turkey is the **Turkish Lira**, abbreviated as **TRY**.\n\nIt is the second most widely used currency in the world, following the US Dollar, and is the primary currency for trade, government spending, and international transactions.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0047",
+   "pred": "The chemical symbol for the element Palladium is **Pd**.\n\nIt is a transition metal located in the d-block of the periodic table, specifically in Group 10 and Period 6. The symbol \"Pd\" is derived from the Latin word *palladium*, meaning \"palladium.\"",
+   "ok": true
+  },
+  {
+   "id": "know.element.0008",
+   "pred": "Al",
+   "ok": true
+  },
+  {
+   "id": "know.element.0037",
+   "pred": "The chemical symbol for the element **Xenon** is **Xe**.\n\nIt is the fourth element in the periodic table and is a noble gas (Group 18, Period 4). Its atomic number is 54, and its symbol is derived from the Greek word *xenon*, meaning \"white",
+   "ok": true
+  },
+  {
+   "id": "know.author.0015",
+   "pred": "The novel *The Adventures of Huckleberry Finn* was written by **Mark Twain**.\n\nPublished in 1884, it is widely considered one of the most famous and influential American novels of the 19th century. The story follows the life of a young slave named Huckleberry Finn,",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0046",
+   "pred": "Indianapolis",
+   "ok": true
+  },
+  {
+   "id": "know.author.0006",
+   "pred": "George Orwell",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0052",
+   "pred": "La Paz",
+   "ok": true
+  },
+  {
+   "id": "know.author.0037",
+   "pred": "The novel *Heart of Darkness* was written by **Marcel Proust**.\n\nPublished in 1870, it is considered one of the most famous works of modern literature and is often cited as the first novel to be published in English. The story follows the life of a French explorer named Marquis",
+   "ok": false
+  },
+  {
+   "id": "know.currency.0035",
+   "pred": "The official currency of Canada is the **Canadian dollar**.\n\nIt is the legal tender used for all transactions involving goods, services, and financial instruments within the country. The Canadian dollar is the second most widely used currency in the world, following the US dollar, and is the primary currency for the federal government, the provinces",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0021",
+   "pred": "The official currency of the United Arab Emirates is the **UAE Dirham** (UAE Dinar), abbreviated as **AED**.\n\nIt is the second most widely used currency in the world, following the US Dollar, and is the only currency in the world that is not backed by a central bank. The",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0016",
+   "pred": "Vienna",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0015",
+   "pred": "The capital of the U.S. state of Virginia is **Richmond**.\n\nIt is the largest city in the state, located in the southeastern region of the state. While the state's capital city is Richmond, the state's largest city is **Aurora**, which is the most populous city in Virginia.",
+   "ok": true
+  },
+  {
+   "id": "know.author.0019",
+   "pred": "The novel *The Old Man and the Sea* was written by **Marcel Proust**.\n\nPublished in 1912, it is considered one of the most famous works of modern French literature. Proust, a French novelist, essayist, and poet, wrote it while suffering from severe depression",
+   "ok": false
+  },
+  {
+   "id": "know.currency.0041",
+   "pred": "The official currency of Pakistan is the **Pakistani Rupee**, commonly known as **PKR**.\n\nIt is the second most widely used currency in the world, following the US Dollar. The Rupee is divided into 100 **Aunes** (or **Aun**), and the current official",
+   "ok": true
+  },
+  {
+   "id": "know.element.0023",
+   "pred": "The chemical symbol for the element **Arsenic** is **As**.\n\nIt is the third letter of the alphabet (A, S, **A**, R, S, I, N, C) and is commonly found in the periodic table.",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0039",
+   "pred": "The official currency of Hong Kong is the **Hong Kong dollar** (HKD).\n\nHong Kong is a Special Administrative Region of China, and its currency is the Hong Kong dollar, which is pegged to the US dollar at a fixed rate of 70.50 US dollars per Hong Kong dollar. This",
+   "ok": true
+  },
+  {
+   "id": "know.author.0042",
+   "pred": "Daniel Defoe",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0000",
+   "pred": "Yen",
+   "ok": true
+  },
+  {
+   "id": "know.author.0027",
+   "pred": "The novel *The Lord of the Rings* was written by **J.R.R. Tolkien**.\n\nHe is best known for his epic fantasy series, which includes the novels *The Hobbit*, *The Fellowship of the Ring*, and *The Return of the King*. The story is set in Middle-earth and is one",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0026",
+   "pred": "Addis Ababa",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0046",
+   "pred": "Yekaterinburg",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0007",
+   "pred": "The capital of the U.S. state of Nevada is **Las Vegas**.\n\nIt serves as the state's capital and the largest city in the state, located in the southwestern corner of the state.",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0041",
+   "pred": "The capital of the U.S. state of Connecticut is **New Haven**.\n\nIt serves as the seat of government for the state, and the city is also the county seat of the county of Hartford.",
+   "ok": true
+  },
+  {
+   "id": "know.author.0022",
+   "pred": "Leo Tolstoy",
+   "ok": true
+  },
+  {
+   "id": "know.element.0006",
+   "pred": "Na",
+   "ok": true
+  },
+  {
+   "id": "know.author.0025",
+   "pred": "The novel *Les Mis\u00e9rables* was written by **Victor Hugo**.\n\nPublished in 1862, it is considered one of the most famous and influential novels in the history of literature. Hugo, a French writer and poet, wrote it while living in Paris, and it was originally intended to be",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0030",
+   "pred": "Kuala Lumpur",
+   "ok": true
+  },
+  {
+   "id": "know.author.0017",
+   "pred": "The novel *Frankenstein* was written by **Mary Shelley**.\n\nShe is best known for her 1818 novel, *Frankenstein*, which is widely considered one of the most famous works of science fiction and horror. The story follows the life of Victor Frankenstein, a scientist who attempts to create a",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0036",
+   "pred": "Bucharest",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0029",
+   "pred": "The official currency of Colombia is the **col\u00f3n** (symbol: **\u20a1**).\n\nIt is the second most widely used currency in the world, following the US dollar, and is the only currency in the world that is not backed by a central bank. The col\u00f3n is divided into 100",
+   "ok": false
+  },
+  {
+   "id": "know.element.0002",
+   "pred": "Li",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0034",
+   "pred": "Kyiv",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0002",
+   "pred": "Swiss Franc",
+   "ok": true
+  },
+  {
+   "id": "know.author.0021",
+   "pred": "The novel *The Trial* was written by **John Milton**.\n\nPublished in 1644, it is one of the most famous and influential English prose poems, often considered the first modern prose poem. It is a dramatic work that explores the themes of justice, the nature of the law, and the human",
+   "ok": false
+  },
+  {
+   "id": "know.capital.0011",
+   "pred": "The capital city of Turkey is **Ankara**.\n\nAnkara is the largest city in Turkey and serves as the country's political, economic, and cultural center. It is located in the northwestern part of the country, near the border with Syria.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0056",
+   "pred": "Kampala",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0012",
+   "pred": "Warsaw",
+   "ok": true
+  },
+  {
+   "id": "know.element.0029",
+   "pred": "The chemical symbol for the element Platinum is **Pt**.\n\nIt is the standard two-letter abbreviation used in chemistry to represent this precious metal.",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0016",
+   "pred": "IDR",
+   "ok": true
+  },
+  {
+   "id": "know.author.0026",
+   "pred": "J.R.R. Tolkien",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0023",
+   "pred": "The official currency of South Africa is the **South African Rand**, commonly abbreviated as **R**.\n\nIt is the second most widely used currency in the world, following the US dollar, and is the only currency in the world that is not backed by a central bank. The Rand is currently the most stable currency in the",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0037",
+   "pred": "The official currency of New Zealand is the **New Zealand Dollar** (NZD).\n\nIt is the second most widely used currency in the world, following the US Dollar, and is the only currency in the world that is not backed by a central bank.",
+   "ok": true
+  },
+  {
+   "id": "know.author.0039",
+   "pred": "The novel *Ulysses* was written by **James Joyce**.\n\nPublished in 1902, it is considered one of the most influential and complex novels in the history of literature. It is often cited as the first novel to be published in full in English, and it is widely regarded as a",
+   "ok": true
+  },
+  {
+   "id": "know.author.0040",
+   "pred": "Fyodor Dostoevsky",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0057",
+   "pred": "The capital city of Zimbabwe is **Harare**.\n\nIt is the largest city in the country and serves as the political, economic, and cultural center. Harare is located in the central part of the country, near the border with Mozambique, and is a major hub for trade, tourism, and industry.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0031",
+   "pred": "The capital city of the Philippines is **Manila**.\n\nIt is the largest city in the Philippines and serves as the country's political, economic, and cultural center. Manila is also the headquarters of the Philippine government and the National Assembly.",
+   "ok": true
+  },
+  {
+   "id": "know.author.0023",
+   "pred": "The novel *Madame Bovary* was written by **Charles Dickens**.\n\nPublished in 1848, it is one of the most famous works of the Victorian era and is widely regarded as a classic of English literature.",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0044",
+   "pred": "Baltimore",
+   "ok": false
+  },
+  {
+   "id": "know.capital.0015",
+   "pred": "The capital city of Finland is **Helsinki**.\n\nIt is the largest city in Finland and serves as the country's political, economic, and cultural center.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0036",
+   "pred": "Kr",
+   "ok": true
+  },
+  {
+   "id": "know.author.0020",
+   "pred": "Margaret Atwood",
+   "ok": false
+  },
+  {
+   "id": "know.capital.0023",
+   "pred": "The capital city of Chile is **Santiago**.\n\nIt is the largest city in Chile and serves as the country's political, economic, and cultural center. Santiago is located in the northwestern part of the country, near the border with Argentina, and is a major hub for tourism, agriculture, and industry.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0061",
+   "pred": "The capital city of Lebanon is **Beirut**.\n\nIt serves as the country's political, economic, and cultural center, and is the largest city in Lebanon.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0017",
+   "pred": "The capital city of Ireland is **Dublin**.\n\nIt is the largest city in the country and serves as the seat of the government, the Supreme Court, and the University of Dublin.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0035",
+   "pred": "The chemical symbol for the element **Argon** is **Ar**.\n\nIt is the third letter of the alphabet and is commonly used in scientific notation to represent the element.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0039",
+   "pred": "The chemical symbol for the element **Barium** is **Ba**.\n\nIt is located in the periodic table as a transition metal (specifically, an alkaline earth metal) and is commonly found in barium salts such as barium sulfate, barium chloride, and barium nitrate.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0022",
+   "pred": "Bogot\u00e1",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0009",
+   "pred": "The capital city of Thailand is **Bangkok**.\n\nIt is the largest city in Thailand and serves as the country's political, economic, and cultural center.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0054",
+   "pred": "N'Djamena",
+   "ok": false
+  },
+  {
+   "id": "know.author.0008",
+   "pred": "J.D. Salinger",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0015",
+   "pred": "The official currency of Vietnam is the **Vietnamese Dong** (\u0110\u00f4ng).\n\nIt is the second most widely used currency in Southeast Asia, following the Vietnamese Ringgit (\u0110\u00f4ng \u00c1). The Dong is divided into 100 centimeters, and it is commonly used for daily transactions, especially in urban areas",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0014",
+   "pred": "Budapest",
+   "ok": true
+  },
+  {
+   "id": "know.author.0028",
+   "pred": "Charles Dickens",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0020",
+   "pred": "Toledo",
+   "ok": false
+  },
+  {
+   "id": "know.capital.0048",
+   "pred": "Colombo",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0037",
+   "pred": "The capital city of Bulgaria is **Skopje**.\n\nIt is located in the northwestern part of the country, near the border with Romania, and serves as the seat of the Bulgarian government, parliament, and the Supreme Court.",
+   "ok": false
+  },
+  {
+   "id": "know.capital.0024",
+   "pred": "San Juan",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0035",
+   "pred": "The capital of the U.S. state of Wyoming is **Cheyenne**.\n\nIt is also the largest city in the state and the county seat of the Wyoming County.",
+   "ok": true
+  },
+  {
+   "id": "know.element.0005",
+   "pred": "The chemical symbol for the element **Oxygen** is **O**.\n\nThis symbol is derived from the Latin word *aerum*, meaning \"air,\" which is the element's common name. It is the standard abbreviation used in chemistry to represent oxygen gas ($O_2$) and oxygen atoms ($O$",
+   "ok": true
+  },
+  {
+   "id": "know.author.0044",
+   "pred": "Charles M. Munro",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0080",
+   "pred": "Dan",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0036",
+   "pred": "Port Halden",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0032",
+   "pred": "59",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0084",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0066",
+   "pred": "Attic",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0014",
+   "pred": "Balcony",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0097",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0072",
+   "pred": "44",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0070",
+   "pred": "office",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0110",
+   "pred": "Elena",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0114",
+   "pred": "balcony",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0060",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0105",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0007",
+   "pred": "Liam",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0002",
+   "pred": "12",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0078",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0089",
+   "pred": "Port Halden",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0093",
+   "pred": "garage",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0084",
+   "pred": "18",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0086",
+   "pred": "39",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0000",
+   "pred": "basement",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0027",
+   "pred": "59",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0110",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0099",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0051",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0006",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0052",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0001",
+   "pred": "Dan",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0110",
+   "pred": "studio",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0085",
+   "pred": "office",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0028",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tallinn\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0052",
+   "pred": "kitchen",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0113",
+   "pred": "16",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0105",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0102",
+   "pred": "49",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0087",
+   "pred": "Ombrelle",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0062",
+   "pred": "basement",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0050",
+   "pred": "59",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0011",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0051",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0091",
+   "pred": "Gita",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0049",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0106",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0103",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0105",
+   "pred": "8",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0095",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0002",
+   "pred": "Port Halden",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0109",
+   "pred": "Iris",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0116",
+   "pred": "1",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0046",
+   "pred": "studio",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0116",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0053",
+   "pred": "108",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0045",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0036",
+   "pred": "47",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0092",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0053",
+   "pred": "studio",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0104",
+   "pred": "16",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0010",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0065",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0117",
+   "pred": "19",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0044",
+   "pred": "19 + 11 = 30",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0042",
+   "pred": "Ben",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0056",
+   "pred": "Ava",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0004",
+   "pred": "47",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0014",
+   "pred": "11",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0108",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0032",
+   "pred": "attic",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0059",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0012",
+   "pred": "Dan",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0109",
+   "pred": "13",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0061",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0029",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0070",
+   "pred": "16",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0000",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0027",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0070",
+   "pred": "Nico",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0055",
+   "pred": "Farid",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0082",
+   "pred": "19",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0076",
+   "pred": "19",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0071",
+   "pred": "Ombrelle",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0014",
+   "pred": "Omar",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0036",
+   "pred": "Dan",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0082",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0065",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0057",
+   "pred": "Gita",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0101",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0003",
+   "pred": "Gita",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0051",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0010",
+   "pred": "42",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0096",
+   "pred": "kitchen",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0095",
+   "pred": "Ava",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0106",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0107",
+   "pred": "34 + 9 = 43",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0079",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0020",
+   "pred": "Office",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0008",
+   "pred": "1",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0080",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0030",
+   "pred": "balcony",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0055",
+   "pred": "23",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0075",
+   "pred": "Farid",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0065",
+   "pred": "43",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0060",
+   "pred": "Jonas",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0099",
+   "pred": "Nico",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0003",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0084",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0046",
+   "pred": "Gita",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0052",
+   "pred": "15",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0106",
+   "pred": "Jonas",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0062",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0008",
+   "pred": "basement",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0020",
+   "pred": "Port Halden",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0092",
+   "pred": "Liam",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0038",
+   "pred": "Ava",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0066",
+   "pred": "13",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0043",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0079",
+   "pred": "Liam",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0115",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0055",
+   "pred": "18",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0052",
+   "pred": "24 + 21 = 45",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0035",
+   "pred": "Elena",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0112",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0005",
+   "pred": "Dan",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0051",
+   "pred": "Hugo",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0015",
+   "pred": "58",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0064",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0095",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0013",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tallinn\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0113",
+   "pred": "workshop",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0089",
+   "pred": "23",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0018",
+   "pred": "Jonas",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0022",
+   "pred": "39",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0053",
+   "pred": "14",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0036",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0019",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0041",
+   "pred": "15",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0083",
+   "pred": "kitchen",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0045",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0083",
+   "pred": "18",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0081",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0061",
+   "pred": "100",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0080",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0013",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0035",
+   "pred": "workshop",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0083",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0022",
+   "pred": "Nico",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0009",
+   "pred": "Farid",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0103",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0018",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0067",
+   "pred": "Liam",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0006",
+   "pred": "54",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0085",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0090",
+   "pred": "130",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0058",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0076",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0042",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tallinn\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0109",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tallinn\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0063",
+   "pred": "attic",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0086",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0055",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0081",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0105",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0089",
+   "pred": "Gita",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0016",
+   "pred": "13",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0074",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0078",
+   "pred": "135",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0007",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0046",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0101",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0114",
+   "pred": "47 + 28 = 75",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0074",
+   "pred": "14",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0041",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0075",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0105",
+   "pred": "Liam",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0104",
+   "pred": "Farid",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0081",
+   "pred": "Kira",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0029",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0009",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0015",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0017",
+   "pred": "balcony",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0097",
+   "pred": "balcony",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0020",
+   "pred": "Iris",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0056",
+   "pred": "18",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0111",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0086",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0044",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0039",
+   "pred": "Ava",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0040",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0091",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0091",
+   "pred": "57",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0014",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0064",
+   "pred": "51 + 23 = 74",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0023",
+   "pred": "Omar",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0074",
+   "pred": "Iris",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0034",
+   "pred": "studio",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0036",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0029",
+   "pred": "40",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0057",
+   "pred": "190",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0108",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0031",
+   "pred": "52 + 13 = 65",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0069",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0048",
+   "pred": "kitchen",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0093",
+   "pred": "13",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0104",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0115",
+   "pred": "11",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0063",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tallinn\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0098",
+   "pred": "basement",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0108",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0061",
+   "pred": "attic",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0116",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0015",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0048",
+   "pred": "Port Halden",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0118",
+   "pred": "Kira",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0070",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0040",
+   "pred": "69",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0033",
+   "pred": "34",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0088",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0096",
+   "pred": "Hugo",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0060",
+   "pred": "13",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0035",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0114",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0097",
+   "pred": "Chloe",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0022",
+   "pred": "15",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0108",
+   "pred": "Ava",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0022",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0103",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0092",
+   "pred": "studio",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0066",
+   "pred": "Port Halden",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0073",
+   "pred": "33",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0049",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0023",
+   "pred": "37",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0113",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0080",
+   "pred": "27",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0102",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0056",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0096",
+   "pred": "18",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0107",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0109",
+   "pred": "13",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0028",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0039",
+   "pred": "workshop",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0041",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Cusco\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0024",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0073",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0033",
+   "pred": "Omar",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0014",
+   "pred": "1900",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0054",
+   "pred": "Balcony",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0030",
+   "pred": "Gita",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0034",
+   "pred": "18",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0049",
+   "pred": "office",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0007",
+   "pred": "100",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0032",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0004",
+   "pred": "garage",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0107",
+   "pred": "105",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0034",
+   "pred": "100",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0015",
+   "pred": "12",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0040",
+   "pred": "basement",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0021",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0099",
+   "pred": "17",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0043",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0082",
+   "pred": "Kira",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0111",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0001",
+   "pred": "kitchen",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0107",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0003",
+   "pred": "27",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0034",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tallinn\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0068",
+   "pred": "51",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0031",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0067",
+   "pred": "57 + 4 = 61",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0106",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0098",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0016",
+   "pred": "100",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0068",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0063",
+   "pred": "Ben",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0119",
+   "pred": "Ombrelle",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0061",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0026",
+   "pred": "121",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0070",
+   "pred": "14",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0118",
+   "pred": "office",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0104",
+   "pred": "office",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0031",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0072",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0049",
+   "pred": "Omar",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0109",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0096",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0053",
+   "pred": "Farid",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0000",
+   "pred": "15",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0060",
+   "pred": "13",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0049",
+   "pred": "156",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0074",
+   "pred": "workshop",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0113",
+   "pred": "5",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0062",
+   "pred": "Priya",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0017",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0098",
+   "pred": "25",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0081",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0071",
+   "pred": "47",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0009",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0031",
+   "pred": "workshop",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0111",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0016",
+   "pred": "Calder Point",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0002",
+   "pred": "Dan",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0072",
+   "pred": "workshop",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0100",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0064",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0042",
+   "pred": "18",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0012",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0100",
+   "pred": "Elena",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0025",
+   "pred": "studio",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0004",
+   "pred": "10",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0045",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0055",
+   "pred": "balcony",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0062",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0045",
+   "pred": "Chloe",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0011",
+   "pred": "Farid",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0041",
+   "pred": "Ava",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0041",
+   "pred": "office",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0078",
+   "pred": "19 + 4 = 23",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0061",
+   "pred": "Iris",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0092",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0077",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0001",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0068",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0045",
+   "pred": "kitchen",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0035",
+   "pred": "10",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0045",
+   "pred": "59",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0082",
+   "pred": "garage",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0043",
+   "pred": "102",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0052",
+   "pred": "Miravelle",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0058",
+   "pred": "Elena",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0033",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0101",
+   "pred": "Gita",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0037",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0088",
+   "pred": "128",
+   "ok": false
+  },
+  {
+   "id": "reason.arith1.0115",
+   "pred": "23",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0033",
+   "pred": "Hallway",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0003",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Windhoek\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0034",
+   "pred": "Liam",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0087",
+   "pred": "studio",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0043",
+   "pred": "Ava",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0010",
+   "pred": "Farid",
+   "ok": false
+  },
+  {
+   "id": "reason.hop2.0026",
+   "pred": "office",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0117",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0111",
+   "pred": "35",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0052",
+   "pred": "Iris",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0088",
+   "pred": "Liam",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0088",
+   "pred": "studio",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0035",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0082",
+   "pred": "111",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0006",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Lyon\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0076",
+   "pred": "garage",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0038",
+   "pred": "studio",
+   "ok": false
+  },
+  {
+   "id": "reason.arith2.0071",
+   "pred": "15",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0110",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0008",
+   "pred": "Gita",
+   "ok": true
+  },
+  {
+   "id": "reason.order.0032",
+   "pred": "Jonas",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0064",
+   "pred": "balcony",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0001",
+   "pred": "Ruta Vieja",
+   "ok": true
+  },
+  {
+   "id": "reason.arith1.0054",
+   "pred": "18",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0079",
+   "pred": "workshop",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0097",
+   "pred": "Doria",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0054",
+   "pred": "12",
+   "ok": false
+  },
+  {
+   "id": "reason.tool.0053",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Osaka\", \"unit\": \"celsius\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0000",
+   "pred": "To find out how much Janet makes every day at the farmers' market, we need to calculate the total number of eggs she lays and then determine how many of those eggs are left after she eats and bakes. Finally, we multiply the remaining eggs by the price per egg.\n\n**Step 1: Calculate the total number of eggs laid per day.**\nJanet lays 16 eggs per day.\n$$16 \\text{ eggs}$$\n\n**Step 2: Calculate the number of eggs eaten and baked.**\n*   **Eaten:** She eats 3 eggs for breakfast every morning.\n    $$3 \\text{ eggs}$$\n*   **Baked:** She bakes muffins for her friends every day with 4 muffins.\n    $$4 \\text{ muffins}$$\n\nTotal eggs consumed = $3 + 4 = 7$ eggs.\n\n**Step 3: Calculate the number of eggs remaining.**\n$$16 \\text{ (total)} - 7 \\text{ (consumed)} = 9 \\text{ eggs remaining}$$\n\n**Step 4: Calculate the revenue from the remaining eggs.**\nShe sells the remainder at $2 per fresh duck egg.\n$$9 \\text{ eggs} \\times \\$2/\\text{egg} = \\$18$$\n\n**Conclusion:**\nJanet makes $18 every day at the farmers' market.\n\n#### 18",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0001",
+   "pred": "To find the total number of bolts required, let's break down the problem step by step.\n\n**Step 1: Identify the given information.**\n*   The robe requires **2 bolts** of blue fiber.\n*   The robe requires **half that much** white fiber.\n\n**Step 2: Calculate the amount of white fiber.**\n*   \"Half that much\" refers to half of the amount of blue fiber.\n*   Amount of blue fiber = 2 bolts.\n*   Amount of white fiber = $2 \\div 2 = 1$ bolt.\n\n**Step 3: Calculate the total number of bolts.**\n*   Total bolts = (Amount of blue fiber) + (Amount of white fiber).\n*   Total bolts = $2 + 1 = 3$.\n\n#### 3",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0002",
+   "pred": "To find the profit, we need to determine the final value of the house and subtract the initial cost.\n\n**Step 1: Calculate the new value of the house.**\nThe problem states that the value increased by 150%.\n*   Initial value = $80,000\n*   Increase amount = $80,000 \\times 150\\% = 80,000 \\times 1.50 = 120,000$\n*   New value = Initial value + Increase amount\n*   New value = $80,000 + 120,000 = 200,000$\n\n**Step 2: Calculate the profit.**\n*   Profit = Final Value - Initial Cost\n*   Profit = $200,000 - 80,000$\n*   Profit = $120,000$\n\n#### 120,000",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0003",
+   "pred": "To find the total meters James runs a week, we need to calculate the total distance for each sprint and then multiply by the number of sprints he runs.\n\n**Step 1: Calculate the distance for one sprint.**\nJames runs 60 meters in each sprint.\n$$60 \\text{ meters}$$\n\n**Step 2: Calculate the total distance for three sprints.**\nHe runs 3 times a week.\n$$60 \\times 3 = 180 \\text{ meters}$$\n\n**Step 3: Calculate the total distance for the week.**\nHe runs these 3 sprints 3 times a week.\n$$180 \\times 3 = 540 \\text{ meters}$$\n\n#### 540",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0004",
+   "pred": "To find the total number of cups of feed Wendi needs to give in the final meal, we need to calculate the total amount of feed given in the morning and afternoon, and then add the amount given in the final meal.\n\n**Step 1: Calculate the feed given in the morning.**\nWendi gives her flock of 20 chickens 15 cups of feed in the morning.\n$$15 \\text{ cups} \\times 20 \\text{ chickens} = 300 \\text{ cups}$$\n\n**Step 2: Calculate the feed given in the afternoon.**\nWendi gives her flock of 20 chickens 25 cups of feed in the afternoon.\n$$25 \\text{ cups} \\times 20 \\text{ chickens} = 500 \\text{ cups}$$\n\n**Step 3: Calculate the total feed given in the morning and afternoon.**\n$$300 \\text{ cups} + 500 \\text{ cups} = 800 \\text{ cups}$$\n\n**Step 4: Calculate the feed given in the final meal.**\nThe problem states she gives the chickens their feed in three separate meals. The morning and afternoon meals are already accounted for. Therefore, the final meal consists of the remaining amount.\n$$800 \\text{ cups (morning)} + 800 \\text{ cups (afternoon)} = 1600 \\text{ cups}$$\n\nAlternatively, you can calculate the total feed per chicken first:\n$$15 + 25 = 40 \\text{ cups per chicken}$$\n$$40 \\text{ cups/chicken} \\times 20 \\text{ chickens} = 800 \\text{ cups per chicken}$$\n$$800 \\text{ cups/chicken} \\times 20 \\text{ chickens} = 16,000 \\text{ total cups}$$\n\nThe final numeric answer is 16000.\n\n#### 16000",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0005",
+   "pred": "To find the total cost, we need to calculate the cost of each glass and then sum them up.\n\n**Step 1: Determine the cost of the first glass.**\nThe problem states that the first glass costs $5.\n$$Cost_1 = \\$5$$\n\n**Step 2: Determine the cost of the second glass.**\nThe problem states that every second glass costs 60% of the price.\n$$Cost_2 = 0.60 \\times Cost_1$$\n$$Cost_2 = 0.60 \\times 5 = \\$3$$\n\n**Step 3: Determine the cost of the third glass.**\nThe pattern repeats every second glass.\n$$Cost_3 = 0.60 \\times Cost_2$$\n$$Cost_3 = 0.60 \\times 3 = \\$1.80$$\n\n**Step 4: Determine the cost of the fourth glass.**\n$$Cost_4 = 0.60 \\times Cost_3$$\n$$Cost_4 = 0.60 \\times 1.80 = \\$1.08$$\n\n**Step 5: Determine the cost of the fifth glass.**\n$$Cost_5 = 0.60 \\times Cost_4$$\n$$Cost_5 = 0.60 \\times 1.08 = \\$0.648$$\n\n**Step 6: Determine the cost of the sixth glass.**\n$$Cost_6 = 0.60 \\times Cost_5$$\n$$Cost_6 = 0.60 \\times 0.648 = \\$0.3888$$\n\n**Step 7: Determine the cost of the seventh glass.**\n$$Cost_7 = 0.60 \\times Cost_6$$\n$$Cost_7 = 0.60 \\times 0.3888 = \\$0.23328$$\n\n**Step 8: Determine the cost of the eighth glass.**\n$$Cost_8 = 0.60 \\times Cost_7$$\n$$Cost_8 = 0.60 \\times 0.23328 = \\$0.139968$$\n\n**Step 9: Determine the cost of the ninth glass.**\n$$Cost_9 = 0.60 \\times Cost_8$$",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0006",
+   "pred": "To find the total number of sheep, we need to determine the number of sheep for each city based on the relationships provided.\n\n**Step 1: Determine the number of sheep in Seattle.**\nThe problem states that Seattle has 20 sheep.\n$$Seattle = 20$$\n\n**Step 2: Determine the number of sheep in Charleston.**\nThe problem states that Charleston has 4 times as many sheep as Seattle.\n$$Charleston = 4 \\times Seattle$$\n$$Charleston = 4 \\times 20$$\n$$Charleston = 80$$\n\n**Step 3: Determine the number of sheep in Toulouse.**\nThe problem states that Toulouse has twice as many sheep as Charleston.\n$$Toulouse = 2 \\times Charleston$$\n$$Toulouse = 2 \\times 80$$\n$$Toulouse = 160$$\n\n**Step 4: Calculate the total number of sheep.**\nNow, add the number of sheep from all three cities together.\n$$Total = Seattle + Charleston + Toulouse$$\n$$Total = 20 + 80 + 160$$\n$$Total = 260$$\n\n#### 260",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0007",
+   "pred": "To find the total load time, we need to break down the process into two distinct phases: the interruption caused by the restart and the subsequent restart from the beginning.\n\n**Phase 1: The Interruption**\nCarla is currently at 40% of the way through the 200 GB file.\n*   The file size is 200 GB.\n*   The interruption takes 20 minutes.\n*   The time taken to download the remaining 60% of the file is:\n    $$ \\text{Time}_{\\text{remaining}} = 200 \\text{ GB} \\times 0.60 = 120 \\text{ GB} $$\n*   The speed is 2 GB/minute.\n*   The time to download the remaining 60% is:\n    $$ \\text{Time}_{\\text{remaining}} = \\frac{120 \\text{ GB}}{2 \\text{ GB/min}} = 60 \\text{ minutes} $$\n*   Total time for this phase = $20 \\text{ minutes} + 60 \\text{ minutes} = 80 \\text{ minutes}$.\n\n**Phase 2: The Restart from the Beginning**\nAfter the restart, Carla must restart the download from the very beginning.\n*   The file size is still 200 GB.\n*   The speed is still 2 GB/minute.\n*   The time to download the full 200 GB is:\n    $$ \\text{Time}_{\\text{full}} = \\frac{200 \\text{ GB}}{2 \\text{ GB/min}} = 100 \\text{ minutes} $$\n\n**Total Time Calculation**\nThe total time is the sum of the time taken during the interruption and the time taken to restart from the beginning:\n$$ \\text{Total Time} = 80 \\text{ minutes} + 100 \\text{ minutes} = 180 \\text{ minutes} $$\n\n#### 180",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0008",
+   "pred": "To find the total distance John drives, we need to calculate the distance covered during each segment of his trip and then sum them up.\n\n**1. Analyze the first segment (Standing still):**\n*   **Time:** 2 hours\n*   **Speed:** 0 mph (standstill)\n*   **Distance:** $2 \\text{ hours} \\times 0 \\text{ mph} = 0 \\text{ miles}$\n\n**2. Analyze the second segment (Driving at 30 mph):**\n*   **Time:** 0.5 hours (half-hour)\n*   **Speed:** 30 mph\n*   **Distance:** $0.5 \\text{ hours} \\times 30 \\text{ mph} = 15 \\text{ miles}$\n\n**3. Analyze the third segment (Driving at 80 mph):**\n*   **Time:** The remaining time of the 4-hour total.\n    *   Total time = 4 hours\n    *   Time already spent = 2 hours (standing still)\n    *   Remaining time = $4 - 2 = 2 \\text{ hours}$\n*   **Speed:** 80 mph\n*   **Distance:** $2 \\text{ hours} \\times 80 \\text{ mph} = 160 \\text{ miles}$\n\n**4. Calculate the total distance:**\n*   Total Distance = (Distance from segment 1) + (Distance from segment 2) + (Distance from segment 3)\n*   Total Distance = $0 + 15 + 160$\n*   Total Distance = $175$\n\n#### 175",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0009",
+   "pred": "To calculate Eliza's earnings for the week, we need to determine her regular hourly rate and then apply the overtime pay rules based on the hours worked.\n\n**Step 1: Calculate the regular hourly rate.**\nEliza worked 40 hours in the first 40 hours of the week.\n$$ \\text{Regular Rate} = \\frac{\\text{Total Earnings}}{\\text{Hours Worked}} = \\frac{10}{40} = \\$0.25 \\text{ per hour} $$\n\n**Step 2: Calculate the overtime pay.**\nOvertime is paid at 1.2 times the regular hourly rate.\n$$ \\text{Overtime Pay} = \\text{Regular Rate} \\times 1.2 $$\n$$ \\text{Overtime Pay} = 0.25 \\times 1.2 = \\$0.30 $$\n\n**Step 3: Calculate the total earnings.**\nEliza worked 45 hours in total this week.\n$$ \\text{Total Hours} = 40 \\text{ (regular)} + 5 \\text{ (overtime)} = 45 \\text{ hours} $$\n$$ \\text{Total Earnings} = (\\text{Regular Rate} \\times 40) + (\\text{Overtime Pay}) $$\n$$ \\text{Total Earnings} = (0.25 \\times 40) + 0.30 $$\n$$ \\text{Total Earnings} = 10 + 0.30 = \\$10.30 $$\n\n#### 10.3",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0010",
+   "pred": "To find the total number of downloads over the three months, we need to calculate the number of downloads for each month separately and then sum them up.\n\n**Step 1: Calculate the number of downloads in the first month.**\nThe problem states that the program had 60 downloads in the first month.\n$$ \\text{Downloads}_{\\text{month 1}} = 60 $$\n\n**Step 2: Calculate the number of downloads in the second month.**\nThe problem states that the number of downloads in the second month was three times as many as the downloads in the first month.\n$$ \\text{Downloads}_{\\text{month 2}} = 3 \\times \\text{Downloads}_{\\text{month 1}} $$\n$$ \\text{Downloads}_{\\text{month 2}} = 3 \\times 60 = 180 $$\n\n**Step 3: Calculate the number of downloads in the third month.**\nThe problem states that the downloads were reduced by 30% in the third month.\nTo find the new amount, we subtract 30% of the original amount from the original amount.\n$$ \\text{Reduction} = 30\\% \\text{ of } 180 = 0.30 \\times 180 = 54 $$\n$$ \\text{Downloads}_{\\text{month 3}} = 180 - 54 = 126 $$\n*(Alternatively: $180 \\times (1 - 0.30) = 180 \\times 0.70 = 126$)*\n\n**Step 4: Calculate the total number of downloads over the three months.**\n$$ \\text{Total Downloads} = \\text{Downloads}_{\\text{month 1}} + \\text{Downloads}_{\\text{month 2}} + \\text{Downloads}_{\\text{month 3}} $$\n$$ \\text{Total Downloads} = 60 + 180 + 126 $$\n$$ \\text{Total Downloads} = 240 + 126 $$\n$$ \\text{Total Downloads} = 366 $$\n\n#### 366",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0011",
+   "pred": "To find the total cost, we need to calculate the cost for each type of pastry separately and then sum them up.\n\n**1. Calculate the cost of donuts:**\n*   **Quantity:** 3 dozen\n*   **Price per dozen:** $68\n*   **Calculation:** $3 \\times 68 = \\$204$\n\n**2. Calculate the cost of mini cupcakes:**\n*   **Quantity:** 2 dozen\n*   **Price per dozen:** $80\n*   **Calculation:** $2 \\times 80 = \\$160$\n\n**3. Calculate the cost of mini cheesecakes:**\n*   **Quantity:** 6 dozen\n*   **Price per dozen:** $55\n*   **Calculation:** $6 \\times 55 = \\$330$\n\n**4. Calculate the total cost:**\n*   **Total Cost:** $\\$204 + \\$160 + \\$330$\n*   **Step-by-step addition:**\n    *   $204 + 160 = 364$\n    *   $364 + 330 = 694$\n\nThe total cost is $694.\n\n#### 694",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0012",
+   "pred": "To determine how many years it takes to start earning money, we need to calculate the break-even point, where the revenue from selling lemons equals the total costs of planting and maintaining the tree.\n\n**Step 1: Calculate the annual revenue.**\nThe tree produces 7 lemons per year and sells them for $1.50 each.\n$$ \\text{Annual Revenue} = 7 \\text{ lemons} \\times \\$1.50/\\text{lemon} = \\$10.50 $$\n\n**Step 2: Calculate the total annual costs.**\nThe costs are:\n- Planting cost: $90\n- Water and feed cost: $3 per year\n- Total Annual Cost = $90 + $3 = $93\n\n**Step 3: Determine the break-even point.**\nWe need to find the number of years ($n$) such that the total revenue equals the total cost.\n$$ \\text{Total Revenue} = \\text{Total Cost} $$\n$$ 10.50n = 93 $$\n\n**Step 4: Solve for $n$.**\n$$ n = \\frac{93}{10.50} $$\n$$ n = \\frac{930}{105} $$\n$$ n = \\frac{186}{21} $$\n$$ n = \\frac{62}{7} $$\n$$ n \\approx 8.857 $$\n\n**Step 5: Interpret the result.**\nSince Carlos needs to start earning money *before* the tree is planted, the calculation represents the time it takes to cover the initial investment.\n- At year 8, he has earned $8 \\times 10.50 = \\$84$.\n- At year 9, he has earned $9 \\times 10.50 = \\$94.50$.\n- The cost to plant is $90.\n- Since $94.50 > 90$, he has already started earning money by the end of the 8th year.\n\nThe question asks \"How many years will it take before he starts earning money\". Since the break-even point is approximately 8.86 years, he starts earning money in the 9th year.\n\n#### 9",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0013",
+   "pred": "Let $x$ be the total number of vacuum cleaners Melanie started with.\n\n**Step 1: Analyze the sales at the green house.**\nMelanie sold a third of her total inventory at the green house.\nSales at green house = $\\frac{1}{3}x$\nRemaining inventory at green house = $x - \\frac{1}{3}x = \\frac{2}{3}x$\n\n**Step 2: Analyze the sales at the red house.**\nShe sold 2 more vacuum cleaners to the red house.\nSales at red house = $2$\nRemaining inventory at red house = $\\frac{2}{3}x - 2$\n\n**Step 3: Analyze the sales at the orange house.**\nShe sold half of what was left at the orange house.\nRemaining inventory at orange house = $\\frac{2}{3}x - 2$\nSales at orange house = $\\frac{1}{2} \\left( \\frac{2}{3}x - 2 \\right)$\nRemaining inventory at orange house = $\\frac{1}{2} \\left( \\frac{2}{3}x - 2 \\right) = \\frac{1}{3}x - 1$\n\n**Step 4: Set up the final equation.**\nWe are told that Melanie has 5 vacuum cleaners left.\nTotal remaining = (Inventory at green) + (Inventory at red) + (Inventory at orange)\n$5 = \\frac{2}{3}x + \\left( \\frac{2}{3}x - 2 \\right) + \\left( \\frac{1}{3}x - 1 \\right)$\n\n**Step 5: Solve for $x$.**\nCombine the $x$ terms:\n$5 = \\left( \\frac{2}{3}x + \\frac{2}{3}x + \\frac{1}{3}x \\right) - (2 + 1)$\n$5 = \\left( \\frac{5}{3}x \\right) - 3$\n\nAdd 3 to both sides:\n$5 + 3 = \\frac{5}{3}x$\n$8 = \\frac{5}{3}x$\n\nMultiply both sides by $\\frac{3}{5}$:\n$x = 8 \\times \\frac{3}{5}$\n$x = \\",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0014",
+   "pred": "To find the percentage of students enrolled in hip-hop dance, we will break down the problem step by step, calculating the number of students in each category and then determining the total percentage.\n\n**Step 1: Calculate the number of students in each category.**\nThe total number of students is 20.\n\n*   **Contemporary Dance:**\n    The problem states that 20% of the students enrolled in contemporary dance.\n    $$20\\% \\text{ of } 20 = 0.20 \\times 20 = 4 \\text{ students}$$\n\n*   **Jazz Dance:**\n    The problem states that 25% of the *remaining* students enrolled in jazz dance.\n    First, we calculate the number of students in contemporary dance:\n    $$4 \\text{ students}$$\n    \n    Next, we find the remaining students after contemporary dance:\n    $$20 - 4 = 16 \\text{ students}$$\n    \n    Now, calculate 25% of this remaining group:\n    $$25\\% \\text{ of } 16 = 0.25 \\times 16 = 4 \\text{ students}$$\n\n*   **Hip-Hop Dance:**\n    The problem states that the *rest* of the students enrolled in hip-hop dance.\n    First, we sum the students in the other two categories:\n    $$4 \\text{ (contemporary)} + 4 \\text{ (jazz)} = 8 \\text{ students}$$\n    \n    Finally, calculate the remaining percentage for hip-hop:\n    $$100\\% - 40\\% (\\text{contemporary}) - 25\\% (\\text{jazz}) = 35\\%$$\n    $$35\\% \\text{ of } 20 = 0.35 \\times 20 = 7 \\text{ students}$$\n\n**Step 2: Calculate the total percentage of students enrolled in hip-hop dance.**\nWe have identified that 7 students are in hip-hop dance.\nThe total number of students is 20.\n$$\\text{Percentage} = \\left( \\frac{7}{20} \\right) \\times 100\\%$$\n$$\\text{Percentage} = 0.35 \\times 100\\%",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0015",
+   "pred": "To determine the profit the merchant can make, we need to calculate the potential profit for each purchase plan based on the given percentage increases.\n\n**Step 1: Calculate the profit for the jewelry plan.**\n*   **Initial Value:** $5,000\n*   **Increase:** 2.5%\n*   **Calculation:**\n    $$ \\text{Profit} = 5,000 \\times 0.025 $$\n    $$ \\text{Profit} = 125 $$\n*   **Total Value after Increase:** $5,000 + 125 = 5,125$\n\n**Step 2: Calculate the profit for the electronic gadgets plan.**\n*   **Initial Value:** $8,000\n*   **Increase:** 1.2%\n*   **Calculation:**\n    $$ \\text{Profit} = 8,000 \\times 0.012 $$\n    $$ \\text{Profit} = 96 $$\n*   **Total Value after Increase:** $8,000 + 96 = 8,096$\n\n**Step 3: Compare the total values to find the maximum profit.**\n*   Jewelry Plan Total Value: $5,125\n*   Electronic Gadgets Plan Total Value: $8,096\n*   Since $8,096 > 5,125$, the merchant should choose the electronic gadgets plan.\n\n**Step 4: Calculate the final profit.**\n*   **Profit:** $8,096 - 5,000 = 3,096$\n\n#### 3096",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0016",
+   "pred": "To solve this problem, we need to determine the distance each train traveled during the first day and the second day.\n\n**Step 1: Analyze the first day**\n*   The trains travel **westward** for **80 miles**.\n*   Since the problem states they travel \"for 80 miles\" in this direction, the distance covered is simply the length of the trip.\n*   Distance traveled (Day 1) = **80 miles**.\n\n**Step 2: Analyze the second day**\n*   The trains travel **northward** for **150 miles**.\n*   The distance covered is the length of the trip.\n*   Distance traveled (Day 2) = **150 miles**.\n\n**Step 3: Calculate the total distance**\n*   Total distance = Distance traveled (Day 1) + Distance traveled (Day 2)\n*   Total distance = $80 + 150$\n*   Total distance = **230 miles**\n\n#### 230",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0017",
+   "pred": "To calculate Jill's annual salary, we need to determine her earnings for each role over the specified number of weeks and then sum them up.\n\n**Step 1: Calculate earnings for the teacher role.**\n*   **Hourly Rate:** $20 per hour\n*   **Weekly Hours:** 35 hours\n*   **Weekly Earnings:** $20 \\times 35 = \\$700$\n*   **Annual Hours:** 50 weeks\n*   **Annual Earnings:** $700 \\times 50 = \\$35,000$\n\n**Step 2: Calculate earnings for the cheerleading coach role.**\n*   **Hourly Rate:** $30 per hour\n*   **Weekly Hours:** 15 hours\n*   **Weekly Earnings:** $30 \\times 15 = \\$450$\n*   **Annual Hours:** 50 weeks\n*   **Annual Earnings:** $450 \\times 50 = \\$22,500$\n\n**Step 3: Calculate total annual salary.**\n*   **Total Earnings:** $\\$35,000 \\text{ (teacher)} + \\$22,500 \\text{ (coach)}$\n*   **Total Earnings:** $\\$57,500$\n\n#### 57500",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0018",
+   "pred": "To find the total number of dozens of eggs Claire will eat, we need to break down the problem into logical steps.\n\n**Step 1: Calculate the total number of eggs per week.**\nClaire makes 3 eggs per morning.\nThere are 5 days in a week.\n$$3 \\text{ eggs/morning} \\times 5 \\text{ days/week} = 15 \\text{ eggs/week}$$\n\n**Step 2: Calculate the total number of eggs in 4 weeks.**\nWe multiply the weekly total by the number of weeks (4).\n$$15 \\text{ eggs/week} \\times 4 \\text{ weeks} = 60 \\text{ eggs}$$\n\n**Step 3: Convert the total number of eggs to dozens.**\nThere are 12 eggs in a dozen.\n$$60 \\text{ eggs} \\div 12 \\text{ eggs/dozen} = 5 \\text{ dozens}$$\n\n#### 5",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0019",
+   "pred": "To find the required speed, we need to determine the total distance and the total time taken for the first part of the hike, then calculate the remaining time needed to achieve the target average speed.\n\n**Step 1: Calculate the total distance.**\nMarissa hikes a total of 12 miles.\n$$ \\text{Total Distance} = 12 \\text{ miles} $$\n\n**Step 2: Calculate the total time taken for the first part of the hike.**\n*   **First segment:** She walks 4 miles in 1 hour.\n    $$ \\text{Time}_1 = 1 \\text{ hour} $$\n*   **Second segment:** She walks the next 2 miles in another hour.\n    $$ \\text{Time}_2 = 1 \\text{ hour} $$\n*   **Total Time:**\n    $$ \\text{Total Time} = \\text{Time}_1 + \\text{Time}_2 = 1 + 1 = 2 \\text{ hours} $$\n\n**Step 3: Calculate the remaining distance.**\nThe remaining distance is the total distance minus the first segment.\n$$ \\text{Remaining Distance} = 12 - 4 = 8 \\text{ miles} $$\n\n**Step 4: Calculate the remaining time needed.**\nWe need the average speed to be 4 miles per hour.\n$$ \\text{Remaining Time} = \\frac{\\text{Remaining Distance}}{\\text{Target Speed}} $$\n$$ \\text{Remaining Time} = \\frac{8}{4} = 2 \\text{ hours} $$\n\n**Step 5: Calculate the required speed.**\nThe formula for average speed is:\n$$ \\text{Average Speed} = \\frac{\\text{Total Distance}}{\\text{Total Time}} $$\nWe know the target average speed is 4 mph and the total time is 2 hours. We need to find the speed for the remaining distance.\n\nLet $v$ be the speed for the remaining 8 miles.\n$$ 4 = \\frac{8}{v} $$\n$$ v = \\frac{8}{4} $$\n$$ v = 2 $$\n\nAlternatively, using the remaining time calculated in Step 4:\n$$ \\text{Remaining Speed} = \\frac{\\text{Remaining Distance}}{\\text{Remaining Time}} = \\frac{8 \\text{ miles}}{2 \\text{ hours}}",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0020",
+   "pred": "To solve this problem, we need to track the amount of water in the two containers after each pour, accounting for the spillage.\n\n**Step 1: Analyze the initial state**\n*   **Orange Drink:** 10 liters total.\n    *   Water content: $2/3$ of the total.\n    *   Water amount = $10 \\times \\frac{2}{3} = \\frac{20}{3}$ liters.\n*   **Pineapple Drink:** 15 liters total.\n    *   Water content: $3/5$ of the total.\n    *   Water amount = $15 \\times \\frac{3}{5} = 9$ liters.\n\n**Step 2: Perform the first pour**\n*   **Action:** Pour the orange drink into the pineapple drink.\n*   **Volume transferred:** 10 liters.\n*   **Spillage:** 1 liter is spilled from the orange drink.\n*   **Remaining Orange Drink:** $10 - 1 = 9$ liters.\n*   **Water in Orange Drink:** $20/3$ liters.\n*   **Water in Pineapple Drink:** $9$ liters.\n*   **Total Water in System:** $\\frac{20}{3} + 9 = \\frac{20}{3} + \\frac{27}{3} = \\frac{47}{3}$ liters.\n\n**Step 3: Perform the second pour**\n*   **Action:** Pour the remaining orange drink into the pineapple drink.\n*   **Volume transferred:** 9 liters.\n*   **Spillage:** 1 liter is spilled from the orange drink.\n*   **Remaining Orange Drink:** $9 - 1 = 8$ liters.\n*   **Water in Orange Drink:** $\\frac{20}{3}$ liters.\n*   **Water in Pineapple Drink:** $9 + 9 = 18$ liters.\n*   **Total Water in System:** $\\frac{20}{3} + 18 = \\frac{20}{3} + \\frac{54}{3} = \\frac{74}{3}$ liters.\n\n**Step 4: Calculate the final amount of water**\n*   The question asks for the amount of water in the **remaining 24 liters**.\n*",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0021",
+   "pred": "To find the age of Raymond's son, we need to determine the age of Raymond at the time of his son's birth and then subtract that from Samantha's current age.\n\n**Step 1: Determine Samantha's current age.**\nThe problem states that Samantha is now 31 years old.\n$$Age_{Samantha} = 31$$\n\n**Step 2: Determine Raymond's current age.**\nWe are told that Raymond was born 6 years before Samantha.\n$$Age_{Raymond} = Age_{Samantha} - 6$$\n$$Age_{Raymond} = 31 - 6 = 25$$\n\n**Step 3: Determine Raymond's age at the time of his son's birth.**\nRaymond had a son at the age of 23.\n$$Age_{Raymond\\_at\\_son\\_birth} = 23$$\n\n**Step 4: Calculate the age of Raymond's son.**\nThe age of the son is the difference between Raymond's age at the time of the birth and the age of Raymond at that time.\n$$Age_{Son} = Age_{Raymond\\_at\\_son\\_birth} - Age_{Raymond}$$\n$$Age_{Son} = 23 - 25$$\n$$Age_{Son} = -2$$\n\nA negative age indicates that the son was born before Raymond was born.\n\n**Step 5: Calculate the time elapsed.**\nThe age of the son is the number of years ago.\n$$Years\\_Ago = -2$$\n\nThe question asks \"how many years ago\", which implies a positive number representing the time elapsed. Since the son was born 2 years before Raymond was born, 2 years ago was the time of the birth.\n\n#### 2",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0022",
+   "pred": "To find the total number of DVDs Billy sold, let's break down the sales based on the number of customers and the number of DVDs each customer bought.\n\n**1. Analyze the first group of customers:**\n*   **Number of customers:** 3\n*   **Sales per customer:** 1 DVD\n*   **Total sales:** $3 \\text{ customers} \\times 1 \\text{ DVD/customer} = 3 \\text{ DVDs}$\n\n**2. Analyze the second group of customers:**\n*   **Number of customers:** 2\n*   **Sales per customer:** 2 DVDs\n*   **Total sales:** $2 \\text{ customers} \\times 2 \\text{ DVDs/customer} = 4 \\text{ DVDs}$\n\n**3. Analyze the third group of customers:**\n*   **Number of customers:** 3\n*   **Sales per customer:** 0 DVDs (they don't buy any)\n*   **Total sales:** $3 \\text{ customers} \\times 0 \\text{ DVDs/customer} = 0 \\text{ DVDs}$\n\n**4. Calculate the total:**\n*   Total DVDs = (Sales from first group) + (Sales from second group) + (Sales from third group)\n*   Total DVDs = $3 + 4 + 0$\n*   Total DVDs = $7$\n\nBilly sold a total of 7 DVDs on Tuesday.\n\n#### 7",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0023",
+   "pred": "To solve this problem, we need to calculate the total distance the candle melts during the specified time period and then subtract that distance from the initial length of the candle.\n\n**Step 1: Determine the total time duration.**\nThe candle burns from 1:00 PM to 5:00 PM.\n- Start time: 1:00 PM\n- End time: 5:00 PM\n- Duration: $5 \\text{ hours} - 1 \\text{ hour} = 4 \\text{ hours}$.\n\n**Step 2: Calculate the total distance melted.**\nThe problem states that the candle melts by **2 centimeters every hour**.\n- Total distance = (Melt rate) $\\times$ (Total time)\n- Total distance = $2 \\text{ cm/hour} \\times 4 \\text{ hours} = 8 \\text{ cm}$.\n\n**Step 3: Calculate the final length of the candle.**\n- Initial length: Let's assume the candle is 100 cm long (this is a standard assumption for such problems unless specified otherwise).\n- Final length = Initial length - Total melted distance\n- Final length = $100 \\text{ cm} - 8 \\text{ cm} = 92 \\text{ cm}$.\n\nAlternatively, if we assume the initial length is $L$, the final length is $L - 8$. However, since the question asks for a specific numeric answer, we must assume the initial length is 100 cm.\n\n**Calculation:**\n$$100 - 8 = 92$$\n\n#### 92",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0024",
+   "pred": "To find the original price of the book, we can set up an equation based on the given information.\n\nLet $x$ be the original price of the book.\n\n1.  **Identify the discount amount**: The book was discounted by 25%. The amount of the discount is $25\\%$ of $x$.\n    $$ \\text{Discount} = 0.25x $$\n\n2.  **Identify the final price**: The final price after the discount is given as $19.50.\n    $$ \\text{Final Price} = \\text{Original Price} - \\text{Discount} $$\n    $$ 19.50 = x - 0.25x $$\n\n3.  **Simplify the equation**:\n    Combine the terms with $x$:\n    $$ 19.50 = 0.75x $$\n\n4.  **Solve for $x$**:\n    Divide both sides by $0.75$:\n    $$ x = \\frac{19.50}{0.75} $$\n\n    To make the division easier, we can multiply the numerator and denominator by 100 to remove decimals:\n    $$ x = \\frac{1950}{75} $$\n\n    Now, divide 1950 by 75:\n    $$ 1950 \\div 75 = 26 $$\n\n    Alternatively, you can see that $0.75$ is the same as $\\frac{3}{4}$.\n    $$ x = 19.50 \\div \\frac{3}{4} = 19.50 \\times \\frac{4}{3} $$\n    $$ 19.50 \\div 3 = 6.5 $$\n    $$ 6.5 \\times 4 = 26 $$\n\nThe original price of the book was $26.00.\n\n#### 26",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0025",
+   "pred": "To find the number of boxes of pizza Marie ordered, we need to determine the total cost of all the items she purchased and subtract that from her total budget of $50.\n\n**Step 1: Calculate the cost of the milk.**\nMarie ordered 5 packs of milk at $3 each.\n$$ \\text{Cost of milk} = 5 \\times 3 = 15 $$\n\n**Step 2: Calculate the cost of the apples.**\nMarie ordered 4 apples at $1.50 each.\n$$ \\text{Cost of apples} = 4 \\times 1.50 = 6 $$\n\n**Step 3: Calculate the cost of the chicken meal.**\nThe cost of the chicken meal is given directly as $12.\n$$ \\text{Cost of chicken} = 12 $$\n\n**Step 4: Calculate the cost of the pizza boxes.**\nLet $x$ be the number of boxes of pizza.\nThe cost of one box is $8.50.\n$$ \\text{Cost of pizza} = 8.50x $$\n\n**Step 5: Set up the equation for the total cost.**\nThe sum of the costs of all items must equal the total amount paid ($50).\n$$ \\text{Cost of milk} + \\text{Cost of apples} + \\text{Cost of chicken} + \\text{Cost of pizza} = \\text{Total Cost} $$\n$$ 15 + 6 + 12 + 8.50x = 50 $$\n\n**Step 6: Solve for $x$.**\nFirst, add the known costs together:\n$$ 15 + 6 + 12 = 33 $$\nSo the equation becomes:\n$$ 33 + 8.50x = 50 $$\n\nSubtract 33 from both sides:\n$$ 8.50x = 50 - 33 $$\n$$ 8.50x = 17 $$\n\nDivide by 8.50 to isolate $x$:\n$$ x = \\frac{17}{8.50} $$\n$$ x = \\frac{170}{85} $$\n$$ x = 2 $$\n\nMarie ordered 2 boxes of pizza.\n\n#### 2",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0026",
+   "pred": "To find the total amount Mishka spent, we need to calculate the cost for each category of clothing and then sum them up.\n\n**1. Calculate the cost of shorts:**\nMishka bought 3 pairs of shorts.\n*   Cost per pair: $16.50\n*   Total cost for shorts = $16.50 \\times 3$\n*   Calculation: $16.50 \\times 3 = 49.50$\n\n**2. Calculate the cost of pants:**\nMishka bought 3 pairs of pants.\n*   Cost per pair: $22.50\n*   Total cost for pants = $22.50 \\times 3$\n*   Calculation: $22.50 \\times 3 = 67.50$\n\n**3. Calculate the cost of shoes:**\nMishka bought 3 pairs of shoes.\n*   Cost per pair: $42.00\n*   Total cost for shoes = $42.00 \\times 3$\n*   Calculation: $42.00 \\times 3 = 126.00$\n\n**4. Calculate the total spending:**\nNow, add the costs for all three categories together.\n*   Total = (Cost of shorts) + (Cost of pants) + (Cost of shoes)\n*   Total = $49.50 + 67.50 + 126.00$\n\nLet's do the addition step-by-step:\n*   $49.50 + 67.50 = 117.00$\n*   $117.00 + 126.00 = 243.00$\n\nMishka spent a total of $243.00.\n\n#### 243",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0027",
+   "pred": "To find the total amount Cynthia will spend on ice cream, we need to calculate the cost for each day she eats ice cream and then sum these costs for the 60 days.\n\n**Step 1: Determine the cost of one serving.**\nCynthia buys cartons with 15 servings each.\n*   Cost per carton: $4.00\n*   Number of servings per carton: 15\n*   Cost per serving = $\\frac{\\$4.00}{15}$\n*   Cost per serving $\\approx \\$0.2667$ (or $\\frac{4}{15}$)\n\n**Step 2: Determine the daily cost.**\nCynthia eats one serving every night.\n*   Number of servings per night: 1\n*   Number of days: 60\n*   Daily cost = $1 \\text{ serving} \\times \\$0.2667 \\text{ per serving}$\n*   Daily cost = $\\frac{4}{15} \\times 1 = \\frac{4}{15}$\n\n**Step 3: Calculate the total cost for 60 days.**\n*   Total cost = Daily cost $\\times$ Number of days\n*   Total cost = $\\frac{4}{15} \\times 60$\n*   Total cost = $\\frac{4 \\times 60}{15}$\n*   Total cost = $\\frac{240}{15}$\n*   Total cost = $16$\n\nAlternatively, you can simplify the fraction first:\n*   $\\frac{4}{15} \\times 60 = 4 \\times \\frac{60}{15} = 4 \\times 4 = 16$\n\nCynthia will spend a total of $16.00.\n\n#### 16",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0028",
+   "pred": "To find the distance Henry traveled between his first and second stops, we can break the problem down into logical steps.\n\n**Step 1: Determine the total distance of the trip.**\nThe problem states that Henry made a 60-mile bike trip.\n$$ \\text{Total Distance} = 60 \\text{ miles} $$\n\n**Step 2: Determine the distance of the first stop.**\nHenry stopped after 20 miles.\n$$ \\text{Distance}_1 = 20 \\text{ miles} $$\n\n**Step 3: Determine the distance of the second stop.**\nThe problem states that his second stop was 15 miles *before* the end of the trip.\nSince the trip started at mile 0 and ended at mile 60, \"before the end\" means subtracting 15 miles from the total distance.\n$$ \\text{Distance}_2 = 60 - 15 = 45 \\text{ miles} $$\n\n**Step 4: Calculate the distance traveled between the two stops.**\nThe distance between two stops is the difference between the distance of the second stop and the distance of the first stop.\n$$ \\text{Distance} = \\text{Distance}_2 - \\text{Distance}_1 $$\n$$ \\text{Distance} = 45 - 20 = 25 \\text{ miles} $$\n\nAlternatively, you can think of it as the distance from the first stop to the end of the trip (45 miles) minus the distance from the first stop to the first stop (20 miles).\n$$ 45 - 20 = 25 $$\n\n#### 25",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0029",
+   "pred": "Let $x$ be the cost of one pair of boots.\n\nWe are given the following information:\n1.  The cost of two pairs of high heels is $5$ dollars less than the boots.\n    $$2 \\times (\\text{cost of heels}) = x - 5$$\n2.  One pair of heels costs $33$.\n3.  The other pair of heels costs twice as much as the first pair.\n    $$\\text{Cost of second heel pair} = 2 \\times 33 = 66$$\n\nNow we can set up the equation for the total cost of the heels:\n$$33 + 66 = 99$$\n\nSubstitute this sum back into the equation from step 1:\n$$99 = x - 5$$\n\nTo find $x$, add $5$ to both sides:\n$$x = 99 + 5$$\n$$x = 104$$\n\nThe cost of one pair of boots is $104$.\n\n#### 104",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0030",
+   "pred": "To solve this problem, we will break it down into two main steps: first, determining the individual ages of Darrell and Allen based on the given ratio and total age; second, calculating Allen's age 10 years from now.\n\n### Step 1: Determine the individual ages\n\nWe are given that Darrell and Allen's ages are in the ratio $7:11$. Let $x$ be the number of years ago when their ages were in this ratio.\nThe current ages are $7x$ and $11x$.\n\nWe are also given that their total current age is $162$.\nThe equation for their current ages is:\n$$7x + 11x = 162$$\n\nCombine like terms:\n$$18x = 162$$\n\nSolve for $x$:\n$$x = \\frac{162}{18}$$\n$$x = 9$$\n\nNow, calculate the current ages:\n*   Darrell's current age: $7 \\times 9 = 63$\n*   Allen's current age: $11 \\times 9 = 99$\n\n### Step 2: Calculate Allen's age 10 years from now\n\nWe need to find Allen's age 10 years from now.\n*   Allen's current age is $99$.\n*   Adding 10 years to the current age:\n    $$99 + 10 = 109$$\n\n### Conclusion\n\nAllen's age 10 years from now is 109.\n\n#### 109",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0031",
+   "pred": "To find the average guess, we need to calculate the value of each person's guess and then find the mean of those three numbers.\n\n**Step 1: Calculate the first guess.**\nThe first person says 80 jelly beans.\n$$G_1 = 80$$\n\n**Step 2: Calculate the second guess.**\nThe second person says 20 more than half the first one.\nFirst, find half of the first guess:\n$$\\frac{1}{2} \\times 80 = 40$$\nThen, add 20 to that result:\n$$G_2 = 40 + 20 = 60$$\n\n**Step 3: Calculate the third guess.**\nThe third person says 25% more than the first one.\nFirst, find 25% of the first guess:\n$$0.25 \\times 80 = 20$$\nNext, add this amount to the first guess:\n$$G_3 = 80 + 20 = 100$$\n\n**Step 4: Calculate the average.**\nThe average is the sum of the guesses divided by the number of people (3).\n$$\\text{Average} = \\frac{G_1 + G_2 + G_3}{3}$$\n$$\\text{Average} = \\frac{80 + 60 + 100}{3}$$\n$$\\text{Average} = \\frac{240}{3}$$\n$$\\text{Average} = 80$$\n\n#### 80",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0032",
+   "pred": "To find out how many hours John spends taking care of dogs each week, we need to break down the problem into logical steps.\n\n**Step 1: Calculate the daily hours per dog.**\nThe problem states that each dog takes 0.5 hours to walk and take care of their business each day.\nSince there are 10 dogs:\n$$10 \\text{ dogs} \\times 0.5 \\text{ hours/dog} = 5 \\text{ hours per day}$$\n\n**Step 2: Calculate the weekly hours per dog.**\nA week consists of 7 days.\n$$5 \\text{ hours/day} \\times 7 \\text{ days/week} = 35 \\text{ hours per week}$$\n\n**Step 3: Calculate the total weekly hours for all dogs.**\nSince there are 10 dogs, we multiply the weekly hours per dog by the number of dogs:\n$$35 \\text{ hours/week} \\times 10 \\text{ dogs} = 350 \\text{ hours/week}$$\n\nAlternatively, you can multiply the daily total by 7:\n$$5 \\text{ hours/day} \\times 7 \\text{ days} = 35 \\text{ hours/week}$$\n$$35 \\text{ hours/week} \\times 10 \\text{ dogs} = 350 \\text{ hours/week}$$\n\n#### 350",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0033",
+   "pred": "Let $g$ be the number of gold coins and $s$ be the number of silver coins.\n\nWe are given two pieces of information:\n1. The total number of coins is 110.\n2. There are 30 more gold coins than silver coins.\n\nWe can set up a system of equations based on this information:\n1. Total coins equation: $g + s = 110$\n2. Difference in coins equation: $g - s = 30$\n\nTo solve for $g$, we can add the two equations together:\n$(g + s) + (g - s) = 110 + 30$\n$2g = 140$\n$g = 70$\n\nAlternatively, we can subtract the second equation from the first:\n$(g + s) - (g - s) = 110 - 30$\n$2s = 80$\n$s = 40$\n\nNow that we know there are 40 silver coins, we can find the number of gold coins by subtracting the silver count from the total:\n$g = 110 - 40 = 70$\n\n#### 70",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0034",
+   "pred": "Let's break down the problem step by step.\n\n**1. Identify the given information:**\n*   Siobhan's jewels ($S$) = 2 fewer than Aaron's jewels ($A$).\n    *   Equation: $S = A - 2$\n*   Aaron's jewels ($A$) = 5 more than half of Raymond's jewels ($R$).\n    *   Equation: $A = \\frac{1}{2}R + 5$\n*   Raymond's jewels ($R$) = 40.\n\n**2. Calculate Aaron's jewels:**\n*   First, find half of Raymond's jewels:\n    $$ \\frac{1}{2} \\times 40 = 20 $$\n*   Next, add 5 to that result to get Aaron's jewels:\n    $$ A = 20 + 5 = 25 $$\n\n**3. Calculate Siobhan's jewels:**\n*   Now that we know Aaron has 25 jewels, we can find Siobhan's count using the relationship from step 1.\n    *   Siobhan has 2 fewer than Aaron.\n    *   $S = 25 - 2$\n    *   $S = 23$\n\n**Conclusion:**\nSiobhan has 23 jewels.\n\n#### 23",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0035",
+   "pred": "To find the total number of points Mike scored, we need to calculate the points earned in the first 20 minutes and the points earned in the second 20 minutes, then add them together.\n\n**Step 1: Calculate points scored in the first 20 minutes.**\nMike scores 4 points in the first 20 minutes.\n$$ \\text{Points}_1 = 4 $$\n\n**Step 2: Calculate points scored in the second 20 minutes.**\nThe problem states that in the second 20 minutes, he scores 25% more points than in the first 20 minutes.\nFirst, find 25% of the points from the first 20 minutes:\n$$ 25\\% \\text{ of } 4 = 0.25 \\times 4 = 1 $$\nNext, add this amount to the original points:\n$$ \\text{Points}_2 = 4 + 1 = 5 $$\n\n**Step 3: Calculate the total points.**\nAdd the points from both intervals:\n$$ \\text{Total Points} = \\text{Points}_1 + \\text{Points}_2 $$\n$$ \\text{Total Points} = 4 + 5 = 9 $$\n\n#### 9",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0036",
+   "pred": "To find out how much Terry spends on yogurt over 30 days, we need to calculate the total cost based on the number of yogurts he buys and the price per yogurt.\n\n**Step 1: Determine the number of yogurts bought.**\nTerry eats 2 yogurts a day.\nOver 30 days, the total number of yogurts is:\n$$2 \\text{ yogurts/day} \\times 30 \\text{ days} = 60 \\text{ yogurts}$$\n\n**Step 2: Determine the cost per yogurt.**\nThe sale offers 4 yogurts for $5.00.\nTo find the price per yogurt, divide the total cost by the number of yogurts:\n$$\\text{Price per yogurt} = \\frac{\\$5.00}{4} = \\$1.25$$\n\n**Step 3: Calculate the total cost.**\nNow, multiply the number of yogurts by the price per yogurt:\n$$\\text{Total Cost} = 60 \\text{ yogurts} \\times \\$1.25/\\text{yogurt}$$\n$$\\text{Total Cost} = \\$75.00$$\n\n#### 75",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0037",
+   "pred": "To find out how many lego sets John still has, we need to calculate the total cost of the video games he bought and subtract that amount from the total money he started with.\n\n**Step 1: Calculate the total cost of the video games.**\nJohn bought 8 video games, and each costs $20.\n$$ \\text{Total Cost} = 8 \\text{ games} \\times \\$20/\\text{game} = \\$160 $$\n\n**Step 2: Calculate the total money John started with.**\nHe started with 13 lego sets, each selling for $15.\n$$ \\text{Total Money} = 13 \\text{ sets} \\times \\$15/\\text{set} = \\$195 $$\n\n**Step 3: Calculate the remaining money.**\nSubtract the cost of the video games from the total money he had.\n$$ \\text{Remaining Money} = \\$195 - \\$160 = \\$35 $$\n\n**Step 4: Calculate the number of lego sets remaining.**\nSubtract the cost of the video games from the total money he started with.\n$$ \\text{Remaining Legos} = \\$195 - \\$160 = \\$35 $$\n\nSince each lego set is worth $15, we divide the remaining money by the value of one lego set.\n$$ \\text{Number of Legos} = \\$35 / \\$15 = 2.333... $$\n\nSince he cannot own a fraction of a lego set, he has 2 full sets remaining.\n\n#### 2",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0038",
+   "pred": "To find John's running speed, we need to calculate the total distance he runs in a week and divide it by the total number of hours he runs.\n\n**Step 1: Calculate the total distance run in a week.**\nJohn runs 60 miles a week.\n- Days per week: 7\n- Days he runs: 3\n- Days he does not run: $7 - 3 = 4$\n\nThe distance he runs is:\n$$ \\text{Distance} = 60 \\text{ miles} \\times 3 = 180 \\text{ miles} $$\n\n**Step 2: Calculate the total time he runs.**\nHe runs 3 hours on the first day.\n- Days he runs: 3\n- Hours per day: 3\n- Total hours: $3 \\times 3 = 9 \\text{ hours}$\n\n**Step 3: Calculate the speed.**\nSpeed is calculated as Total Distance divided by Total Time.\n$$ \\text{Speed} = \\frac{180 \\text{ miles}}{9 \\text{ hours}} = 20 \\text{ miles per hour} $$\n\n#### 20",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0039",
+   "pred": "To solve this problem, we need to break it down into logical steps: determining the speeds of Dana, calculating the time spent on each activity, and finally summing the distances traveled.\n\n### Step 1: Determine Dana's Speeds\n\nLet $S$ be Dana's walking speed.\nThe problem states:\n1.  She runs **four times faster** than she walks.\n    $$ \\text{Running Speed} = 4 \\times S $$\n2.  She skips at a rate that is **half as fast** as she can run.\n    $$ \\text{Skipping Speed} = \\frac{1}{2} \\times (\\text{Running Speed}) = \\frac{1}{2} \\times (4S) = 2S $$\n\nWe are given that she can skip at **3 miles per hour**.\n$$ 2S = 3 \\text{ mph} $$\n$$ S = 1.5 \\text{ mph} $$\n\nNow we can find the running speed:\n$$ \\text{Running Speed} = 4 \\times 1.5 = 6 \\text{ mph} $$\n\n### Step 2: Calculate Time Spent on Each Activity\n\nDana spends **one-third of the time running** and **two-thirds of the time walking**.\n\n*   **Time running ($T_{run}$):**\n    $$ T_{run} = \\frac{1}{3} \\times 6 \\text{ hours} = 2 \\text{ hours} $$\n\n*   **Time walking ($T_{walk}$):**\n    $$ T_{walk} = \\frac{2}{3} \\times 6 \\text{ hours} = 4 \\text{ hours} $$\n\n*   **Total Time ($T_{total}$):**\n    $$ T_{total} = 2 + 4 = 6 \\text{ hours} $$\n\n### Step 3: Calculate Total Distance Traveled\n\nThe total distance is the sum of the distances covered while running and while walking.\n\n*   **Distance running ($D_{run}$):**\n    $$ D_{run} = \\text{Running Speed} \\times T_{run} = 6 \\text{ mph} \\times 2 \\text{ hours} = 12 \\text{ miles} $$\n\n*   **Distance walking ($D_{walk}$):**\n    $$ D_{walk} = \\text{Walking Speed} \\times T",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0040",
+   "pred": "To find the age of Brandon's iPhone, let's break down the relationships between the ages of the four iPhones step by step.\n\n**1. Define the variables:**\nLet $B$ be the age of Ben's iPhone.\nLet $S$ be the age of Suzy's iPhone.\nLet $B_{old}$ be the age of Brandon's iPhone.\n\n**2. Translate the given statements into equations:**\n*   \"Brandon's iPhone is four times as old as Ben's iPhone\":\n    $$B_{old} = 4 \\times B$$\n*   \"Ben's iPhone is two times older than Suzy's iPhone\":\n    $$B = 2 \\times S$$\n*   \"Suzy's iPhone is 1 year old\":\n    $$S = 1$$\n\n**3. Solve for Suzy's iPhone's age:**\nSubstitute the value of $S$ into the second equation:\n$$B = 2 \\times 1$$\n$$B = 2$$\nSo, Ben's iPhone is 2 years old.\n\n**4. Solve for Brandon's iPhone's age:**\nNow substitute the value of $B$ into the first equation:\n$$B_{old} = 4 \\times 2$$\n$$B_{old} = 8$$\n\n**Conclusion:**\nBrandon's iPhone is 8 years old.\n\n#### 8",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0041",
+   "pred": "To solve this problem, we need to determine the effective distance Polly can throw the javelin when holding the sapphire gemstone.\n\n**Step 1: Analyze the base throwing distance without the gemstone.**\nThe problem states that without the gemstone, Polly can throw the javelin for a distance of **400 feet**.\n\n**Step 2: Analyze the effect of holding the gemstone.**\nThe problem states that when holding the gemstone, Polly can throw the javelin **three times farther** than when not holding the gemstone.\n\n**Step 3: Calculate the new throwing distance.**\nTo find the distance when holding the gemstone, we multiply the base distance by 3:\n$$ \\text{New Distance} = 400 \\text{ feet} \\times 3 = 1200 \\text{ feet} $$\n\n**Step 4: Determine the dragon's reach.**\nThe dragon's reach is defined as a distance of **1000 feet**.\n\n**Step 5: Calculate the maximum distance outside the dragon's reach.**\nWe need to find the distance outside the 1000-foot limit.\n$$ \\text{Distance Outside Reach} = \\text{New Distance} - \\text{Dragon's Reach} $$\n$$ \\text{Distance Outside Reach} = 1200 \\text{ feet} - 1000 \\text{ feet} $$\n$$ \\text{Distance Outside Reach} = 200 \\text{ feet} $$\n\nPolly can stand 200 feet outside the dragon's flames.\n\n#### 200",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0042",
+   "pred": "To find the number of pieces taken by the guests, we can work backwards from the total number of pieces remaining.\n\n**Step 1: Calculate the total number of pieces baked.**\nGrandma baked 5 pies, and each pie was cut into 8 pieces.\n$$5 \\text{ pies} \\times 8 \\text{ pieces/pie} = 40 \\text{ pieces total}$$\n\n**Step 2: Calculate the number of pieces remaining.**\nAfter the guests ate their pieces, there were 14 pieces remaining.\n$$40 \\text{ (total)} - 14 \\text{ (remaining)} = 26 \\text{ pieces taken}$$\n\n**Step 3: Verify the calculation.**\nIf 26 pieces were taken, then $26 + 14 = 40$. This matches the total number of pieces baked.\n\nThe number of pieces taken by the guests is 26.\n\n#### 26",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0043",
+   "pred": "To solve this problem, we need to determine the total number of servings in the bag and then calculate the total calories consumed, subtracting the target daily limit to find the remaining calories to be eaten.\n\n**Step 1: Calculate the total number of servings in the bag.**\nThe problem states that a 300g bag has 5 servings.\n$$ \\text{Total Servings} = 5 $$\n\n**Step 2: Calculate the total calories consumed.**\nWe are given that the bag contains 250 calories per serving.\n$$ \\text{Total Calories} = \\text{Servings} \\times \\text{Calories per serving} $$\n$$ \\text{Total Calories} = 5 \\times 250 = 1250 \\text{ calories} $$\n\n**Step 3: Determine the remaining calories to eat.**\nThe daily calorie target is 2000 calories.\n$$ \\text{Remaining Calories} = \\text{Target} - \\text{Calories Consumed} $$\n$$ \\text{Remaining Calories} = 2000 - 1250 = 750 \\text{ calories} $$\n\n**Step 4: Calculate the grams of chips to eat.**\nWe know the bag weighs 300g and contains 1250 calories.\nFirst, find the calories per gram:\n$$ \\text{Calories per gram} = \\frac{1250 \\text{ calories}}{300 \\text{ grams}} = \\frac{125}{30} = \\frac{25}{6} \\approx 4.1667 \\text{ calories/gram} $$\n\nNow, divide the remaining calories by the calories per gram to find the grams needed:\n$$ \\text{Grams} = \\frac{\\text{Remaining Calories}}{\\text{Calories per gram}} $$\n$$ \\text{Grams} = \\frac{750}{\\frac{25}{6}} $$\n$$ \\text{Grams} = 750 \\times \\frac{6}{25} $$\n$$ \\text{Grams} = 30 \\times 6 = 180 \\text{ grams} $$\n\nAlternatively, using the ratio directly:\n$$ \\text{Ratio} = \\frac{300 \\text{ g}}{12",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0044",
+   "pred": "To find Charlie's net profit, we need to calculate the total revenue from selling the candles and subtract the total cost of the supplies.\n\n**Step 1: Calculate the total cost of supplies.**\nThe problem states that one pound of beeswax and the wicks cost $10.00.\n*   Number of pounds = 20 candles $\\times$ 1 pound/candle = 20 pounds.\n*   Total cost = $10.00 \\times 20 = \\$200.00$.\n\n**Step 2: Calculate the total revenue.**\nThe problem states that each candle sells for $2.00.\n*   Number of candles = 20.\n*   Total revenue = $20 \\text{ candles} \\times \\$2.00/\\text{candle} = \\$40.00$.\n\n**Step 3: Calculate the net profit.**\nNet profit is calculated by subtracting the total cost from the total revenue.\n*   Net Profit = Total Revenue - Total Cost\n*   Net Profit = $\\$40.00 - \\$200.00 = -\\$160.00$.\n\nSince the profit is negative, Charlie incurs a loss.\n\n#### -160",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0045",
+   "pred": "To find the total number of hours Meredith spent writing articles, we need to calculate the number of articles written each day and then multiply by the time required to write one article.\n\n**Step 1: Calculate the number of articles written on Monday.**\nThe problem states that on Monday, she wrote 5 articles.\n$$ \\text{Articles on Monday} = 5 $$\n\n**Step 2: Calculate the number of articles written on Tuesday.**\nThe problem states that on Tuesday, she wrote \"2/5 times more articles\" than on Monday.\nFirst, we calculate the base amount (articles on Monday): 5.\nNext, we add the extra amount (2/5 of the base amount):\n$$ \\text{Extra articles} = \\frac{2}{5} \\times 5 = 2 $$\n$$ \\text{Total articles on Tuesday} = 5 + 2 = 7 $$\n\n**Step 3: Calculate the number of articles written on Wednesday.**\nThe problem states that on Wednesday, she wrote \"twice the number of articles she wrote on Tuesday.\"\n$$ \\text{Articles on Wednesday} = 2 \\times 7 = 14 $$\n\n**Step 4: Calculate the total number of articles.**\n$$ \\text{Total articles} = 5 (\\text{Monday}) + 7 (\\text{Tuesday}) + 14 (\\text{Wednesday}) = 26 $$\n\n**Step 5: Calculate the total hours spent writing.**\nThe problem states that an article takes an average of 4 hours to write.\n$$ \\text{Total hours} = \\text{Total articles} \\times \\text{Hours per article} $$\n$$ \\text{Total hours} = 26 \\times 4 = 104 $$\n\n#### 104",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0046",
+   "pred": "To find the number of Post-it notes in the package, let's break down the problem step by step.\n\n**1. Analyze the initial state:**\n*   Candice started with 80 post-it notes.\n\n**2. Analyze the purchase:**\n*   She stopped at a store and bought a package.\n*   Let $x$ be the number of notes in the package.\n*   After the purchase, she had $80 + x$ notes in total.\n\n**3. Analyze the usage:**\n*   At work, she placed a single note on each of 220 different cups.\n*   This means she used exactly 220 notes.\n*   The remaining notes are the ones she had after the purchase but before using them.\n\n**4. Set up the equation:**\nThe total number of notes remaining is the initial amount minus the notes used.\n$$ \\text{Remaining Notes} = \\text{Initial Notes} - \\text{Notes Used} $$\n$$ 23 = 80 - 220 $$\n\n**5. Solve for the package size ($x$):**\n$$ 23 = 80 - 220 $$\n$$ 23 = -140 $$\n\nThis result ($23 = -140$) indicates a mathematical inconsistency in the problem statement as written. It implies that the scenario described is impossible under standard arithmetic rules.\n\nHowever, in logic puzzles of this type, there is often a specific interpretation intended where the \"remaining\" count is calculated differently or there is a typo in the numbers provided. Let's re-read carefully: \"If she had 23 post-it notes remaining overall\".\n\nIf we strictly follow the math:\n$80 - 220 = -140$.\nThis means she would have had 140 notes *before* the purchase, or the purchase was negative.\n\nLet's consider if the \"remaining\" refers to the notes *after* the purchase but *before* the work, which is what the equation $80 - 220$ represents.\nIf the remaining amount is 23, then:\n$80 - 220 = 23$\n$-140 = 23$ (False)\n\nIs it possible the number of cups is different? No, it says 220.\nIs it possible",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0047",
+   "pred": "To find the total amount John spent on ties, we need to determine the cost of the blue ties and the cost of the red ties separately, then sum them up.\n\n**Step 1: Analyze the cost of blue ties**\nThe problem states that John bought twice as many red ties as blue ties.\n*   Let $B$ be the number of blue ties.\n*   Let $R$ be the number of red ties.\n*   We know $R = 2B$.\n*   The total number of ties is $B + R = B + 2B = 3B$.\n\nThe problem states that the red ties cost 50% more than the blue ties.\n*   Cost of Blue Ties = $40.\n*   Cost of Red Ties = Cost of Blue Ties + 50% of Cost of Blue Ties.\n*   Cost of Red Ties = $40 + 0.50 \\times 40$.\n*   Cost of Red Ties = $40 + 20 = 60$.\n\n**Step 2: Calculate the total cost**\nNow we sum the cost of the blue ties and the red ties to find the total amount spent.\n*   Total Cost = (Cost of Blue Ties) + (Cost of Red Ties)\n*   Total Cost = $40 + 60$\n*   Total Cost = $100$\n\n#### 100",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0048",
+   "pred": "To solve this problem, we need to convert the units so that they are all in the same system (feet) before performing the division.\n\n**Step 1: Convert the total length of the wire to feet.**\nThe total length of the wire is given as **4 feet**.\nThe length of each piece is given as **6 inches**.\n\n**Step 2: Convert the length of each piece to feet.**\nSince 1 foot = 12 inches, we divide the length of one piece by 12.\n$$6 \\text{ inches} \\div 12 = 0.5 \\text{ feet}$$\n\n**Step 3: Calculate the number of pieces.**\nNow, we divide the total length of the wire by the length of each piece.\n$$4 \\text{ feet} \\div 0.5 \\text{ feet/piece} = 8 \\text{ pieces}$$\n\nAlternatively, you can think of it this way:\nIf each piece is 0.5 feet long, then 4 feet is exactly 4 divided by 0.5, which equals 8.\n\n#### 8",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0049",
+   "pred": "To find the total number of unoccupied units, we can break the problem down into logical steps:\n\n**Step 1: Calculate the total number of units in the building.**\nThe building has 15 floors, and each floor contains 8 units.\n$$ \\text{Total Units} = 15 \\text{ floors} \\times 8 \\text{ units/floor} = 120 \\text{ units} $$\n\n**Step 2: Calculate the number of occupied units.**\nThe problem states that 3/4 of the building is occupied.\n$$ \\text{Occupied Units} = \\frac{3}{4} \\times 120 $$\n$$ \\text{Occupied Units} = 90 \\text{ units} $$\n\n**Step 3: Calculate the number of unoccupied units.**\nThe total number of units is the sum of occupied and unoccupied units.\n$$ \\text{Unoccupied Units} = \\text{Total Units} - \\text{Occupied Units} $$\n$$ \\text{Unoccupied Units} = 120 - 90 = 30 $$\n\nAlternatively, you can calculate the fraction of unoccupied units directly:\n$$ \\text{Unoccupied Fraction} = 1 - \\frac{3}{4} = \\frac{1}{4} $$\n$$ \\text{Unoccupied Units} = \\frac{1}{4} \\times 120 = 30 $$\n\n#### 30",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0050",
+   "pred": "To find out how much Lloyd makes on eggs per week, we need to break down the problem into logical steps: calculating the daily earnings, converting the daily rate to a weekly rate, and finally converting the weekly rate to a dollar amount.\n\n**Step 1: Calculate the number of eggs produced per day.**\nLloyd's chickens produce 252 eggs per day.\n$$252 \\text{ eggs/day}$$\n\n**Step 2: Calculate the number of eggs produced per week.**\nThere are 7 days in a week.\n$$252 \\text{ eggs/day} \\times 7 \\text{ days/week} = 1,764 \\text{ eggs/week}$$\n\n**Step 3: Calculate the total earnings per week.**\nLloyd sells the eggs for $2 per dozen.\nFirst, we need to determine how many dozen eggs are in 1,764 eggs.\n$$1,764 \\text{ eggs} \\div 12 \\text{ eggs/dozen} = 147 \\text{ dozen eggs}$$\nNext, multiply the number of dozen eggs by the price per dozen.\n$$147 \\text{ dozen} \\times \\$2/\\text{dozen} = \\$294$$\n\n**Step 4: Verify the weekly calculation.**\nAlternatively, we can multiply the daily earnings by 7:\n$$252 \\text{ eggs/day} \\times \\$2/\\text{dozen} \\times 7 \\text{ days} = 1,764 \\text{ eggs} \\times \\$2/\\text{dozen} = \\$294$$\n\nLloyd makes $294 on eggs per week.\n\n#### 294",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0051",
+   "pred": "To find the total time Tom takes to travel from 1 to 4 PM and then back, we need to calculate the time for each leg of the journey separately and then add them together.\n\n**Step 1: Calculate the time to travel from 1 to 4 PM.**\n*   **Distance:** 3 miles (from 1 to 4).\n*   **Speed:** 10 mph.\n*   **Formula:** Time = Distance / Speed\n*   **Calculation:** $3 \\text{ miles} / 10 \\text{ mph} = 0.3 \\text{ hours}$.\n*   **Convert to minutes:** $0.3 \\text{ hours} \\times 60 \\text{ minutes/hour} = 18 \\text{ minutes}$.\n\n**Step 2: Calculate the time to travel back from 4 PM to 1 PM.**\n*   **Distance:** 3 miles (from 4 to 1).\n*   **Speed:** 6 mph.\n*   **Formula:** Time = Distance / Speed\n*   **Calculation:** $3 \\text{ miles} / 6 \\text{ mph} = 0.5 \\text{ hours}$.\n*   **Convert to minutes:** $0.5 \\text{ hours} \\times 60 \\text{ minutes/hour} = 30 \\text{ minutes}$.\n\n**Step 3: Calculate the total time.**\n*   **Total Time:** Time (1 to 4) + Time (4 to 1)\n*   **Calculation:** $18 \\text{ minutes} + 30 \\text{ minutes} = 48 \\text{ minutes}$.\n\n#### 48",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0052",
+   "pred": "To solve this problem, we need to determine the total weight of the comic books and the total weight of the toys currently in the bag, and then calculate the number of toys to remove based on the remaining weight.\n\n**Step 1: Calculate the total weight of the comic books.**\nThe problem states that he removes 30 comic books, and each comic book weighs $1/4$ pound.\n$$ \\text{Total comic book weight} = 30 \\times \\frac{1}{4} = \\frac{30}{4} = 7.5 \\text{ pounds} $$\n\n**Step 2: Calculate the total weight of the toys.**\nThe problem states that each toy weighs $1/2$ pound.\n$$ \\text{Total toy weight} = \\text{Number of toys} \\times \\frac{1}{2} $$\nLet $T$ be the number of toys.\n$$ \\text{Total toy weight} = \\frac{T}{2} $$\n\n**Step 3: Set up the equation for the total weight.**\nThe total weight of the bag is the sum of the comic book weight and the toy weight.\n$$ \\text{Total weight} = 7.5 + \\frac{T}{2} $$\n\n**Step 4: Determine the remaining weight.**\nThe problem states that he needs to remove 15 pounds.\n$$ \\text{Remaining weight} = \\text{Total weight} - 15 $$\n$$ \\text{Remaining weight} = \\left( 7.5 + \\frac{T}{2} \\right) - 15 $$\n$$ \\text{Remaining weight} = \\frac{T}{2} - 7.5 $$\n\n**Step 5: Solve for the number of toys ($T$).**\nWe know the remaining weight is 15 pounds.\n$$ 15 = \\frac{T}{2} - 7.5 $$\nAdd 7.5 to both sides:\n$$ 15 + 7.5 = \\frac{T}{2} $$\n$$ 22.5 = \\frac{T}{2} $$\nMultiply both sides by 2:\n$$ T = 45 $$\n\nSo, he needs to remove 45 toys.\n\n#### 45",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0053",
+   "pred": "To determine how much more revenue the mechanic earned on Friday compared to Thursday, we need to calculate the total earnings for each day separately.\n\n**Step 1: Calculate Revenue for Thursday**\n*   **Tires repaired:** 6 truck tires + 4 car tires = 10 tires total.\n*   **Rate per tire:** $60 (truck) + $40 (car) = $100 per tire.\n*   **Total Revenue Thursday:** $100 \\times 10 = \\$1,000$.\n\n**Step 2: Calculate Revenue for Friday**\n*   **Tires repaired:** 12 car tires. (Note: The problem states \"doesn't repair any truck tires,\" so truck revenue is $0).\n*   **Rate per tire:** $40 (car).\n*   **Total Revenue Friday:** $12 \\times \\$40 = \\$480$.\n\n**Step 3: Calculate the Difference**\n*   **Difference:** Total Revenue Thursday - Total Revenue Friday\n*   **Calculation:** $\\$1,000 - \\$480 = \\$520$.\n\nThe mechanic earned $520 more on Thursday.\n\n#### 520",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0054",
+   "pred": "To find the total number of kittens the Doubtfire family now has, we need to calculate the number of kittens for each cat based on the information provided and then sum them up.\n\n**Step 1: Analyze Patchy's kittens**\n*   The problem states that Patchy has had **3 times** the number of adopted kittens.\n*   We are told Trixie has had **12** kittens.\n*   Therefore, Patchy's kittens = $3 \\times 12$.\n*   Calculation: $3 \\times 12 = 36$.\n*   So, Patchy has 36 kittens.\n\n**Step 2: Analyze Trixie's kittens**\n*   The problem explicitly states that Trixie has had **12** kittens.\n*   So, Trixie has 12 kittens.\n\n**Step 3: Calculate the total number of kittens**\n*   Total Kittens = (Kittens from Patchy) + (Kittens from Trixie)\n*   Total Kittens = $36 + 12$\n*   Calculation: $36 + 12 = 48$.\n\nThe Doubtfire family now has 48 kittens.\n\n#### 48",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0055",
+   "pred": "To solve this problem, we need to follow a logical sequence of steps:\n\n1.  **Calculate the initial number of lollipops:**\n    Jean starts with 30 lollipops.\n\n2.  **Calculate the number of lollipops remaining:**\n    Jean eats 2 lollipops.\n    $$30 - 2 = 28$$\n    Jean has 28 lollipops left.\n\n3.  **Determine the number of bags needed:**\n    Jean wants to package 2 lollipops in one bag.\n    To find the number of bags, we divide the remaining lollipops by the size of each bag:\n    $$28 \\div 2 = 14$$\n\nJean can fill 14 bags.\n\n#### 14",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0056",
+   "pred": "To determine how many times Peter can go to the movies, we need to divide his total budget by the cost of a single ticket.\n\n**Step 1: Identify the total budget.**\nPeter has **42** dollars.\n\n**Step 2: Identify the cost of a single ticket.**\nA ticket costs **$7**.\n\n**Step 3: Perform the division.**\nTo find the number of movies, divide the total budget by the cost per movie:\n$$42 \\div 7 = 6$$\n\n**Step 4: Verify the result.**\nIf he goes to the movies 6 times, the cost would be:\n$$6 \\times 7 = 42$$\nThis matches his budget exactly.\n\n#### 6",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0057",
+   "pred": "To find the maximum number of boxes, we need to determine the total weight of the truck and the boxes it can carry without exceeding the bridge's capacity.\n\n**Step 1: Calculate the weight of the empty truck.**\nThe problem states that the combined weight of the driver and the empty truck is 3755 pounds.\n$$ \\text{Weight of Driver + Empty Truck} = 3755 \\text{ lbs} $$\n$$ \\text{Weight of Empty Truck} = 3755 - 3755 = 0 \\text{ lbs} $$\n*(Note: The weight of the driver is not explicitly given, but since the total weight of the empty truck is 0, the driver's weight is also 0.)*\n\n**Step 2: Calculate the weight of the boxes.**\nEach box weighs 15 pounds.\n$$ \\text{Weight of one box} = 15 \\text{ lbs} $$\n\n**Step 3: Calculate the maximum number of boxes.**\nThe bridge can carry no more than 5000 pounds.\n$$ \\text{Total Weight Limit} = 5000 \\text{ lbs} $$\n$$ \\text{Maximum Boxes} = \\frac{\\text{Total Weight Limit}}{\\text{Weight of one box}} $$\n$$ \\text{Maximum Boxes} = \\frac{5000}{15} $$\n\nPerforming the division:\n$$ \\frac{5000}{15} = \\frac{1000}{3} \\approx 333.333... $$\n\nSince we cannot load a fraction of a box, we must round down to the nearest whole number.\n$$ \\text{Maximum Boxes} = 333 $$\n\n**Conclusion:**\nThe truck can carry 333 boxes.\n\n#### 333",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0058",
+   "pred": "To find the final price of Stephen's groceries, we need to work backwards from the final bill to determine the base cost of the groceries before any additional fees were added.\n\n**Step 1: Identify the final bill amount.**\nThe final bill is given as **$40.00**.\n\n**Step 2: Identify the delivery fee.**\nThe delivery vendor added a 25% fee to the final total.\n$$ \\text{Delivery Fee} = 25\\% \\text{ of } \\$40.00 $$\n$$ \\text{Delivery Fee} = 0.25 \\times 40.00 = \\$10.00 $$\n\n**Step 3: Identify the tip amount.**\nStephen added a tip of **$4.00**.\n\n**Step 4: Calculate the total fees.**\nAdd the delivery fee and the tip together to find the total amount charged for delivery and tips.\n$$ \\text{Total Fees} = \\$10.00 + \\$4.00 = \\$14.00 $$\n\n**Step 5: Calculate the base cost of the groceries.**\nSubtract the total fees from the final bill to find the amount that was actually charged for the groceries.\n$$ \\text{Base Cost} = \\text{Final Bill} - \\text{Total Fees} $$\n$$ \\text{Base Cost} = \\$40.00 - \\$14.00 = \\$26.00 $$\n\nThe final price of Stephen's groceries was $26.00.\n\n#### 26",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0059",
+   "pred": "To find the total number of raspberries, we need to add the number of clusters to the number of individual fruits within each cluster.\n\n**Step 1: Calculate the total number of fruit clusters.**\nThe bush has 6 clusters.\n$$6 \\text{ clusters}$$\n\n**Step 2: Calculate the total number of individual fruits.**\nEach cluster contains 20 fruit.\n$$20 \\text{ fruits/cluster} \\times 6 \\text{ clusters} = 120 \\text{ fruits}$$\n\n**Step 3: Calculate the total number of raspberries.**\nAdd the total number of fruit clusters to the total number of individual fruits.\n$$6 \\text{ clusters} + 120 \\text{ fruits} = 126 \\text{ raspberries}$$\n\n#### 126",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0060",
+   "pred": "To find the number of good oranges, we can break down the problem into logical steps based on the given information.\n\n**1. Analyze the Total Number of Oranges**\nThe problem states there are 25 oranges in total.\n$$ \\text{Total} = 25 $$\n\n**2. Analyze the \"Good\" Oranges**\nThe problem states that \"the rest are good.\"\nWe know the total is 25.\n$$ \\text{Good} = \\text{Total} - \\text{Bad} $$\n$$ \\text{Good} = 25 - 1 = 24 $$\n\n**3. Analyze the \"Unripe\" Oranges**\nThe problem states that \"20% are unripe.\"\nFirst, we calculate the number of unripe oranges:\n$$ \\text{Unripe} = 25 \\times 0.20 = 5 $$\n\n**4. Analyze the \"Sour\" Oranges**\nThe problem states that \"2 are sour.\"\n$$ \\text{Sour} = 2 $$\n\n**5. Analyze the \"Bad\" Oranges**\nThe problem states that \"1 is bad.\"\n$$ \\text{Bad} = 1 $$\n\n**6. Verify the Total**\nLet's sum the parts we have identified to ensure they add up to the total of 25:\n$$ \\text{Unripe} + \\text{Sour} + \\text{Bad} + \\text{Good} = 5 + 2 + 1 + 24 $$\n$$ 5 + 2 + 1 + 24 = 32 $$\n\n**7. Identify the Contradiction**\nThe sum of the parts (Unripe, Sour, Bad, Good) is 32.\nHowever, the total number of oranges is given as 25.\n$$ 32 \\neq 25 $$\n\nThis implies that the problem statement contains an inconsistency. It is impossible to satisfy all conditions simultaneously:\n- If there are 25 oranges total, and 1 is bad, then 24 must be good.\n- If 24 are good, then $24 \\times 100\\% = 2400\\%$ are unripe.\n- If 2400% are unripe, then $2400",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0061",
+   "pred": "To find the total amount Janet paid, we need to break down the costs into individual components and sum them up.\n\n**Step 1: Calculate the cost of the material.**\nJanet paid $500 for the material.\n*Cost Material = $500*\n\n**Step 2: Calculate the cost of the jeweler's work.**\nJanet paid an additional $800 for the jeweler to construct it.\n*Cost Jeweler = $800*\n\n**Step 3: Calculate the cost of the insurance.**\nJanet paid 10% of the total amount spent so far.\nFirst, let's find the total amount paid before insurance:\nTotal Amount = Cost Material + Cost Jeweler\nTotal Amount = $500 + $800 = $1,300\n\nNow, calculate 10% of this total:\nInsurance Cost = 10% of $1,300\nInsurance Cost = 0.10 \u00d7 $1,300 = $130\n\n**Step 4: Calculate the total amount paid.**\nAdd the insurance cost to the previous two amounts.\nTotal Paid = Insurance Cost + Cost Material + Cost Jeweler\nTotal Paid = $130 + $500 + $800\nTotal Paid = $1,300 + $800\nTotal Paid = $2,100\n\n#### 2100",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0062",
+   "pred": "To find Marcy's annual pension after she quits, we need to calculate the value of her pension at the time of her retirement and then apply the reduction formula.\n\n**Step 1: Calculate the total value of the pension at the time of retirement.**\nMarcy works for 40 years.\nThe annual pension is $50,000.\nThe total value of the pension at retirement is:\n$$ \\text{Total Value} = 50,000 \\times 40 = 2,000,000 $$\n\n**Step 2: Determine the time elapsed before retirement.**\nShe works for 40 years, and she becomes entitled to the pension 20 years after starting.\nTherefore, the time elapsed before retirement is:\n$$ \\text{Time Elapsed} = 40 - 20 = 20 \\text{ years} $$\n\n**Step 3: Calculate the value of the pension at the time of retirement.**\nThe problem states that starting after 20 years, she gets 5% of the value of the pension per year.\nThe value of the pension at the time of retirement is the total value calculated in Step 1.\n$$ \\text{Value at Retirement} = \\text{Total Value} \\times (0.05)^{\\text{Time Elapsed}} $$\n$$ \\text{Value at Retirement} = 2,000,000 \\times (0.05)^{20} $$\n\nLet's calculate $0.05^{20}$:\n$$ 0.05^{20} \\approx 9.536743164 \\times 10^{-10} $$\n$$ \\text{Value at Retirement} = 2,000,000 \\times 9.536743164 \\times 10^{-10} $$\n$$ \\text{Value at Retirement} \\approx 1,907,348.6328 $$\n\n**Step 4: Calculate the annual pension after quitting.**\nMarcy quits after 30 years.\nThe time elapsed from the start of her employment until she quits is:\n$$ \\text{Time Elapsed} = 30 \\text{ years} $$\n\nThe annual pension after quitting is the value of the pension at",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0063",
+   "pred": "To calculate the total amount Aleena paid, we need to break down the payment into two parts: the cost for the first half of the year and the cost for the second half of the year.\n\n**Step 1: Calculate the cost for the first half of the year.**\nThe problem states that the streaming company charged her the initial amount for the first half of the year.\n*   Monthly charge: $140\n*   Number of months in the first half: 6 months (January, February, March, April, May, June)\n*   Cost for first half = $140 \\times 6 = \\$840$\n\n**Step 2: Calculate the cost for the second half of the year.**\nThe problem states that she was charged 10% less money on the other half of the year.\n*   Monthly charge: $140\n*   Monthly discount: $140 \\times 0.10 = \\$14$\n*   Cost for second half = $140 - 14 = \\$126$\n\n**Step 3: Calculate the total amount paid.**\nAdd the cost of the first half and the cost of the second half together.\n*   Total payment = Cost of first half + Cost of second half\n*   Total payment = $840 + 126 = \\$966$\n\n#### 966",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0064",
+   "pred": "To find out how many miles Sophia can drive on a single tank of gas, we need to determine the total capacity of her tank and then calculate the distance she can travel using the fuel she has already used.\n\n**Step 1: Determine the total capacity of the tank.**\nThe owner's manual states that the tank holds **12 gallons**.\n\n**Step 2: Calculate the amount of gas currently in the tank.**\nSophia has traveled **100 miles** since the last fill. The problem states she needed to put in **4 gallons** to fill it up again.\n*   Total capacity = 12 gallons\n*   Gas used = 4 gallons\n*   Gas remaining = Total capacity - Gas used\n*   Gas remaining = $12 - 4 = 8$ gallons\n\n**Step 3: Calculate the distance she can drive on the remaining gas.**\nTo find the distance, we divide the remaining gas by the amount of gas required to travel one mile.\n*   Distance per gallon = $1 \\text{ mile} / 4 \\text{ gallons} = 0.25 \\text{ miles per gallon}$\n*   Total distance = Gas remaining $\\times$ Distance per gallon\n*   Total distance = $8 \\text{ gallons} \\times 0.25 \\text{ miles/gallon}$\n*   Total distance = $2$ miles\n\n**Conclusion:**\nSophia can drive 2 miles on a single tank of gas.\n\n#### 2",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0065",
+   "pred": "To solve this problem, we need to break it down into two parts: the time spent on TV and the time spent reading, and then multiply the total time by the number of times Jim does this.\n\n**Step 1: Calculate the time spent on TV.**\nJim spends 2 hours watching TV.\n*   Time on TV = 2 hours.\n\n**Step 2: Calculate the time spent reading.**\nJim reads for half as long as he watches TV.\n*   Time on TV = 2 hours.\n*   Time on reading = $2 \\text{ hours} / 2 = 1 \\text{ hour}$.\n\n**Step 3: Calculate the total time spent on TV and reading in one week.**\n*   Total time per week = Time on TV + Time on reading\n*   Total time per week = $2 \\text{ hours} + 1 \\text{ hour} = 3 \\text{ hours}$.\n\n**Step 4: Calculate the total time for 4 weeks.**\nJim does this 3 times a week.\n*   Total time for 4 weeks = Total time per week $\\times$ Number of times per week\n*   Total time for 4 weeks = $3 \\text{ hours/week} \\times 3 \\text{ weeks} = 9 \\text{ hours}$.\n\n#### 9",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0066",
+   "pred": "To find the total number of people sent by all four schools, we need to calculate the number of people for each school and then sum them up.\n\n**Step 1: Analyze the composition of one school's teams.**\n*   There are **4** schools.\n*   Each school has sent **2** teams (one girls' and one boys').\n*   Each team has **5** players.\n*   Each team has a **coach**.\n\n**Step 2: Calculate the number of people per school.**\n*   **Girls' Team:**\n    *   Players: $5 \\text{ players} \\times 1 \\text{ coach} = 5$ people.\n*   **Boys' Team:**\n    *   Players: $5 \\text{ players} \\times 1 \\text{ coach} = 5$ people.\n*   **Total people per school:** $5 + 5 = 10$ people.\n\n**Step 3: Calculate the total number of people sent by all schools.**\n*   Since there are 4 schools, we multiply the people per school by the number of schools.\n*   Total = (People per school) $\\times$ (Number of schools)\n*   Total = $10 \\times 4 = 40$ people.\n\n**Conclusion:**\nThere are 40 people in total who have all of the schools sent.\n\n#### 40",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0067",
+   "pred": "To find the total number of gems, we need to calculate the number of each type of gem (diamonds, rubies, and emeralds) and then sum them up.\n\n**Step 1: Calculate the number of rubies.**\nThe problem states there are 35 fewer rubies than diamonds.\n*   Number of diamonds = 175\n*   Number of rubies = $175 - 35$\n*   Number of rubies = $140$\n\n**Step 2: Calculate the number of emeralds.**\nThe problem states there are twice the number of emeralds than the rubies.\n*   Number of rubies = 140\n*   Number of emeralds = $140 \\times 2$\n*   Number of emeralds = $280$\n\n**Step 3: Calculate the total number of gems.**\nNow, add the number of diamonds, rubies, and emeralds together.\n*   Total gems = (Number of diamonds) + (Number of rubies) + (Number of emeralds)\n*   Total gems = $175 + 140 + 280$\n*   Total gems = $315 + 280$\n*   Total gems = $595$\n\n#### 595",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0068",
+   "pred": "To find the number of teachers, let's break down the problem step by step.\n\n**Step 1: Determine the number of girls.**\nThe problem states there are 60 girls.\n$$ \\text{Number of girls} = 60 $$\n\n**Step 2: Determine the number of boys.**\nThe problem states there are twice as many boys as girls.\n$$ \\text{Number of boys} = 2 \\times \\text{Number of girls} $$\n$$ \\text{Number of boys} = 2 \\times 60 = 120 $$\n\n**Step 3: Determine the total number of students.**\nThe problem states there are 5 students to every teacher.\n$$ \\text{Total students} = \\text{Number of teachers} \\times 5 $$\n\n**Step 4: Determine the total number of students in the school.**\nWe know the total number of students is the sum of boys and girls.\n$$ \\text{Total students} = \\text{Number of boys} + \\text{Number of girls} $$\n$$ \\text{Total students} = 120 + 60 = 180 $$\n\n**Step 5: Calculate the number of teachers.**\nWe can set up an equation where the total number of students equals the number of teachers multiplied by 5.\n$$ 180 = \\text{Number of teachers} \\times 5 $$\n\nTo find the number of teachers, divide the total number of students by 5:\n$$ \\text{Number of teachers} = \\frac{180}{5} $$\n$$ \\text{Number of teachers} = 36 $$\n\n#### 36",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0069",
+   "pred": "Let $x$ be the amount of money Bailey started with.\n\n1.  **Calculate the weekly allowance:**\n    Bailey receives a weekly allowance of $5 for 8 weeks.\n    $$ \\text{Weekly Allowance} = 5 \\times 8 = 40 $$\n\n2.  **Calculate the total money received after 8 weeks:**\n    After 8 weeks, she has received $40.\n    $$ \\text{Total Received} = 40 $$\n\n3.  **Set up the equation for the total amount:**\n    The problem states that at the end of the 8 weeks, her total amount is $100.\n    $$ \\text{Total Amount} = \\text{Initial Amount} + \\text{Total Received} $$\n    $$ 100 = x + 40 $$\n\n4.  **Solve for $x$:**\n    Subtract 40 from both sides of the equation:\n    $$ x = 100 - 40 $$\n    $$ x = 60 $$\n\nBailey started with $60.\n\n#### 60",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0070",
+   "pred": "To find out how much money Judy makes in 1 week, we need to break down the problem into logical steps:\n\n**Step 1: Calculate the total number of classes taught in one week.**\n*   Judy teaches 5 classes on weekdays.\n*   She teaches 8 classes on Saturday.\n*   Total classes per week = $5 + 8 = 13$ classes.\n\n**Step 2: Calculate the total number of students in one week.**\n*   Each class has 15 students.\n*   Total students per week = $13 \\text{ classes} \\times 15 \\text{ students/class}$.\n*   Calculation: $13 \\times 15 = 195$.\n*   So, there are 195 students in one week.\n\n**Step 3: Calculate the total revenue in one week.**\n*   Judy charges $15.00 per student.\n*   Total revenue = Total students $\\times$ Price per student.\n*   Total revenue = $195 \\times 15.00$.\n*   Calculation:\n    *   $195 \\times 10 = 1950$\n    *   $195 \\times 5 = 975$\n    *   $1950 + 975 = 2925$\n*   Alternatively: $195 \\times 15 = (200 - 5) \\times 15 = 3000 - 75 = 2925$.\n\n**Step 4: Determine the total amount in 1 week.**\n*   Since the question asks for the amount in 1 week, we do not multiply by the number of weeks (which is 7).\n*   Total money = $2925.00.\n\n#### 2925.00",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0071",
+   "pred": "To find the total number of instructions Kelian has to read, we need to calculate the sum of the instructions in both recipes.\n\n**Step 1: Determine the number of instructions in the first recipe.**\nThe problem states that the first recipe has 20 instructions.\n$$ \\text{Instructions}_{\\text{recipe 1}} = 20 $$\n\n**Step 2: Determine the number of instructions in the second recipe.**\nThe problem states that the second recipe has \"twice as many instructions\" as the first one.\n$$ \\text{Instructions}_{\\text{recipe 2}} = 2 \\times \\text{Instructions}_{\\text{recipe 1}} $$\n$$ \\text{Instructions}_{\\text{recipe 2}} = 2 \\times 20 = 40 $$\n\n**Step 3: Calculate the total number of instructions.**\nTo prepare both dishes, Kelian must read the instructions for both recipes.\n$$ \\text{Total Instructions} = \\text{Instructions}_{\\text{recipe 1}} + \\text{Instructions}_{\\text{recipe 2}} $$\n$$ \\text{Total Instructions} = 20 + 40 = 60 $$\n\n#### 60",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0072",
+   "pred": "To find the total money raised, we need to calculate the revenue from each type of dessert separately and then add them together.\n\n**Step 1: Calculate the revenue from brownies.**\nTommy sells 43 brownies at $3 per slice.\n$$ \\text{Revenue}_{\\text{brownies}} = 43 \\times 3 = 129 $$\n\n**Step 2: Calculate the revenue from cheesecakes.**\nTommy sells 23 slices of cheesecake at $4 per slice.\n$$ \\text{Revenue}_{\\text{cheesecakes}} = 23 \\times 4 = 92 $$\n\n**Step 3: Calculate the total money raised.**\nAdd the revenue from brownies and cheesecakes.\n$$ \\text{Total Revenue} = 129 + 92 = 221 $$\n\n#### 221",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0073",
+   "pred": "To find the total amount Shiela will pay each month, we need to break down the problem into logical steps:\n\n1.  **Calculate the total cost of the phones:**\n    Shiela bought 5 cell phones, and each costs $150.\n    $$ \\text{Total Cost} = 5 \\times 150 = 750 \\text{ dollars} $$\n\n2.  **Calculate the total interest charged:**\n    The interest is 2% per unit. Since there are 5 phones, the total interest is:\n    $$ \\text{Total Interest} = 5 \\times 2\\% = 5 \\times 0.02 = 0.10 \\text{ dollars} $$\n\n3.  **Calculate the total amount paid:**\n    The total amount paid is the sum of the total cost and the total interest.\n    $$ \\text{Total Amount} = \\text{Total Cost} + \\text{Total Interest} $$\n    $$ \\text{Total Amount} = 750 + 0.10 = 750.10 \\text{ dollars} $$\n\n4.  **Calculate the monthly payment:**\n    The total amount was paid over 3 months. To find the monthly payment, divide the total amount by 3.\n    $$ \\text{Monthly Payment} = \\frac{750.10}{3} $$\n    $$ \\text{Monthly Payment} = 250.0333... $$\n\n    Rounding to two decimal places (standard for currency), the monthly payment is $250.03.\n\n#### 250.03",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0074",
+   "pred": "To find the total amount Artie will make, we need to calculate the total revenue for each type of flower based on the given quantities and prices, then sum them up.\n\n**Step 1: Calculate the total revenue for marigolds.**\n*   Quantity: 12 pots\n*   Price per pot: $2.74\n*   Calculation: $12 \\times 2.74$\n    *   $12 \\times 2 = 24$\n    *   $12 \\times 0.7 = 8.4$\n    *   $12 \\times 0.04 = 0.48$\n    *   Sum: $24 + 8.4 + 0.48 = 32.88$\n*   Rounded to the nearest dollar: **$33**\n\n**Step 2: Calculate the total revenue for petunias.**\n*   Quantity: 9 pots\n*   Price per pot: $1.87\n*   Calculation: $9 \\times 1.87$\n    *   $9 \\times 1 = 9$\n    *   $9 \\times 0.8 = 7.2$\n    *   $9 \\times 0.07 = 0.63$\n    *   Sum: $9 + 7.2 + 0.63 = 16.83$\n*   Rounded to the nearest dollar: **$17**\n\n**Step 3: Calculate the total revenue for begonias.**\n*   Quantity: 17 pots\n*   Price per pot: $2.12\n*   Calculation: $17 \\times 2.12$\n    *   $17 \\times 2 = 34$\n    *   $17 \\times 0.1 = 1.7$\n    *   $17 \\times 0.02 = 0.34$\n    *   Sum: $34 + 1.7 + 0.34 = 36.04$\n*   Rounded to the nearest dollar: **$36**\n\n**Step 4: Calculate the total revenue.**\n*   Total Revenue = (Marigolds) + (Petunias) + (Begonias)",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0075",
+   "pred": "To find the average square footage of a level, we need to determine the total square footage of the sandcastle and divide it by the number of levels.\n\n**Step 1: Determine the total square footage of the sandcastle.**\nThe problem states that the top level has a square footage of 16.\nThe levels below the top one are 3 levels deep (since there are 4 levels total).\nThe square footage of each level below the top one is half the square footage of the level below it.\nLet $x$ be the square footage of the bottom level.\n- Top level: 16\n- 2nd level: $16 / 2 = 8$\n- 3rd level: $8 / 2 = 4$\n- Bottom level: $4 / 2 = 2$\n\nThe total square footage is the sum of these levels:\n$$ \\text{Total} = 16 + 8 + 4 + 2 = 30 $$\n\n**Step 2: Determine the number of levels.**\nThere are 4 levels in total.\n\n**Step 3: Calculate the average square footage.**\nThe average is the total square footage divided by the number of levels.\n$$ \\text{Average} = \\frac{\\text{Total Square Footage}}{\\text{Number of Levels}} $$\n$$ \\text{Average} = \\frac{30}{4} $$\n$$ \\text{Average} = 7.5 $$\n\n#### 7.5",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0076",
+   "pred": "To find the total number of bags of dog food Cecilia will use in the first year, we need to calculate the total cups of food required and then divide by the capacity of one bag.\n\n**Step 1: Calculate the total number of days in the first year.**\nA year is typically defined as 365 days.\n$$365 \\text{ days}$$\n\n**Step 2: Calculate the total cups of dog food required.**\nThe diet consists of two parts:\n1.  **First 180 days:** 1 cup per day.\n2.  **Remaining days (365 - 180 = 185 days):** 2 cups per day.\n\nWe sum these amounts:\n$$1 \\text{ cup} \\times 180 \\text{ days} + 2 \\text{ cups} \\times 185 \\text{ days}$$\n$$= 180 \\text{ cups} + 370 \\text{ cups}$$\n$$= 550 \\text{ cups total}$$\n\n**Step 3: Calculate the number of bags needed.**\nOne bag contains 110 cups. We divide the total cups by the number of cups per bag:\n$$\\frac{550 \\text{ cups}}{110 \\text{ cups/bag}}$$\n$$= 5 \\text{ bags}$$\n\n#### 5",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0077",
+   "pred": "To find the difference in the amount of laundry Raymond and David do, let's break down the relationships step by step.\n\n**1. Identify the given information:**\n*   Sarah does 400 pounds of laundry.\n*   Sarah does 4 times as much laundry as David.\n*   Raymond does half as much laundry as Sarah.\n\n**2. Calculate the laundry amount for David:**\nSince Sarah does 4 times as much as David, we can set up the equation:\n$$ \\text{David's laundry} = \\frac{\\text{Sarah's laundry}}{4} $$\n$$ \\text{David's laundry} = \\frac{400}{4} = 100 \\text{ pounds} $$\n\n**3. Calculate the laundry amount for Raymond:**\nSince Raymond does half as much as Sarah, we can set up the equation:\n$$ \\text{Raymond's laundry} = \\frac{\\text{Sarah's laundry}}{2} $$\n$$ \\text{Raymond's laundry} = \\frac{400}{2} = 200 \\text{ pounds} $$\n\n**4. Calculate the difference:**\nThe question asks for the difference between the amount of laundry Raymond and David do.\n$$ \\text{Difference} = \\text{Raymond's laundry} - \\text{David's laundry} $$\n$$ \\text{Difference} = 200 - 100 = 100 \\text{ pounds} $$\n\n#### 100",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0078",
+   "pred": "To find out how much money Vincent saves by buying 18 flowers at the better price, we need to determine the cost of the flowers in two different scenarios:\n1.  The cost of 18 flowers using the cheaper package.\n2.  The total cost of 18 flowers using the more expensive package.\n3.  The difference between these two totals.\n\n**Step 1: Determine the cost of 18 flowers using the cheaper package.**\nThe cheaper package consists of 2 flowers for $1.\nTo find the cost for 18 flowers, we divide the total price by the number of flowers in the package:\n$$ \\text{Cost per package} = \\frac{\\$1}{2} = \\$0.50 $$\n$$ \\text{Total cost for 18 flowers} = 18 \\times \\$0.50 = \\$9.00 $$\n\n**Step 2: Determine the cost of 18 flowers using the more expensive package.**\nThe more expensive package consists of 3 flowers for $2.50.\nTo find the cost for 18 flowers, we divide the total price by the number of flowers in the package:\n$$ \\text{Cost per package} = \\frac{\\$2.50}{3} = \\frac{5}{6} \\approx \\$0.8333... $$\n$$ \\text{Total cost for 18 flowers} = 18 \\times \\frac{5}{6} = 3 \\times 5 = \\$15.00 $$\n\n**Step 3: Calculate the savings.**\nSavings = Total cost (expensive) - Total cost (cheaper)\n$$ \\text{Savings} = \\$15.00 - \\$9.00 = \\$6.00 $$\n\nVincent saves $6.00 by buying 18 flowers at the better price.\n\n#### 6",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0079",
+   "pred": "To find the final cost, we need to calculate the total cost after applying the discount.\n\n**Step 1: Calculate the total cost of the grooming service.**\nThe cost of the grooming service is given as $100.\n\n**Step 2: Calculate the discounted price.**\nThe groomer offers a 30% discount. To find the discount amount, we calculate 30% of $100:\n$$0.30 \\times 100 = 30$$\n\nThe discount amount is $30.\n\n**Step 3: Subtract the discount from the total cost.**\nNow, subtract the discount amount from the original total cost to find the final price:\n$$100 - 30 = 70$$\n\nThe final cost is $70.\n\n#### 70",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0080",
+   "pred": "To solve this problem, we will break it down into logical steps:\n\n**Step 1: Calculate the total amount of water initially.**\nThe problem states that there were 24 liters of water.\n$$ \\text{Total Water} = 24 \\text{ liters} $$\n\n**Step 2: Calculate the amount of water each girl received.**\nEach girl received $\\frac{1}{6}$ of the total water.\n$$ \\text{Water per girl} = 24 \\times \\frac{1}{6} = 4 \\text{ liters} $$\nSince there are two girls, the total water consumed by the girls is:\n$$ 4 \\text{ liters} + 4 \\text{ liters} = 8 \\text{ liters} $$\n\n**Step 3: Calculate the amount of water the boy received.**\nThe boy received 6 liters of water.\n$$ \\text{Water consumed by boy} = 6 \\text{ liters} $$\n\n**Step 4: Calculate the remaining water.**\nTo find the amount left, subtract the total water consumed by the girls and the boy from the initial total amount.\n$$ \\text{Remaining Water} = \\text{Total Water} - (\\text{Water per girl} \\times 2) - \\text{Water by boy} $$\n$$ \\text{Remaining Water} = 24 - 8 - 6 $$\n$$ \\text{Remaining Water} = 10 \\text{ liters} $$\n\n#### 10",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0081",
+   "pred": "To find the number of stickers Charlie has left, we need to track the total number of stickers he started with, subtract the ones he bought, subtract the ones he gave away, and subtract the ones he used.\n\n**Step 1: Start with the initial number of stickers.**\nCharlie started with **10** stickers.\n\n**Step 2: Subtract the stickers he bought.**\nHe bought 21 stickers.\n$$10 - 21 = -11$$\nSince he cannot have negative stickers, he effectively has **0** stickers left from this transaction.\n\n**Step 3: Subtract the stickers he gave away.**\nHe gave 9 stickers to his sister.\n$$0 - 9 = -9$$\nAgain, since he cannot have negative stickers, he has **0** stickers left from this transaction.\n\n**Step 4: Subtract the stickers he used.**\nHe used 28 stickers to decorate the card.\n$$0 - 28 = -28$$\nHe has **0** stickers left from this transaction.\n\n**Step 5: Calculate the final result.**\nSince the total number of stickers he started with (10) was less than the number of stickers he bought (21), he ended up with a net loss of stickers.\n$$10 - 21 = -11$$\nThe final number of stickers Charlie has is **-11**.\n\n#### -11",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0082",
+   "pred": "To find the combined weight of Grace and Alex, we need to determine Alex's weight first and then add their individual weights together.\n\n**Step 1: Calculate Alex's weight.**\nThe problem states that Alex weighs 2 pounds less than 4 times what Grace weighs.\n*   Grace's weight = 125 pounds.\n*   4 times Grace's weight = $4 \\times 125 = 500$ pounds.\n*   Alex's weight = (4 times Grace's weight) - 2 pounds.\n*   Alex's weight = $500 - 2 = 498$ pounds.\n\n**Step 2: Calculate the combined weight.**\nNow, add Grace's weight and Alex's weight together.\n*   Combined weight = Grace's weight + Alex's weight\n*   Combined weight = $125 + 498$\n*   Combined weight = $623$ pounds.\n\n#### 623",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0083",
+   "pred": "To find the total number of thorns, we need to calculate the number of thorns for each rose bush and then multiply by the number of rose bushes.\n\n**Step 1: Calculate the number of thorns in one rose bush.**\nEach rose bush has 25 roses, and each rose has 8 thorns.\n$$25 \\text{ roses} \\times 8 \\text{ thorns/ros} = 200 \\text{ thorns}$$\n\n**Step 2: Calculate the total number of thorns.**\nDan plants 3 rose bushes, and each bush has 200 thorns.\n$$3 \\text{ bushes} \\times 200 \\text{ thorns/bush} = 600 \\text{ thorns}$$\n\n#### 600",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0084",
+   "pred": "Let $w$ be the number of wins and $l$ be the number of losses.\n\nWe are given two pieces of information:\n1. The total number of games played is 22.\n2. They won 8 more than they lost.\n\nFirst, we can express the total number of games in terms of wins and losses:\n$$w + l = 22$$\n\nNext, we express the relationship between wins and losses based on the problem statement:\n$$w = l + 8$$\n\nNow, we have a system of two linear equations:\n1. $w + l = 22$\n2. $w = l + 8$\n\nTo solve for $w$, we can substitute the expression for $w$ from the second equation into the first equation:\n$$(l + 8) + l = 22$$\n\nCombine like terms:\n$$2l + 8 = 22$$\n\nSubtract 8 from both sides:\n$$2l = 14$$\n\nDivide by 2:\n$$l = 7$$\n\nNow that we know the number of losses ($l = 7$), we can find the number of wins ($w$) using the second equation:\n$$w = 7 + 8$$\n$$w = 15$$\n\nAlternatively, we can find the number of wins by subtracting the number of losses from the total games:\n$$w = 22 - 7 = 15$$\n\nBoth methods yield the same result.\n\n#### 15",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0085",
+   "pred": "To find the total number of quilt blocks, let's break down the problem step by step.\n\n**1. Analyze the number of vacations:**\nThe problem states that the person has been vacationing since he was 23 years old and is now 34 years old.\n*   Total years of vacation = $34 - 23 = 11$ years.\n\n**2. Determine the number of blocks per year:**\nThe problem states that \"He goes on four vacations a year.\"\n*   Blocks per year = 4.\n\n**3. Calculate the total number of blocks:**\nSince there are 11 years of vacations and 4 blocks per year, we multiply these two numbers.\n*   Total blocks = (Blocks per year) $\\times$ (Number of years)\n*   Total blocks = $4 \\times 11$\n*   Total blocks = 44\n\n**4. Verify the context of \"quilt blocks\":**\nThe problem states, \"Every shirt is its own quilt block.\" This confirms that the number of blocks corresponds directly to the number of vacation blocks.\n\n**Calculation:**\n$$4 \\times 11 = 44$$\n\n#### 44",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0086",
+   "pred": "To solve this problem, let's break down the sequence of ringing times step by step.\n\n**1. Define the initial condition:**\n*   The alarm rings **4 times** on the first day.\n\n**2. Analyze the second ringing:**\n*   The problem states: \"The second time it went off, it rang for **three times as long** as the first time.\"\n*   Calculation: $4 \\times 3 = 12$.\n*   The alarm rings **12 times** on the second day.\n\n**3. Analyze the third ringing:**\n*   The problem states: \"The third time, it rang for **half as long** as the second time.\"\n*   Calculation: $12 \\div 2 = 6$.\n*   The alarm rings **6 times** on the third day.\n\n**4. Calculate the total number of rings:**\n*   Total = (First day) + (Second day) + (Third day)\n*   Total = $4 + 12 + 6$\n*   Total = $22$\n\n#### 22",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0087",
+   "pred": "To find Sylvie's annual salary after three more years of service, we need to calculate the salary for each year based on the specific rules provided.\n\n**1. Analyze the Initial Salary and Service Period**\n*   **Initial Salary:** $600\n*   **Service Period:** 5 years (as of December last year).\n*   **Current Year:** The question asks for the salary after **three more years**. This means we are looking at the salary for the 6th year of service.\n\n**2. Determine the Rule for Salary Increases**\nThe policy states: \"increasing the salaries of each of its employees by 10% of the initial salary every year for those who've stayed in the company for five years.\"\n*   **Base Salary:** $600\n*   **Increase Rate:** 10% of the initial salary ($600).\n*   **Calculation:** $600 \\times 0.10 = \\$60$.\n*   **Annual Increase:** $60.\n\n**3. Calculate the Salary for Each Year of Service**\n\n*   **Year 1 (Current Year):**\n    *   Base: $600\n    *   Increase: $60\n    *   Total: $600 + $60 = **$660**\n\n*   **Year 2:**\n    *   Base: $660\n    *   Increase: $660 \\times 0.10 = \\$66$\n    *   Total: $660 + $66 = **$726**\n\n*   **Year 3:**\n    *   Base: $726\n    *   Increase: $726 \\times 0.10 = \\$72.6$\n    *   Total: $726 + $72.6 = **$798.60**\n\n**4. Final Verification**\nThe question asks for the salary \"after three more years of service.\"\n*   Year 1: 5 years total\n*   Year 2: 6 years total\n*   Year 3: 7 years total\n\nThe calculation holds up.\n\n#### 798.60",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0088",
+   "pred": "Let $h$ be the number of copies Harald sold.\nLet $m$ be the number of copies Marilyn sold.\n\nWe are given two pieces of information:\n1.  Marilyn's first record sold 10 times as many copies as Harald's.\n    $$m = 10h$$\n2.  The total number of copies sold by both is 88,000.\n    $$m + h = 88,000$$\n\nSubstitute the expression for $m$ from the first equation into the second equation:\n$$(10h) + h = 88,000$$\n\nCombine like terms:\n$$11h = 88,000$$\n\nSolve for $h$ by dividing both sides by 11:\n$$h = \\frac{88,000}{11}$$\n$$h = 8,000$$\n\nSo, Harald sold 8,000 copies.\n\n#### 8000",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0089",
+   "pred": "To find the total cost of the gift bags, we need to follow these steps:\n\n**Step 1: Calculate the number of guests who will attend.**\nChristina plans for 16 friends, but 1/4 of them don't show up.\n$$ \\text{Guests who attend} = 16 \\times \\left(1 - \\frac{1}{4}\\right) $$\n$$ \\text{Guests who attend} = 16 \\times \\frac{3}{4} $$\n$$ \\text{Guests who attend} = 12 $$\n\n**Step 2: Calculate the total number of gift bags needed.**\nShe needs 0.75 bags per guest.\n$$ \\text{Total bags} = 12 \\text{ (guests)} \\times 0.75 \\text{ (bags/guest)} $$\n$$ \\text{Total bags} = 9 $$\n\n**Step 3: Calculate the total cost.**\nEach bag costs $2.\n$$ \\text{Total cost} = 9 \\text{ bags} \\times \\$2/\\text{bag} $$\n$$ \\text{Total cost} = \\$18 $$\n\n#### 18",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0090",
+   "pred": "To solve this problem, we need to calculate the total amount of potato salad required based on the number of adults and children, then subtract the amount already eaten by the dinosaurs.\n\n**Step 1: Calculate the total number of adults.**\nThe problem states there are 20 adults.\n$$ \\text{Adults} = 20 $$\n\n**Step 2: Calculate the total number of children.**\nThe problem states there are 5 children.\n$$ \\text{Children} = 5 $$\n\n**Step 3: Calculate the total number of people.**\nAdd the number of adults and children together.\n$$ \\text{Total People} = 20 + 5 = 25 $$\n\n**Step 4: Calculate the total amount of potato salad needed for everyone.**\nThe problem states an adult eats 10 lbs and a child eats half as much as an adult.\nFirst, find the amount needed for one person:\n$$ \\text{Amount per person} = 10 \\text{ lbs (adult)} + 10 \\text{ lbs (child)} = 20 \\text{ lbs} $$\nAlternatively, since a child eats half, the total per person is $10 + 10 = 20$.\nNow, multiply by the total number of people (25).\n$$ \\text{Total Needed} = 25 \\times 20 = 500 \\text{ lbs} $$\n\n**Step 5: Calculate the amount already eaten by the dinosaurs.**\nThe problem states an adult eats 10 lbs and a child eats half as much as an adult.\nFirst, find the amount needed for one person:\n$$ \\text{Amount per person} = 10 \\text{ lbs (adult)} + 10 \\text{ lbs (child)} = 20 \\text{ lbs} $$\nNow, multiply by the number of dinosaurs (20).\n$$ \\text{Amount eaten} = 20 \\times 20 = 400 \\text{ lbs} $$\n\n**Step 6: Calculate the amount Ted needs to bring.**\nSubtract the amount already eaten from the total amount needed.\n$$ \\text{Amount to bring} = \\text{Total Needed} - \\text{Amount eaten} $$\n$$ \\text{Amount to bring} = 500 - 400 = 10",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0091",
+   "pred": "To find the total number of pets, we need to determine the number of pets for each person (Jan, Marcia, and Cindy) and then sum them up.\n\n**Step 1: Determine the number of pets for Cindy.**\nThe problem states that Cindy has four pets.\n$$Cindy = 4$$\n\n**Step 2: Determine the number of pets for Marcia.**\nThe problem states that Marcia has two more pets than Cindy.\n$$Marcia = Cindy + 2$$\n$$Marcia = 4 + 2$$\n$$Marcia = 6$$\n\n**Step 3: Determine the number of pets for Jan.**\nThe problem states that Jan has three times the number of pets as Marcia.\n$$Jan = 3 \\times Marcia$$\n$$Jan = 3 \\times 6$$\n$$Jan = 18$$\n\n**Step 4: Calculate the total number of pets.**\nNow, we add the number of pets for all three individuals:\n$$Total = Cindy + Marcia + Jan$$\n$$Total = 4 + 6 + 18$$\n$$Total = 10 + 18$$\n$$Total = 28$$\n\n#### 28",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0092",
+   "pred": "Let's break down the information given to find the age of Jackson.\n\n**1. Identify the knowns:**\n*   Total number of kids: 4 (Amy, Jackson, Corey, James).\n*   James's age: 10.\n*   Amy is 2 years younger than Corey.\n*   James is 1 year younger than Corey.\n*   Amy is 5 years older than Jackson.\n\n**2. Determine the ages of the other three kids:**\n*   Since James is 10 and is 1 year younger than Corey, Corey is $10 + 1 = 11$ years old.\n*   Since Amy is 2 years younger than Corey, Amy is $11 - 2 = 9$ years old.\n\n**3. Determine the age of Jackson:**\n*   We know Amy is 9 years old.\n*   We know Amy is 5 years older than Jackson.\n*   Therefore, Jackson's age = Amy's age - 5.\n*   Jackson's age = $9 - 5 = 4$.\n\n**4. Verify the total count:**\n*   Amy = 9\n*   Jackson = 4\n*   Corey = 11\n*   James = 10\n*   Total = $9 + 4 + 11 + 10 = 34$.\n*   The problem states there are 4 kids, but the sum of their ages is 34. This is mathematically consistent with the given relationships, as the ages do not have to sum to the total number of people.\n\n**Conclusion:**\nJackson is 4 years old.\n\n#### 4",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0093",
+   "pred": "To find the new speed of Gerald, we will break down the problem into logical steps involving time, speed, and percentage changes.\n\n### Step 1: Determine Lee's original speed\nWe are given that Lee was able to run the 400-meter hurdles **2 seconds faster** than Gerald.\n*   Let $T_{\\text{Gerald}}$ be the time it takes Gerald to run the 400m hurdles.\n*   Let $T_{\\text{Lee}}$ be the time it takes Lee to run the 400m hurdles.\n*   The relationship is: $T_{\\text{Lee}} = T_{\\text{Gerald}} + 2$.\n\n### Step 2: Determine Lee's new speed\nLee's speed is inversely proportional to his time.\n*   Lee's original time was $T_{\\text{Lee}}$.\n*   Lee's new time is given as **38 seconds**.\n*   Therefore, Lee's original speed was:\n    $$ \\text{Speed}_{\\text{Lee, original}} = \\frac{38}{T_{\\text{Lee}}} $$\n\n### Step 3: Determine Gerald's new speed\nGerald's speed is inversely proportional to his time.\n*   Let $T_{\\text{Gerald}}$ be the time it takes Gerald to run the 400m hurdles.\n*   The problem states that Gerald's speed improved by **10%**.\n*   The new time for Gerald ($T_{\\text{Gerald, new}}$) is:\n    $$ T_{\\text{Gerald, new}} = T_{\\text{Gerald}} \\times (1 + 0.10) = 1.10 \\times T_{\\text{Gerald}} $$\n*   The new speed is the reciprocal of the new time:\n    $$ \\text{Speed}_{\\text{Gerald, new}} = \\frac{1}{T_{\\text{Gerald, new}}} = \\frac{1}{1.10 \\times T_{\\text{Gerald}}} $$\n\n### Step 4: Set up the equation\nWe know that Lee's original speed equals Gerald's new speed.\n$$ \\text{Speed}_{\\text{Lee, original}} = \\text{Speed}_{\\text{Gerald, new}} $$\n\nSubstitute",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0094",
+   "pred": "To find the total number of pets, let's break down the problem step by step.\n\n**Step 1: Identify the given information.**\n*   Total number of pets = 12 less than the combined number of dogs and cats.\n*   There are two cats for every dog.\n*   The number of dogs = 60.\n\n**Step 2: Calculate the number of dogs.**\nThe problem states there are 60 dogs.\n$$ \\text{Number of dogs} = 60 $$\n\n**Step 3: Calculate the number of cats.**\nSince there are two cats for every dog, we multiply the number of dogs by 2.\n$$ \\text{Number of cats} = 60 \\times 2 = 120 $$\n\n**Step 4: Calculate the combined number of dogs and cats.**\nAdd the number of dogs and the number of cats together.\n$$ \\text{Combined number} = 60 + 120 = 180 $$\n\n**Step 5: Calculate the total number of pets.**\nThe problem states the total number of pets is 12 less than the combined number of dogs and cats.\n$$ \\text{Total pets} = 180 - 12 = 168 $$\n\n**Conclusion:**\nThe total number of pets in the neighborhood is 168.\n\n#### 168",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0095",
+   "pred": "To solve this problem, we will break it down into logical steps: determining the total number of students, calculating the number of boys, determining the number of girls, and finally calculating the number of girls who are not in the Girl Scout troop.\n\n### Step 1: Determine the total number of students\nThe problem states there are **200** Grade 5 students in total.\n\n### Step 2: Calculate the number of boys\nWe are told that **2/5** of the students are boys.\n$$ \\text{Number of boys} = \\frac{2}{5} \\times 200 $$\n$$ \\text{Number of boys} = 2 \\times 40 = 80 $$\n\n### Step 3: Calculate the number of girls\nFirst, we find the number of girls by subtracting the number of boys from the total number of students.\n$$ \\text{Number of girls} = \\text{Total students} - \\text{Number of boys} $$\n$$ \\text{Number of girls} = 200 - 80 = 120 $$\n\nAlternatively, we can use the fraction of girls directly:\n$$ \\text{Number of girls} = \\frac{3}{5} \\times 200 = 3 \\times 40 = 120 $$\n\n### Step 4: Calculate the number of girls not in the Girl Scout troop\nThe problem states that **2/3** of the girls are in the Girl Scout troop.\n$$ \\text{Number of girls in Girl Scout} = \\frac{2}{3} \\times 120 $$\n$$ \\text{Number of girls in Girl Scout} = 2 \\times 40 = 80 $$\n\nThe question asks for the number of girls **not** in the Girl Scout troop.\n$$ \\text{Number of girls not in Girl Scout} = \\text{Total girls} - \\text{Girls in Girl Scout} $$\n$$ \\text{Number of girls not in Girl Scout} = 120 - 80 = 40 $$\n\n### Final Answer\n#### 40",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0096",
+   "pred": "To solve this problem, we need to calculate the amount of time James slept and then find the difference between Harry's total sleep time and James's sleep time.\n\n**Step 1: Calculate James's sleep time.**\nHarry slept for 9 hours. James slept $\\frac{2}{3}$ of what Harry slept.\n$$ \\text{James's sleep} = 9 \\text{ hours} \\times \\frac{2}{3} $$\n$$ \\text{James's sleep} = 6 \\text{ hours} $$\n\n**Step 2: Calculate the difference in sleep time.**\nWe need to find how many more hours Harry slept than James.\n$$ \\text{Difference} = \\text{Harry's sleep} - \\text{James's sleep} $$\n$$ \\text{Difference} = 9 \\text{ hours} - 6 \\text{ hours} $$\n$$ \\text{Difference} = 3 \\text{ hours} $$\n\n#### 3",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0097",
+   "pred": "To find the number of tomatoes Freda used, we need to determine the volume of sauce produced per can and then calculate how many cans were used based on the total volume of sauce.\n\n**Step 1: Determine the volume of sauce produced per can.**\nThe problem states that each 16-ounce can of tomatoes loses half its volume when cooked.\n*   Original volume of one can = 16 ounces.\n*   Volume of sauce produced = $16 \\text{ oz} \\times \\frac{1}{2} = 8 \\text{ ounces}$.\n\n**Step 2: Determine the number of cans used.**\nFreda's last batch of sauce made 32 ounces.\n*   Total sauce volume = 32 ounces.\n*   Volume per can = 8 ounces.\n*   Number of cans = $\\frac{\\text{Total sauce volume}}{\\text{Volume per can}} = \\frac{32}{8} = 4$ cans.\n\n**Step 3: Calculate the total number of tomatoes used.**\nThe problem states that each 16-ounce can contains **three** tomatoes.\n*   Number of cans = 4.\n*   Tomatoes per can = 3.\n*   Total tomatoes = $4 \\text{ cans} \\times 3 \\text{ tomatoes/can} = 12 \\text{ tomatoes}$.\n\n#### 12",
+   "ok": true
+  },
+  {
+   "id": "reason.gsm8k.0098",
+   "pred": "To solve this problem, we need to break down the total number of cars and the time they spend in the traffic jam.\n\n**1. Analyze the Total Number of Cars**\nThe problem states there were originally **30 cars** on the motorway.\n*   Cars that drive through in the first 15 minutes: $x$\n*   Cars that drive through in the remaining 15 minutes: $y$\n*   Cars that exit: $z$\n\nWe know the total number of cars is 30.\n$$x + y + z = 30$$\n\n**2. Analyze the Time Spent in the Traffic Jam**\n*   Cars that drive through in the first 15 minutes: $x$\n*   Cars that drive through in the remaining 15 minutes: $y$\n*   Total time in traffic jam = $15 + 15 = 30$ minutes.\n\n**3. Analyze the Exit Cars**\n*   The problem states that **5 cars** from the line take an exit.\n*   These 5 cars are not in the traffic jam.\n*   Therefore, the number of cars in the traffic jam is the total number of cars minus the 5 cars that exited.\n*   Number of cars in traffic jam = $30 - 5 = 25$.\n\n**4. Calculate the Number of Cars in the Traffic Jam**\nSince the total time spent in the traffic jam is 30 minutes and there are 25 cars in that time, we can calculate the time per car:\n$$\\text{Time per car} = \\frac{\\text{Total time}}{\\text{Number of cars}} = \\frac{30 \\text{ minutes}}{25 \\text{ cars}} = 1.2 \\text{ minutes per car}$$\n\n**5. Determine the Number of Cars Driving Through in the First 15 Minutes**\nWe need to find $x$, the number of cars that drive through in the first 15 minutes.\n*   Time per car = 1.2 minutes.\n*   Total time available = 15 minutes.\n*   Number of cars = $\\frac{\\text{Total time}}{\\text{Time per car}} = \\frac{15}{1.2}$.\n\nLet's simplify the fraction:\n$$\\frac{15}{1.",
+   "ok": false
+  },
+  {
+   "id": "reason.gsm8k.0099",
+   "pred": "To find the number of potted plants Mary will remain with, we need to calculate the total number of plants she currently has and subtract the number of plants she gives away.\n\n**Step 1: Calculate the total number of potted plants she already has.**\nShe has 2 potted plants on each of 40 window ledges.\n$$ \\text{Total plants} = 2 \\times 40 = 80 $$\n\n**Step 2: Calculate the number of potted plants she gives away.**\nShe gives 1 potted plant from each ledge.\n$$ \\text{Plants given away} = 1 \\times 40 = 40 $$\n\n**Step 3: Calculate the number of potted plants remaining.**\n$$ \\text{Remaining plants} = \\text{Total plants} - \\text{Plants given away} $$\n$$ \\text{Remaining plants} = 80 - 40 = 40 $$\n\n#### 40",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0000",
+   "pred": "The Chipmunks were created by **Jim Faris** and **John T. Smith**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0001",
+   "pred": "*The Phantom of the Opera*",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0002",
+   "pred": "Arthur Balfour was succeeded by **William Gladstone**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0003",
+   "pred": "The song \"Kiss You All Over\" by **Kiss** (featuring **Michael Jackson**) was the No. 1 hit in the United States in 1987.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0004",
+   "pred": "The life of singer Kathleen Ferrier was claimed by the **1910s**, when she was born in 1890.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0005",
+   "pred": "*The Time of the Chosen One*",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0006",
+   "pred": "The last US state to reintroduce alcohol after prohibition was **California** (and Hawaii, which was the first to do so in 1906).",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0007",
+   "pred": "Lillian Gish.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0008",
+   "pred": "Nikkei 225",
+   "ok": true
+  },
+  {
+   "id": "know.trivia.0009",
+   "pred": "*Thriller*",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0010",
+   "pred": "The 1950s.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0011",
+   "pred": "1936",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0012",
+   "pred": "Mount Kilimanjaro.",
+   "ok": true
+  },
+  {
+   "id": "know.trivia.0013",
+   "pred": "Red.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0014",
+   "pred": "Niger",
+   "ok": true
+  },
+  {
+   "id": "know.trivia.0015",
+   "pred": "John F. Kennedy.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0016",
+   "pred": "The song \"The Street Where You Live\" was featured in the musical **The People's Republic of 2000** (2000).",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0017",
+   "pred": "The target of the failed \"Bomb Plot\" of 1944 was **General Douglas MacArthur**, who was the Commander-in-Chief of the United States Army in the Pacific Theater.\n\nThe plot, orchestrated by the Japanese Imperial",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0018",
+   "pred": "The song \"Hold On To The Nights\" by **The Weeknd** (released in 2019) topped the charts in the US, UK, and Canada.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0019",
+   "pred": "The classic 1930s western *Stagecoach* was directed by **John Ford**.",
+   "ok": true
+  },
+  {
+   "id": "know.trivia.0020",
+   "pred": "The Rolling Stones",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0021",
+   "pred": "The **I-95** (Interstate 95).",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0022",
+   "pred": "The Soviet Union.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0023",
+   "pred": "*The Batman*",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0024",
+   "pred": "The Broadway musical *If I Were a Rich Man* (1984).",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0025",
+   "pred": "They were sequels to **The Mysterious Island**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0026",
+   "pred": "Capote's last name was **Truman**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0027",
+   "pred": "The elusive, troublesome snark turned into a **fancy hat**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0028",
+   "pred": "The sun and moon stood still before **God** (the Father).\n\nAccording to the Book of Genesis, God created the sun and moon to serve as a light source for the earth, and He placed them in their fixed positions to guide",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0029",
+   "pred": "*Gangster's Paradise* (1992)",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0030",
+   "pred": "Gerald Ford's middle name was **Foster**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0031",
+   "pred": "He trained for **music**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0032",
+   "pred": "The last inmate of Spandau Prison in Berlin was **Karl von Hagen**, who died in 1945.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0033",
+   "pred": "*The Great White Hope* (1980).",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0034",
+   "pred": "The novel *Empire of the Sun* was written by **John Steinbeck**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0035",
+   "pred": "Japan",
+   "ok": true
+  },
+  {
+   "id": "know.trivia.0036",
+   "pred": "Basketball",
+   "ok": true
+  },
+  {
+   "id": "know.trivia.0037",
+   "pred": "\"I'm Not the One\"",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0038",
+   "pred": "The Lion's Gate bridge is located in **Toronto, Ontario**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0039",
+   "pred": "*The Great White Hope* (1950).",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0040",
+   "pred": "The United States.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0041",
+   "pred": "London, England.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0042",
+   "pred": "The **Gorgon**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0043",
+   "pred": "**Ares** was the god of war, while **Brontes** (also known as Brontes of the sea) was the god of the sea. **Steropes** was the god of the underworld.\n\nTogether,",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0044",
+   "pred": "The Red Hot Peppers were founded by **Chris Brown**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0045",
+   "pred": "The Shinning Path terrorists operated in **China**, specifically targeting **Taiwan**, **Hong Kong**, and **Macau** (including the Hong Kong Special Administrative Region). They were active in the **Taiwan** region, where they were",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0046",
+   "pred": "73",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0047",
+   "pred": "No Brit broke the record in 1990 in Thrust 2. The record was set by **John H. Smith** in 1991.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0048",
+   "pred": "California",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0049",
+   "pred": "The European Recovery Program was commonly known as the **Economic Recovery Program**.",
+   "ok": true
+  },
+  {
+   "id": "know.trivia.0050",
+   "pred": "The movie is *The Godfather* (1972).",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0051",
+   "pred": "The song \"Let's Do It Again\" by **The Beatles** (released in 1971) topped the UK Singles Chart.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0052",
+   "pred": "The band **Too Legit To Quit** (formed in 2013) had a tour in 2014.\n\nThey were the first band to tour in the United States since **The Weeknd** (2",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0053",
+   "pred": "The two imposters were **Rudyard Kipling** and **W. Somerset Maugham**. They met and treated the same day in 1904 at the **Barnsley Hotel** in England.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0054",
+   "pred": "**Taylor Swift** is widely considered the most successful UK-based solo artist in the United States. Her massive global success, driven by her iconic albums (*1989*, *Reputation*, *Midnights*), streaming numbers, and",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0055",
+   "pred": "Turkey",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0056",
+   "pred": "\"I'm Not Your Mummy\"",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0057",
+   "pred": "The movie is *The Dark Knight*.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0058",
+   "pred": "David Bowie.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0059",
+   "pred": "John",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0060",
+   "pred": "London.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0061",
+   "pred": "The movie is **The Wizard of Oz** (1939).\n\nIn the film, Garbo plays the character **Oz**, who is the only one who can hear the voice of the Wizard. When the Wizard asks,",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0062",
+   "pred": "Osbert Lancaster is best known for producing the **Lancaster 1912** (the first American automobile), which was the first car to use a gasoline engine.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0063",
+   "pred": "Martina Navratilova defeated Maria Sakkas.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0064",
+   "pred": "Jack Nicklaus.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0065",
+   "pred": "The Sky Train Rail bridge is located in **China**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0066",
+   "pred": "Paramount was originally called **Paramount Pictures**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0067",
+   "pred": "**Robert Scott** was the first person to reach the South Pole overland.\n\n(Note: While **George P. Smoot** was the first to reach the South Pole by air, Scott was the first to do so by land.)",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0068",
+   "pred": "The journalist who first told the world about the My Lai massacre was **John L. Sullivan**, a reporter for the *New York Times*. He reported on the massacre in 1945, which led to the creation of the \"",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0069",
+   "pred": "The name of Terence and Shirley Conran's dress designer son is **John Conran**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0070",
+   "pred": "The Spice Girls promoted **Spice Tea**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0071",
+   "pred": "The youngest brother in the Beach Boys was **Brian**. He was born in 1960 and was the youngest member of the group.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0072",
+   "pred": "The first host was **Jackie Gleason**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0073",
+   "pred": "Kemo Sabe was the Apache name for the Lone Ranger.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0074",
+   "pred": "Gentle Ben was a fictional character in the 1960s TV series *The Adventures of Tintin*, played by **John Gielgud**.\n\nHe was a young, eccentric, and somewhat eccentric Frenchman",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0075",
+   "pred": "*The* **Till Death Us Do Part** (1975) was the source material for the British sitcom **The Office** (1985\u20131986).\n\n*The Office* was based on",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0076",
+   "pred": "August 20, 1969.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0077",
+   "pred": "Brunei.",
+   "ok": true
+  },
+  {
+   "id": "know.trivia.0078",
+   "pred": "Painter and illustrator.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0079",
+   "pred": "No.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0080",
+   "pred": "Kiefer Sutherland.",
+   "ok": true
+  },
+  {
+   "id": "know.trivia.0081",
+   "pred": "1",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0082",
+   "pred": "The Georgia Peach was a professional baseball team based in Atlanta, Georgia, that played in the National League from 1920 to 1930.",
+   "ok": true
+  },
+  {
+   "id": "know.trivia.0083",
+   "pred": "The guitarist who set fire to his guitar at the Monterey Pop festival in 1967 was **John Maynard Keynes**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0084",
+   "pred": "Dora.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0085",
+   "pred": "**Sweet and Innocent and Too Young** was a 1960s American country music group consisting of **Linda Ronstadt**, **Loretta Lynn**, and **Dolly Parton**. They were formed in 1",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0086",
+   "pred": "The song \"Can't Hold Me Down\" features **Puff Daddy** (who is also known as **P.Diddy**).",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0087",
+   "pred": "He worked as a **mountain guide** before taking up mountain climbing.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0088",
+   "pred": "Massachusetts",
+   "ok": true
+  },
+  {
+   "id": "know.trivia.0089",
+   "pred": "Nigeria",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0090",
+   "pred": "The Color Purple.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0091",
+   "pred": "Captain James T. Kirk.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0092",
+   "pred": "The Object of My Affection (1980) featured **Marilyn Monroe**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0093",
+   "pred": "Julia Roberts played **Maggie** in the film *Hook*.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0094",
+   "pred": "John F. Kennedy.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0095",
+   "pred": "*The Life of David Helfgott* (1998).",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0096",
+   "pred": "The film director who guested as the FBI Director in *The Silence of the Lambs* is **Clint Eastwood**.",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0097",
+   "pred": "*Starship Troopers* (1959)",
+   "ok": false
+  },
+  {
+   "id": "know.trivia.0098",
+   "pred": "The Madness of King George VI.",
+   "ok": true
+  },
+  {
+   "id": "know.trivia.0099",
+   "pred": "Sandra Hultqvist.",
+   "ok": false
+  }
+ ],
+ "ppl_neutral": 24.625,
+ "config": {
+  "model": "qwen-0.8b",
+  "strategy": "baseline",
+  "frac": 0.0
+ }
+}
