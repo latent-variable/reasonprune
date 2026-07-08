@@ -136,6 +136,33 @@ def chart_heatmap(model_key: str, out: Path):
     plt.close(fig)
 
 
+def chart_layer_profile(model_key: str, out: Path):
+    scores_path = RESULTS_DIR / model_key / "scores.npz"
+    if not scores_path.exists():
+        return
+    z = np.load(scores_path)
+    i_know, i_reason = z["i_know"], z["i_reason"]
+    layers = np.arange(i_know.shape[0])
+    fig, ax = plt.subplots(figsize=(8, 4), facecolor=SURFACE)
+    style_ax(ax)
+    for arr, color, label in ((i_know, SERIES[0], "knowledge importance"),
+                              (i_reason, SERIES[1], "reasoning importance")):
+        med = np.median(arr, axis=1)
+        hi = np.percentile(arr, 90, axis=1)
+        ax.plot(layers, med / med.max(), color=color, linewidth=2, label=label)
+        ax.plot(layers, hi / hi.max(), color=color, linewidth=1.2,
+                linestyle=(0, (3, 2)), alpha=0.7)
+    ax.set_xlabel("layer", color=INK2, fontsize=9)
+    ax.set_ylabel("normalized importance", color=INK2, fontsize=9)
+    ax.set_title("Where each capability lives (median solid, p90 dashed) — "
+                 f"{model_key}", color=INK, fontsize=10.5, loc="left")
+    ax.legend(frameon=False, fontsize=9)
+    fig.tight_layout()
+    fig.savefig(out / "layer_profile.png", dpi=180, bbox_inches="tight",
+                facecolor=SURFACE)
+    plt.close(fig)
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--model", default="qwen-0.8b")
@@ -145,6 +172,7 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     chart_tradeoff(args.model, baseline, runs, out)
     chart_heatmap(args.model, out)
+    chart_layer_profile(args.model, out)
     print(f"charts -> {out}")
 
 
