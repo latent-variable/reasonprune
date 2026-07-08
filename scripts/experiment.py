@@ -39,6 +39,23 @@ def out_dir(model_key: str) -> Path:
     return d
 
 
+def guard_memory(mem_limit_gb: float, cache_limit_gb: float = 8.0):
+    """Hard-cap MLX memory so a runaway errors out instead of freezing macOS."""
+    mx.set_memory_limit(int(mem_limit_gb * 1e9))
+    mx.set_cache_limit(int(cache_limit_gb * 1e9))
+    import subprocess
+    free_pages = int(subprocess.run(
+        ["sysctl", "-n", "vm.page_free_count"], capture_output=True,
+        text=True).stdout.strip())
+    free_gb = free_pages * 16384 / 1e9
+    print(f"memory guard: limit={mem_limit_gb}GB cache={cache_limit_gb}GB "
+          f"host_free={free_gb:.0f}GB", flush=True)
+    if free_gb < mem_limit_gb * 0.75:
+        print(f"WARNING: host free memory ({free_gb:.0f}GB) is tight for the "
+              f"{mem_limit_gb}GB limit; other processes (oMLX server?) may be "
+              f"holding memory", flush=True)
+
+
 def load_model(model_key: str):
     t0 = time.time()
     model, tokenizer = load(MODELS[model_key])
@@ -229,7 +246,9 @@ def main():
     p.add_argument("--strategies", default="diff,know,lowmag,random")
     p.add_argument("--fracs", default="0.1,0.2,0.3")
     p.add_argument("--suffix", default="", help="results filename suffix")
+    p.add_argument("--mem-limit-gb", type=float, default=72.0)
     args = p.parse_args()
+    guard_memory(args.mem_limit_gb)
     {"baseline": cmd_baseline, "score": cmd_score, "sweep": cmd_sweep,
      "score-moe": cmd_score_moe, "sweep-moe": cmd_sweep_moe}[args.cmd](args)
 

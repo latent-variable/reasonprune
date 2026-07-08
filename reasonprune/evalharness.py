@@ -86,7 +86,11 @@ def run_eval(model, tokenizer, items: list[Item], max_tokens: int = 64,
     per_kind: dict[str, list[int]] = {}
     records = []
     t0 = time.time()
-    for it in items:
+    for i, it in enumerate(items):
+        if i and i % 50 == 0:
+            mx.clear_cache()
+            print(f"  eval {i}/{len(items)} "
+                  f"(peak {mx.get_peak_memory()/1e9:.0f}GB)", flush=True)
         prompt = format_prompt(tokenizer, it.prompt)
         out = generate(model, tokenizer, prompt=prompt,
                        max_tokens=int(it.meta.get("max_tokens", max_tokens)),

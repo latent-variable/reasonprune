@@ -41,6 +41,7 @@ def forward_collect(model, tokenizer, items: list[Item],
         mx.eval([w.sum_abs for w in wrappers] + [w.sum_sq for w in wrappers])
         n_tokens += len(tokens)
         if (i + 1) % 25 == 0:
+            mx.clear_cache()
             print(f"  calib {i+1}/{len(items)} ({n_tokens} tok, "
                   f"peak {mx.get_peak_memory()/1e9:.1f}GB)", flush=True)
     return n_tokens
