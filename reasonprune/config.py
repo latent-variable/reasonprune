@@ -13,6 +13,7 @@ RESULTS_DIR = REPO_ROOT / "results"
 # Direct-load analysis models (HF hub ids; mlx_lm resolves from local cache).
 MODELS = {
     "qwen-0.8b": "Qwen/Qwen3.5-0.8B",
+    "qwen-2b": "Qwen/Qwen3.5-2B",
     "qwen-4b": "Qwen/Qwen3.5-4B",
     "qwen-27b": "unsloth/Qwen3.6-27B-MLX-8bit",
     # MoE target: local path, standard MLX 8-bit quant of the A3B worker family.

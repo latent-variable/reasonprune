@@ -1,0 +1,413 @@
+<title>reasonprune — evidence report</title>
+<style>
+  :root {
+    --bg: #fbfbf9; --panel: #f3f3ef; --ink: #14161a; --ink2: #5a5d63;
+    --grid: #e7e8e4; --line: #d8d9d4;
+    --kn: #2a78d6; --rs: #1baf7a; --warn: #b97b00; --bad: #c73635;
+    --violet: #4a3aa7; --green: #008300; --magenta: #d55181;
+    --chip-ok-bg: #e3f3ec; --chip-warn-bg: #fbf0d9; --chip-pend-bg: #ececf5;
+    --code-bg: #eeeeea;
+  }
+  @media (prefers-color-scheme: dark) { :root {
+    --bg: #16181c; --panel: #1e2126; --ink: #f2f3f0; --ink2: #a2a6ad;
+    --grid: #2a2d33; --line: #34383f;
+    --kn: #3987e5; --rs: #1baf7a; --warn: #eda100; --bad: #e66767;
+    --violet: #9085e9; --green: #4caf50; --magenta: #e87ba4;
+    --chip-ok-bg: #12312a; --chip-warn-bg: #33290e; --chip-pend-bg: #23233a;
+    --code-bg: #22252b;
+  }}
+  :root[data-theme="light"] {
+    --bg: #fbfbf9; --panel: #f3f3ef; --ink: #14161a; --ink2: #5a5d63;
+    --grid: #e7e8e4; --line: #d8d9d4;
+    --kn: #2a78d6; --rs: #1baf7a; --warn: #b97b00; --bad: #c73635;
+    --violet: #4a3aa7; --green: #008300; --magenta: #d55181;
+    --chip-ok-bg: #e3f3ec; --chip-warn-bg: #fbf0d9; --chip-pend-bg: #ececf5;
+    --code-bg: #eeeeea;
+  }
+  :root[data-theme="dark"] {
+    --bg: #16181c; --panel: #1e2126; --ink: #f2f3f0; --ink2: #a2a6ad;
+    --grid: #2a2d33; --line: #34383f;
+    --kn: #3987e5; --rs: #1baf7a; --warn: #eda100; --bad: #e66767;
+    --violet: #9085e9; --green: #4caf50; --magenta: #e87ba4;
+    --chip-ok-bg: #12312a; --chip-warn-bg: #33290e; --chip-pend-bg: #23233a;
+    --code-bg: #22252b;
+  }
+  body { background: var(--bg); color: var(--ink); margin: 0;
+    font: 16px/1.55 -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 20px 90px; }
+  .col { max-width: 68ch; }
+  .eyebrow { font-family: "Avenir Next Condensed", "Arial Narrow", sans-serif;
+    text-transform: uppercase; letter-spacing: .14em; font-weight: 600;
+    font-size: 13px; color: var(--ink2); margin: 52px 0 6px; }
+  h1 { font-family: "Avenir Next Condensed", "Arial Narrow", sans-serif;
+    font-size: clamp(34px, 6vw, 52px); line-height: 1.04; font-weight: 700;
+    letter-spacing: -.01em; margin: 8px 0 10px; text-wrap: balance; }
+  h2 { font-size: 24px; margin: 6px 0 12px; letter-spacing: -.01em; text-wrap: balance; }
+  h3 { font-size: 17px; margin: 20px 0 6px; }
+  p, li { color: var(--ink); max-width: 68ch; }
+  .muted { color: var(--ink2); }
+  .sub { font-size: 17px; color: var(--ink2); max-width: 62ch; }
+  a { color: var(--kn); }
+  code, .mono { font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: .92em; font-variant-numeric: tabular-nums; }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 26px 0 8px; }
+  .tile { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 6px; padding: 14px 16px 12px; }
+  .tile .big { font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 30px; font-weight: 700; letter-spacing: -.02em; }
+  .tile .lbl { font-size: 13px; color: var(--ink2); margin-top: 2px; }
+  .tile .ctx { font-size: 12px; color: var(--ink2); margin-top: 6px; }
+  .kn { color: var(--kn); } .rs { color: var(--rs); }
+  .warn { color: var(--warn); } .bad { color: var(--bad); }
+  .chip { display: inline-block; font-size: 11.5px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .08em; border-radius: 999px;
+    padding: 2px 10px; vertical-align: 2px; }
+  .chip.ok { background: var(--chip-ok-bg); color: var(--rs); }
+  .chip.warn { background: var(--chip-warn-bg); color: var(--warn); }
+  .chip.pend { background: var(--chip-pend-bg); color: var(--violet); }
+  .card { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 6px; padding: 16px 18px; margin: 14px 0; }
+  .card h3 { margin-top: 0; }
+  figure { margin: 22px 0 6px; }
+  figcaption { font-size: 13px; color: var(--ink2); margin-top: 8px; max-width: 74ch; }
+  .chartband { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 6px; padding: 14px 10px 6px; overflow-x: auto; }
+  svg text { font-family: ui-monospace, "SF Mono", Menlo, monospace; fill: var(--ink2); }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; padding: 8px 8px 4px; font-size: 13px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; color: var(--ink2); }
+  .sw { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+  table { border-collapse: collapse; font-size: 14px; margin: 10px 0;
+    font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 5px 14px 5px 0; border-bottom: 1px solid var(--grid); }
+  th { color: var(--ink2); font-weight: 600; font-size: 12.5px;
+    text-transform: uppercase; letter-spacing: .06em; }
+  td.num, th.num { text-align: right; font-family: ui-monospace, Menlo, monospace; }
+  details { margin: 8px 0; } summary { cursor: pointer; color: var(--ink2); font-size: 13px; }
+  .tooltip { position: fixed; pointer-events: none; background: var(--ink);
+    color: var(--bg); font: 12px ui-monospace, Menlo, monospace;
+    padding: 5px 8px; border-radius: 4px; opacity: 0; z-index: 10;
+    white-space: pre; transition: opacity .08s; }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; margin: 18px 0; }
+  .flow .step { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 6px; padding: 12px 14px; font-size: 13.5px; }
+  .flow .step b { display: block; font-size: 14px; margin-bottom: 4px; }
+  .flow .step .n { font-family: ui-monospace, Menlo, monospace; color: var(--ink2);
+    font-size: 11px; display: block; margin-bottom: 6px; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">reasonprune · evidence report · updated 2026-07-08 · <a href="https://github.com/latent-variable/reasonprune">github.com/latent-variable/reasonprune</a></div>
+  <h1>Cut the memory, keep the mind</h1>
+  <p class="sub">Can structured pruning remove a model's stored trivia while preserving its ability to reason over what's in front of it? Status: <b>validated at 0.8B on real benchmarks</b>; J-space integration running; 27B mapped but parked. Every claim below carries its evidence and its caveats.</p>
+
+  <div class="tiles">
+    <div class="tile"><div class="big kn" id="t-know">−74%</div>
+      <div class="lbl">closed-book knowledge (bench)</div>
+      <div class="ctx">TriviaQA + fact probes, 0.31 → 0.08</div></div>
+    <div class="tile"><div class="big rs" id="t-reason">+1pt</div>
+      <div class="lbl">in-context reasoning (bench)</div>
+      <div class="ctx">held above baseline, 0.557 → 0.564</div></div>
+    <div class="tile"><div class="big rs">100%</div>
+      <div class="lbl">tool-call accuracy</div>
+      <div class="ctx">unchanged at every pruning level</div></div>
+  </div>
+  <p class="muted" style="font-size:13px">Headline config: Qwen3.5-0.8B, guarded differential pruning, 10% of MLP channels, CoT-aware calibration (v2). Full tables below.</p>
+
+  <div class="eyebrow">01 · The idea</div>
+  <h2>Anthropic showed the cut exists; we run it in reverse</h2>
+  <div class="col">
+  <p>The <a href="https://transformer-circuits.pub/2026/workspace/index.html">workspace paper</a> (July 2026) found that a small, privileged subspace in a model's middle layers carries its flexible reasoning. Ablate that J-space and multi-hop reasoning collapses while shallow recall survives untouched. So the two capabilities are causally separable, and reasoning is the <em>small</em> part.</p>
+  <p>reasonprune inverts the cut: identify the components serving closed-book recall, remove those, and guard everything reasoning depends on. A model that knows less but thinks just as well; facts come from the context window, tools, and the web.</p>
+  <p>Prior art check (full survey in the repo): calibration-based pruning exists (Wanda, REAP), and a forget/retain ratio exists for small-scale unlearning (Pochinkov &amp; Schoots 2024). Nobody has used the ratio for compression, nobody prunes with a knowledge/reasoning split, and nobody has touched the workspace paper for pruning. Three claims, all still open as of this writing.</p>
+  </div>
+
+  <div class="eyebrow">02 · Method</div>
+  <h2>Two decks, one wiretap, a guarded cut</h2>
+  <div class="flow">
+    <div class="step"><span class="n">STEP 1</span><b>Two calibration decks</b>
+      K: closed-book trivia (answer lives in the weights). R: reasoning with every fact in the prompt (memory is useless), incl. worked GSM8K solutions so long-form chains are covered.</div>
+    <div class="step"><span class="n">STEP 2</span><b>Wiretap every channel</b>
+      Each MLP channel ≈ one key-value memory slot (Geva et&nbsp;al.). Record activation strength × write-vector size on each deck separately. 86k channels on 0.8B, 1.1M on 27B.</div>
+    <div class="step"><span class="n">STEP 3</span><b>Ratio + guard</b>
+      Prunability = importance-on-K / importance-on-R. The guard: channels in the top 30% of reasoning importance are untouchable. Proven load-bearing, see 04.</div>
+    <div class="step"><span class="n">STEP 4</span><b>Cut, then verify</b>
+      Masking for science (identical math), physical slicing for a real smaller checkpoint. Evals: held-out fact probes, reasoning tasks, TriviaQA, GSM8K, format controls, perplexity.</div>
+  </div>
+  <p class="col">Design choices that keep the science honest: the reasoning deck is generated programmatically so answers are correct by construction; knowledge probes come from curated fact tables; eval splits are disjoint from calibration; knowledge evals are open recall because the workspace paper shows multiple-choice survives workspace damage and would hide knowledge loss.</p>
+
+  <div class="eyebrow">03 · Core result</div>
+  <h2>The dissociation is real and only the guarded ratio finds it</h2>
+  <figure>
+    <div class="chartband"><div id="chart-tradeoff"></div>
+      <div class="legend" id="legend-tradeoff"></div></div>
+    <figcaption>Qwen3.5-0.8B, internal eval sets (262 knowledge / 360 reasoning items held out). Left: closed-book knowledge vs fraction of MLP channels pruned. Middle: in-context reasoning. Right: the tradeoff path; up-left is the goal. Hover any point for exact values.</figcaption>
+  </figure>
+  <details><summary>table view</summary><div id="table-tradeoff"></div></details>
+
+  <div class="card">
+    <h3><span class="chip ok">confirmed</span> Not format damage</h3>
+    <p style="margin:6px 0 0">The open-book control asks capital-city questions in the identical format with the fact supplied in the prompt. At diff@10% it holds at 0.87 (from 0.96) while closed-book capital recall falls 0.81 → 0.32 and author recall 0.72 → 0.04. The recall pathway is severed; question-answering is intact. Tool-call JSON: 1.00 at every level.</p>
+  </div>
+  <div class="card">
+    <h3><span class="chip ok">confirmed</span> The guard is load-bearing</h3>
+    <p style="margin:6px 0 0">The raw ratio without reasoning protection (<span class="mono">diff_noguard</span>) collapses the model by 20% pruning; so does pruning what knowledge needs most (<span class="mono">know</span>, the destructive control, ppl → 100k+). Knowledge and reasoning share substrate; the method works because the guard restricts cuts to the separable part. This replicates the entanglement warning in the unlearning literature.</p>
+  </div>
+  <div class="card">
+    <h3><span class="chip ok">confirmed</span> Arithmetic improved after pruning</h3>
+    <p style="margin:6px 0 0">Single-step word math rose 0.48 → 0.76 at diff@10%. Removing noisy memorized associations helping reasoning is the published LASER effect (Sharma et&nbsp;al., ICLR'24); we reproduce it with an entirely different selection mechanism.</p>
+  </div>
+
+  <div class="eyebrow">04 · External validity</div>
+  <h2>Real benchmarks agree, after teaching the guard about chain-of-thought</h2>
+  <div class="col">
+  <p>First pass (v1): TriviaQA halved, exactly as designed, but GSM8K slipped 0.51 → 0.39. Diagnosis: the reasoning deck contained only short answers, so channels carrying long-form working were never protected. v2 adds 150 worked GSM8K <em>training</em> solutions to calibration (eval slice untouched). Result: more knowledge removed and better math retention. The classic low-importance baseline is worse on both axes at the same perplexity cost.</p>
+  </div>
+  <figure>
+    <div class="chartband"><div id="chart-bench"></div>
+      <div class="legend" id="legend-bench"></div></div>
+    <figcaption>External benchmarks at 10% pruning, 100 items each. TriviaQA is open recall (want: low after pruning). GSM8K is chain-of-thought math (want: high). lowmag = classic Wanda-style low-importance pruning at the same budget.</figcaption>
+  </figure>
+  <details><summary>table view</summary><div id="table-bench"></div></details>
+
+  <div class="eyebrow">05 · J-space</div>
+  <h2>From inspiration to instrument <span class="chip pend">running</span></h2>
+  <div class="col">
+  <p>Sections 03–04 use behavioral signals; the workspace paper contributed the hypothesis. The direct integration is now built and running: <b>sketched Jacobian-transport alignment</b>. Each channel writes a vector into the residual stream; the lens transport <span class="mono">J<sub>l</sub> = E[∂h_final/∂h<sub>l</sub>]</span> says how much of that write causally reaches the output. Computing J<sub>l</sub> exactly is a d×d matrix per layer (Anthropic used a cluster). We only need ‖J<sub>l</sub>w‖ for our channel vectors, and a Johnson–Lindenstrauss sketch delivers it for all 86k channels at once: ~64 random probes, one backward pass each, gradients for every layer simultaneously. Twenty minutes on an M5 Max for what naively costs thousands of backprops.</p>
+  <p>The first profile already reproduces the paper's signature: transport alignment rises through the middle layers, peaks around layer 19 of 24, and falls at the end; the workspace band, recovered on a local hybrid-attention model by an independent estimator.</p>
+  </div>
+  <figure>
+    <div class="chartband"><div id="chart-layers"></div>
+      <div class="legend" id="legend-layers"></div></div>
+    <figcaption>Per-layer medians, each normalized to its own max. Knowledge and reasoning importance travel together (no layer-level split exists, which is why whole-layer pruning can't do this job). J-alignment is the sketched transport signal; preliminary probe count, full run in progress.</figcaption>
+  </figure>
+  <div class="card">
+    <h3><span class="chip pend">pending</span> The ablation that answers "is J-space useful for pruning"</h3>
+    <p style="margin:6px 0 0"><span class="mono">diff_jguard</span> protects channels ranked high by <em>either</em> behavioral reasoning importance or J-alignment. It is sweeping now against <span class="mono">diff</span> at 10–40% with full evals. If the tradeoff curve improves, the Jacobian lens earns its place in the loop; if not, that's a real negative result and the report will say so.</p>
+  </div>
+
+  <div class="eyebrow">06 · The honest ledger</div>
+  <h2>What should keep you skeptical</h2>
+  <div class="card">
+    <h3><span class="chip warn">caveat</span> Perplexity rises</h3>
+    <p style="margin:6px 0 0">24.6 → 31 at the headline config. Some prose-coherence cost is real. Mitigation path: a short LoRA heal on reasoning-style data only (standard after aggressive pruning, not yet run).</p>
+  </div>
+  <div class="card">
+    <h3><span class="chip warn">caveat</span> 0.8B is fragile past 10–15%</h3>
+    <p style="margin:6px 0 0">All strategies collapse long-form generation by 20%+ on a sub-1B model; there is little redundancy to spend. The interesting question is whether headroom grows with scale. The 27B baseline (knowledge 0.844, reasoning 0.950, GSM8K 0.89) and its importance scores are computed and committed; its differential scores concentrate in layers 55–59 of 64, matching where ROME/MEMIT locate factual storage. The sweep is parked pending small-model proof.</p>
+  </div>
+  <div class="card">
+    <h3><span class="chip warn">caveat</span> Memory math, no spin</h3>
+    <p style="margin:6px 0 0">MLPs are ~⅔ of a dense model. 10% of MLP ≈ 6.5% of total weights: not a product, a measurement. A worthwhile dense win needs 30–50% MLP cuts to hold (plus healing), and the genuinely large prize is MoE experts (~90% of parameters in A3B-class models, REAP shows 50% removable), which is exactly where this differential method should shine. Dense-27B is the hard mode for the approach.</p>
+  </div>
+  <div class="card">
+    <h3><span class="chip warn">caveat</span> What would falsify this</h3>
+    <p style="margin:6px 0 0">If reasoning retention at matched knowledge-removal doesn't beat the lowmag control on 2B/4B replications; if the J-guard adds nothing over the behavioral guard; if healed perplexity can't return near baseline; or if the effect shrinks with scale instead of growing. All four are scheduled measurements.</p>
+  </div>
+
+  <div class="eyebrow">07 · Status</div>
+  <h2>Where the program stands</h2>
+  <table>
+    <tr><th>Stage</th><th>State</th><th>Evidence</th></tr>
+    <tr><td>Toolkit (score / prune / slice / eval / charts)</td><td><span class="chip ok">done</span></td><td class="mono">12 commits, public repo</td></tr>
+    <tr><td>0.8B dissociation + controls</td><td><span class="chip ok">done</span></td><td class="mono">20-config sweep</td></tr>
+    <tr><td>External benchmarks (TriviaQA, GSM8K)</td><td><span class="chip ok">done</span></td><td class="mono">v1 + v2 calibration A/B</td></tr>
+    <tr><td>J-space sketch estimator</td><td><span class="chip ok">done</span></td><td class="mono">workspace band reproduced</td></tr>
+    <tr><td>J-guard ablation, full rigor, 0.8B</td><td><span class="chip pend">running</span></td><td class="mono">5 strategies × 4 fracs, full evals</td></tr>
+    <tr><td>Scaling replication 2B / 4B</td><td><span class="chip pend">queued</span></td><td class="mono">weights on disk</td></tr>
+    <tr><td>Physical slice + measured tok/s</td><td><span class="chip pend">queued</span></td><td class="mono">slicer built &amp; committed</td></tr>
+    <tr><td>27B sweep, MoE expert pruning</td><td><span class="chip warn">parked</span></td><td class="mono">by owner's call, GPU budget</td></tr>
+  </table>
+  <p class="muted" style="font-size:13px">Data in this page is generated from <span class="mono">results/*.json</span> in the repo; nothing is hand-entered. Reproduce any number with the commands in the README.</p>
+</div>
+
+<div class="tooltip" id="tt"></div>
+
+<script>
+const DATA = __DATA__;
+
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const STRAT = {
+  diff:         { label: "differential (guarded)", cv: "--kn" },
+  diff_jguard:  { label: "differential + J-guard", cv: "--violet" },
+  diff_noguard: { label: "differential (no guard)", cv: "--magenta" },
+  know:         { label: "knowledge-importance (destructive ctrl)", cv: "--warn" },
+  lowmag:       { label: "low overall importance (classic)", cv: "--green" },
+  random:       { label: "random", cv: "--ink2" },
+};
+const tt = document.getElementById("tt");
+function showTT(e, text) { tt.textContent = text; tt.style.opacity = 1;
+  tt.style.left = (e.clientX + 12) + "px"; tt.style.top = (e.clientY - 10) + "px"; }
+function hideTT() { tt.style.opacity = 0; }
+
+function svgEl(tag, attrs) { const el = document.createElementNS("http://www.w3.org/2000/svg", tag);
+  for (const k in attrs) el.setAttribute(k, attrs[k]); return el; }
+
+function linePanel(parent, title, pts, xlab, w=280, h=230) {
+  // pts: [{series, color, data: [[x, y], ...]}], x in [0, .45], y in [0, 1]
+  const m = {l: 34, r: 8, t: 24, b: 30};
+  const svg = svgEl("svg", {width: w, height: h, viewBox: `0 0 ${w} ${h}`});
+  const X = x => m.l + (x / 0.45) * (w - m.l - m.r);
+  const Y = y => m.t + (1 - y) * (h - m.t - m.b);
+  for (let g = 0; g <= 1; g += 0.25) {
+    svg.appendChild(svgEl("line", {x1: m.l, x2: w - m.r, y1: Y(g), y2: Y(g),
+      stroke: css("--grid"), "stroke-width": 1}));
+    const t = svgEl("text", {x: m.l - 6, y: Y(g) + 3, "text-anchor": "end", "font-size": 9});
+    t.textContent = g.toFixed(2); svg.appendChild(t);
+  }
+  [0, .1, .2, .3, .4].forEach(x => {
+    const t = svgEl("text", {x: X(x), y: h - m.b + 14, "text-anchor": "middle", "font-size": 9});
+    t.textContent = (x * 100) + "%"; svg.appendChild(t);
+  });
+  const tl = svgEl("text", {x: 2, y: 13, "font-size": 11, "font-weight": 600});
+  tl.textContent = title; tl.setAttribute("fill", css("--ink")); svg.appendChild(tl);
+  const xl = svgEl("text", {x: (w + m.l - m.r) / 2, y: h - 3, "text-anchor": "middle", "font-size": 9});
+  xl.textContent = xlab; svg.appendChild(xl);
+  for (const s of pts) {
+    const d = s.data.map((p, i) => (i ? "L" : "M") + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1)).join(" ");
+    svg.appendChild(svgEl("path", {d, fill: "none", stroke: s.color, "stroke-width": 2}));
+    for (const p of s.data) {
+      const c = svgEl("circle", {cx: X(p[0]), cy: Y(p[1]), r: 3.4, fill: s.color});
+      const hit = svgEl("circle", {cx: X(p[0]), cy: Y(p[1]), r: 9, fill: "transparent"});
+      hit.addEventListener("mousemove", e => showTT(e, `${s.series}\nfrac ${p[0]}  →  ${p[1].toFixed(3)}`));
+      hit.addEventListener("mouseleave", hideTT);
+      svg.appendChild(c); svg.appendChild(hit);
+    }
+  }
+  parent.appendChild(svg);
+}
+
+// ---- tradeoff charts
+(function () {
+  const host = document.getElementById("chart-tradeoff");
+  host.style.display = "flex"; host.style.flexWrap = "wrap"; host.style.gap = "6px";
+  const strategies = [...new Set(DATA.sweep.map(r => r.config.strategy))];
+  const series = key => strategies.map(s => ({
+    series: STRAT[s].label, color: css(STRAT[s].cv),
+    data: [[0, DATA.baseline[key]],
+      ...DATA.sweep.filter(r => r.config.strategy === s)
+        .map(r => [r.config.frac, r[key]]).sort((a, b) => a[0] - b[0])],
+  }));
+  linePanel(host, "closed-book knowledge", series("knowledge_acc"), "MLP channels pruned");
+  linePanel(host, "in-context reasoning", series("reasoning_acc"), "MLP channels pruned");
+  // pareto panel
+  const w = 280, h = 230, m = {l: 36, r: 8, t: 24, b: 30};
+  const svg = svgEl("svg", {width: w, height: h, viewBox: `0 0 ${w} ${h}`});
+  const X = x => m.l + x * (w - m.l - m.r), Y = y => m.t + (1 - y) * (h - m.t - m.b);
+  for (let g = 0; g <= 1; g += 0.25) {
+    svg.appendChild(svgEl("line", {x1: m.l, x2: w - m.r, y1: Y(g), y2: Y(g), stroke: css("--grid")}));
+    svg.appendChild(svgEl("line", {y1: m.t, y2: h - m.b, x1: X(g), x2: X(g), stroke: css("--grid")}));
+  }
+  const tl = svgEl("text", {x: 2, y: 13, "font-size": 11, "font-weight": 600});
+  tl.textContent = "tradeoff path (up-left = goal)"; tl.setAttribute("fill", css("--ink")); svg.appendChild(tl);
+  const xl = svgEl("text", {x: (w + m.l) / 2, y: h - 3, "text-anchor": "middle", "font-size": 9});
+  xl.textContent = "knowledge (want low)"; svg.appendChild(xl);
+  const yl = svgEl("text", {x: 8, y: (h + m.t - m.b) / 2, "font-size": 9,
+    transform: `rotate(-90 8 ${(h + m.t - m.b) / 2})`, "text-anchor": "middle"});
+  yl.textContent = "reasoning (want high)"; svg.appendChild(yl);
+  for (const s of strategies) {
+    const col = css(STRAT[s].cv);
+    const pts = [[DATA.baseline.knowledge_acc, DATA.baseline.reasoning_acc],
+      ...DATA.sweep.filter(r => r.config.strategy === s)
+        .sort((a, b) => a.config.frac - b.config.frac)
+        .map(r => [r.knowledge_acc, r.reasoning_acc])];
+    const d = pts.map((p, i) => (i ? "L" : "M") + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1)).join(" ");
+    svg.appendChild(svgEl("path", {d, fill: "none", stroke: col, "stroke-width": 2, opacity: .9}));
+    pts.slice(1).forEach((p, i) => {
+      const hit = svgEl("circle", {cx: X(p[0]), cy: Y(p[1]), r: 8, fill: "transparent"});
+      hit.addEventListener("mousemove", e => showTT(e,
+        `${STRAT[s].label}\nfrac ${DATA.sweep.filter(r => r.config.strategy === s).sort((a,b)=>a.config.frac-b.config.frac)[i].config.frac}\nknow ${p[0].toFixed(3)}  reason ${p[1].toFixed(3)}`));
+      hit.addEventListener("mouseleave", hideTT);
+      svg.appendChild(svgEl("circle", {cx: X(p[0]), cy: Y(p[1]), r: 3.2, fill: col}));
+      svg.appendChild(hit);
+    });
+  }
+  const st = svgEl("text", {x: X(DATA.baseline.knowledge_acc) + 6, y: Y(DATA.baseline.reasoning_acc) - 6, "font-size": 9});
+  st.textContent = "★ unpruned"; svg.appendChild(st);
+  host.appendChild(svg);
+  const leg = document.getElementById("legend-tradeoff");
+  for (const s of strategies) leg.insertAdjacentHTML("beforeend",
+    `<span><i class="sw" style="background:${css(STRAT[s].cv)}"></i>${STRAT[s].label}</span>`);
+  // table view
+  let tb = "<table><tr><th>strategy</th><th class=num>frac</th><th class=num>knowledge</th><th class=num>reasoning</th><th class=num>ppl</th></tr>";
+  tb += `<tr><td>baseline</td><td class=num>0</td><td class=num>${DATA.baseline.knowledge_acc.toFixed(3)}</td><td class=num>${DATA.baseline.reasoning_acc.toFixed(3)}</td><td class=num>${DATA.baseline.ppl_neutral}</td></tr>`;
+  for (const r of DATA.sweep) tb += `<tr><td>${r.config.strategy}</td><td class=num>${r.config.frac}</td><td class=num>${r.knowledge_acc.toFixed(3)}</td><td class=num>${r.reasoning_acc.toFixed(3)}</td><td class=num>${r.ppl_neutral ?? ""}</td></tr>`;
+  document.getElementById("table-tradeoff").innerHTML = tb + "</table>";
+})();
+
+// ---- bench bars
+(function () {
+  const host = document.getElementById("chart-bench");
+  const rows = [
+    {label: "baseline (unpruned)", trivia: DATA.bench_baseline.trivia, gsm8k: DATA.bench_baseline.gsm8k, cv: "--ink2"},
+    ...DATA.bench_sweep.filter(r => r.frac === 0.1 && r.strategy === "diff")
+      .map(r => ({label: `diff@10% (${r.calib} calib)`, trivia: r.trivia, gsm8k: r.gsm8k, cv: r.calib === "v2" ? "--kn" : "--violet"})),
+    ...DATA.bench_sweep.filter(r => r.frac === 0.1 && r.strategy === "lowmag")
+      .map(r => ({label: "lowmag@10% (classic)", trivia: r.trivia, gsm8k: r.gsm8k, cv: "--green"})),
+  ];
+  const w = 640, bh = 20, gap = 8, groups = 2, lh = 18;
+  const h = (bh + gap) * rows.length * groups + 70;
+  const svg = svgEl("svg", {width: w, height: h, viewBox: `0 0 ${w} ${h}`});
+  const X = v => 190 + v * (w - 210);
+  let y = 24;
+  [["TriviaQA — open recall (want LOW after pruning)", "trivia"],
+   ["GSM8K chain-of-thought (want HIGH)", "gsm8k"]].forEach(([title, key]) => {
+    const t = svgEl("text", {x: 0, y: y - 6, "font-size": 11, "font-weight": 600});
+    t.textContent = title; t.setAttribute("fill", css("--ink")); svg.appendChild(t);
+    for (const r of rows) {
+      const col = css(r.cv);
+      svg.appendChild(svgEl("rect", {x: X(0), y, width: Math.max(2, X(r[key]) - X(0)), height: bh,
+        rx: 3, fill: col, opacity: r.cv === "--ink2" ? .55 : .92}));
+      const lab = svgEl("text", {x: 184, y: y + 14, "text-anchor": "end", "font-size": 10});
+      lab.textContent = r.label; svg.appendChild(lab);
+      const val = svgEl("text", {x: X(r[key]) + 5, y: y + 14, "font-size": 10, "font-weight": 600});
+      val.textContent = r[key].toFixed(2); val.setAttribute("fill", css("--ink")); svg.appendChild(val);
+      y += bh + gap;
+    }
+    y += lh + 14;
+  });
+  host.appendChild(svg);
+  let tb = "<table><tr><th>config</th><th class=num>TriviaQA</th><th class=num>GSM8K</th></tr>";
+  for (const r of rows) tb += `<tr><td>${r.label}</td><td class=num>${r.trivia.toFixed(2)}</td><td class=num>${r.gsm8k.toFixed(2)}</td></tr>`;
+  document.getElementById("table-bench").innerHTML = tb + "</table>";
+})();
+
+// ---- layer profile
+(function () {
+  const host = document.getElementById("chart-layers");
+  const P = DATA.layer_profile;
+  const norm = a => { const mx = Math.max(...a); return a.map(v => v / mx); };
+  const L = P.know_med.length;
+  const w = 640, h = 240, m = {l: 36, r: 10, t: 20, b: 30};
+  const svg = svgEl("svg", {width: w, height: h, viewBox: `0 0 ${w} ${h}`});
+  const X = i => m.l + (i / (L - 1)) * (w - m.l - m.r);
+  const Y = v => m.t + (1 - v) * (h - m.t - m.b);
+  for (let g = 0; g <= 1; g += 0.25)
+    svg.appendChild(svgEl("line", {x1: m.l, x2: w - m.r, y1: Y(g), y2: Y(g), stroke: css("--grid")}));
+  [0, 6, 12, 18, 23].forEach(i => { const t = svgEl("text", {x: X(i), y: h - m.b + 14, "text-anchor": "middle", "font-size": 9}); t.textContent = "L" + i; svg.appendChild(t); });
+  const seriesDefs = [
+    ["knowledge importance", norm(P.know_med), "--kn"],
+    ["reasoning importance", norm(P.reason_med), "--rs"],
+    ["J-transport alignment (prelim)", norm(P.jalign_med.map((v, i) => i === 0 ? P.jalign_med[1] : v)), "--violet"],
+  ];
+  for (const [name, ys, cv] of seriesDefs) {
+    const col = css(cv);
+    const d = ys.map((v, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(v).toFixed(1)).join(" ");
+    svg.appendChild(svgEl("path", {d, fill: "none", stroke: col, "stroke-width": 2}));
+    ys.forEach((v, i) => {
+      const hit = svgEl("circle", {cx: X(i), cy: Y(v), r: 7, fill: "transparent"});
+      hit.addEventListener("mousemove", e => showTT(e, `${name}\nlayer ${i}: ${v.toFixed(3)} (rel)`));
+      hit.addEventListener("mouseleave", hideTT);
+      svg.appendChild(hit);
+    });
+  }
+  host.appendChild(svg);
+  const leg = document.getElementById("legend-layers");
+  for (const [name, , cv] of seriesDefs) leg.insertAdjacentHTML("beforeend",
+    `<span><i class="sw" style="background:${css(cv)}"></i>${name}</span>`);
+})();
+</script>
