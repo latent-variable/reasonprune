@@ -1,0 +1,128 @@
+{
+ "kinds": {
+  "know.capital": {
+   "acc": 0.6666666666666666,
+   "n": 3
+  },
+  "know.currency": {
+   "acc": 1.0,
+   "n": 2
+  },
+  "know.state_capital": {
+   "acc": 0.6666666666666666,
+   "n": 3
+  },
+  "reason.arith2": {
+   "acc": 0.0,
+   "n": 2
+  },
+  "reason.hop2": {
+   "acc": 1.0,
+   "n": 2
+  },
+  "reason.openbook": {
+   "acc": 1.0,
+   "n": 2
+  },
+  "reason.order": {
+   "acc": 1.0,
+   "n": 1
+  },
+  "reason.tool": {
+   "acc": 1.0,
+   "n": 1
+  }
+ },
+ "knowledge_acc": 0.75,
+ "reasoning_acc": 0.75,
+ "n_items": 16,
+ "seconds": 3.4,
+ "records": [
+  {
+   "id": "know.currency.0012",
+   "pred": "Z\u0142oty",
+   "ok": true
+  },
+  {
+   "id": "know.currency.0038",
+   "pred": "Singapore Dollar",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0033",
+   "pred": "The capital city of Bangladesh is **Dhaka**.\n\nIt is the largest city in the country and serves as the political, economic, and cultural center of the nation. Dhaka is located in the northern part of the country, near the border with China, and is the most populous city in Bangladesh.",
+   "ok": true
+  },
+  {
+   "id": "know.state_capital.0009",
+   "pred": "The capital of the U.S. state of Colorado is **Denver**.\n\nDenver serves as the state's capital and the largest city in the state, along with the state's second-largest city, Pueblo.",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0055",
+   "pred": "The capital city of Tanzania is **Dar es Salaam**.\n\nIt is the largest city in Tanzania and serves as the country's political, economic, and cultural center.",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0024",
+   "pred": "Toledo",
+   "ok": false
+  },
+  {
+   "id": "know.state_capital.0012",
+   "pred": "Columbus",
+   "ok": true
+  },
+  {
+   "id": "know.capital.0029",
+   "pred": "The capital city of Indonesia is **Jakarta**.\n\nIt is the largest city in Indonesia and serves as the country's political, economic, and cultural center.",
+   "ok": true
+  },
+  {
+   "id": "reason.openbook.0034",
+   "pred": "Askenholm",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0038",
+   "pred": "office",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0078",
+   "pred": "108",
+   "ok": false
+  },
+  {
+   "id": "reason.order.0095",
+   "pred": "Elena",
+   "ok": true
+  },
+  {
+   "id": "reason.hop2.0043",
+   "pred": "balcony",
+   "ok": true
+  },
+  {
+   "id": "reason.tool.0018",
+   "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Da Nang\", \"unit\": \"fahrenheit\"}}",
+   "ok": true
+  },
+  {
+   "id": "reason.arith2.0119",
+   "pred": "100",
+   "ok": false
+  },
+  {
+   "id": "reason.openbook.0059",
+   "pred": "Doria",
+   "ok": true
+  }
+ ],
+ "ppl_neutral": 24.625,
+ "config": {
+  "model": "qwen-0.8b",
+  "strategy": "baseline",
+  "frac": 0.0
+ }
+}

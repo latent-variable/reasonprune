@@ -1,0 +1,21 @@
+[project]
+name = "reasonprune"
+version = "0.1.0"
+description = "Reasoning-preserving, knowledge-shedding pruning for local MLX models"
+requires-python = ">=3.11"
+dependencies = [
+    "mlx>=0.31",
+    "mlx-lm>=0.31",
+    "requests",
+    "numpy",
+]
+
+[project.optional-dependencies]
+viz = ["matplotlib"]
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["reasonprune"]
