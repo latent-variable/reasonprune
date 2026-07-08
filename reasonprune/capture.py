@@ -41,11 +41,16 @@ class InstrumentedMLP(nn.Module):
         # Runtime channel mask (1 = keep). Equivalent to zeroing gate/up rows
         # and down columns, but works unchanged on quantized weights.
         self.channel_mask = None
+        # Stats accumulate ONLY while capture=True (scoring). Left on, every
+        # decode step chains lazy adds nobody evaluates — unbounded growth.
+        self.capture = False
 
     def __call__(self, x: mx.array) -> mx.array:
         h = _swiglu(self.gate_proj(x), self.up_proj(x))
         if self.channel_mask is not None:
             h = h * self.channel_mask
+        if not self.capture:
+            return self.down_proj(h)
         # Stats over token positions, skipping attention-sink prefix.
         flat = h.reshape(-1, h.shape[-1])
         if flat.shape[0] > self.skip_first:

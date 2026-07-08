@@ -51,7 +51,13 @@ def collect_importance(model, tokenizer, items: list[Item]) -> np.ndarray:
     """Returns [n_layers, d_inter] Wanda importance on `items`."""
     wrappers = instrument(model)
     reset_all(wrappers)
-    forward_collect(model, tokenizer, items, wrappers)
+    for w in wrappers:
+        w.capture = True
+    try:
+        forward_collect(model, tokenizer, items, wrappers)
+    finally:
+        for w in wrappers:
+            w.capture = False
     rows = []
     for w in wrappers:
         act_rms = w.stats()["rms"]                     # [d_inter]
