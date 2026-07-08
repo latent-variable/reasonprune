@@ -25,6 +25,8 @@ BENCH_DIR = Path(__file__).resolve().parent.parent / "data" / "bench"
 
 GSM8K_URL = ("https://raw.githubusercontent.com/openai/grade-school-math/"
              "master/grade_school_math/data/test.jsonl")
+GSM8K_TRAIN_URL = ("https://raw.githubusercontent.com/openai/grade-school-math/"
+                   "master/grade_school_math/data/train.jsonl")
 TRIVIA_API = ("https://datasets-server.huggingface.co/rows"
               "?dataset=mandarjoshi%2Ftrivia_qa&config=rc.nocontext"
               "&split=validation")
@@ -74,9 +76,30 @@ def fetch_trivia(n: int = 200) -> list[Item]:
     return items
 
 
+def fetch_gsm8k_train_calib(n: int = 150) -> list[Item]:
+    """TRAIN split with full worked solutions as the target text.
+
+    Calibration-only: teacher-forcing over the solution exposes long-form CoT
+    activations so the reasoning-protection guard covers chain-of-thought
+    machinery, not just short answers. Never used for evaluation.
+    """
+    lines = requests.get(GSM8K_TRAIN_URL, timeout=60).text.splitlines()
+    items = []
+    for i, line in enumerate(lines[:n]):
+        d = json.loads(line)
+        solution = re.sub(r"<<[^>]*>>", "", d["answer"])
+        items.append(Item(
+            id=f"calib.gsm8k_cot.{i:04d}", kind="reason.gsm8k_cot",
+            prompt=d["question"] + "\nWork through this step by step.",
+            answer=solution, aliases=[], meta={"calib_only": True},
+        ))
+    return items
+
+
 def main():
     BENCH_DIR.mkdir(parents=True, exist_ok=True)
-    for name, items in (("gsm8k", fetch_gsm8k()), ("trivia", fetch_trivia())):
+    for name, items in (("gsm8k", fetch_gsm8k()), ("trivia", fetch_trivia()),
+                        ("gsm8k_train_calib", fetch_gsm8k_train_calib())):
         path = BENCH_DIR / f"{name}.jsonl"
         path.write_text("\n".join(it.to_json() for it in items) + "\n")
         print(f"{path}: {len(items)} items")

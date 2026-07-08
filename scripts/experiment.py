@@ -78,10 +78,24 @@ def cmd_baseline(args):
     print(json.dumps({k: v for k, v in res.items() if k != "records"}, indent=1))
 
 
+def reason_calib_items():
+    """Reasoning calibration: synthetic short-form + GSM8K-train CoT text.
+
+    The CoT slice protects long-form working; without it, GSM8K chain-of-
+    thought degrades under pruning even when short-answer reasoning holds
+    (observed on qwen-0.8b, see .agents/memory/experiment-log.md).
+    """
+    items = load_items(DATA_DIR / "reasoning.calib.jsonl")
+    cot = DATA_DIR / "bench" / "gsm8k_train_calib.jsonl"
+    if cot.exists():
+        items = items + load_items(cot)
+    return items
+
+
 def cmd_score(args):
     model, tokenizer = load_model(args.model)
     know = load_items(DATA_DIR / "knowledge.calib.jsonl")
-    reason = load_items(DATA_DIR / "reasoning.calib.jsonl")
+    reason = reason_calib_items()
     t0 = time.time()
     i_know = collect_importance(model, tokenizer, know)
     print(f"knowledge importance done in {time.time()-t0:.0f}s", flush=True)
@@ -152,7 +166,7 @@ def cmd_score_moe(args):
     from reasonprune.moe import collect_expert_saliency
     model, tokenizer = load_model(args.model)
     know = load_items(DATA_DIR / "knowledge.calib.jsonl")
-    reason = load_items(DATA_DIR / "reasoning.calib.jsonl")
+    reason = reason_calib_items()
     t0 = time.time()
     s_know = collect_expert_saliency(model, tokenizer, know, format_prompt)
     print(f"knowledge expert saliency in {time.time()-t0:.0f}s", flush=True)

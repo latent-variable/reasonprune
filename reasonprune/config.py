@@ -14,6 +14,7 @@ RESULTS_DIR = REPO_ROOT / "results"
 MODELS = {
     "qwen-0.8b": "Qwen/Qwen3.5-0.8B",
     "qwen-4b": "Qwen/Qwen3.5-4B",
+    "qwen-27b": "unsloth/Qwen3.6-27B-MLX-8bit",
     # MoE target: local path, standard MLX 8-bit quant of the A3B worker family.
     "qwen-35b-a3b": str(Path.home() / ".omlx/models/unsloth/Qwen3.6-35B-A3B-MLX-8bit"),
 }
