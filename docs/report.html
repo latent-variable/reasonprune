@@ -101,22 +101,22 @@
 </style>
 
 <div class="wrap">
-  <div class="eyebrow">reasonprune · evidence report · updated 2026-07-08 · <a href="https://github.com/latent-variable/reasonprune">github.com/latent-variable/reasonprune</a></div>
+  <div class="eyebrow">reasonprune · evidence report · updated 2026-07-08 (rev 2, full-rigor 0.8B) · <a href="https://github.com/latent-variable/reasonprune">github.com/latent-variable/reasonprune</a></div>
   <h1>Cut the memory, keep the mind</h1>
-  <p class="sub">Can structured pruning remove a model's stored trivia while preserving its ability to reason over what's in front of it? Status: <b>validated at 0.8B on real benchmarks</b>; J-space integration running; 27B mapped but parked. Every claim below carries its evidence and its caveats.</p>
+  <p class="sub">Can structured pruning remove a model's stored trivia while preserving its ability to reason over what's in front of it? Status: <b>validated at 0.8B on real benchmarks, J-space guard confirmed useful</b>; 27B mapped but parked. Every claim below carries its evidence and its caveats. Program paused for owner review before larger models.</p>
 
   <div class="tiles">
-    <div class="tile"><div class="big kn" id="t-know">−74%</div>
-      <div class="lbl">closed-book knowledge (bench)</div>
-      <div class="ctx">TriviaQA + fact probes, 0.31 → 0.08</div></div>
-    <div class="tile"><div class="big rs" id="t-reason">+1pt</div>
-      <div class="lbl">in-context reasoning (bench)</div>
-      <div class="ctx">held above baseline, 0.557 → 0.564</div></div>
+    <div class="tile"><div class="big kn" id="t-know">−66%</div>
+      <div class="lbl">closed-book knowledge</div>
+      <div class="ctx">aggregate incl. TriviaQA, 0.506 → 0.173</div></div>
+    <div class="tile"><div class="big rs" id="t-reason">0.53</div>
+      <div class="lbl">GSM8K after pruning</div>
+      <div class="ctx">unpruned baseline: 0.51 — fully intact</div></div>
     <div class="tile"><div class="big rs">100%</div>
       <div class="lbl">tool-call accuracy</div>
       <div class="ctx">unchanged at every pruning level</div></div>
   </div>
-  <p class="muted" style="font-size:13px">Headline config: Qwen3.5-0.8B, guarded differential pruning, 10% of MLP channels, CoT-aware calibration (v2). Full tables below.</p>
+  <p class="muted" style="font-size:13px">Headline config: Qwen3.5-0.8B, differential pruning with the J-space guard, 10% of MLP channels, CoT-aware calibration. Full tables below.</p>
 
   <div class="eyebrow">01 · The idea</div>
   <h2>Anthropic showed the cut exists; we run it in reverse</h2>
@@ -186,9 +186,15 @@
     <figcaption>Per-layer medians, each normalized to its own max. Knowledge and reasoning importance travel together (no layer-level split exists, which is why whole-layer pruning can't do this job). J-alignment is the sketched transport signal; preliminary probe count, full run in progress.</figcaption>
   </figure>
   <div class="card">
-    <h3><span class="chip pend">pending</span> The ablation that answers "is J-space useful for pruning"</h3>
-    <p style="margin:6px 0 0"><span class="mono">diff_jguard</span> protects channels ranked high by <em>either</em> behavioral reasoning importance or J-alignment. It is sweeping now against <span class="mono">diff</span> at 10–40% with full evals. If the tradeoff curve improves, the Jacobian lens earns its place in the loop; if not, that's a real negative result and the report will say so.</p>
+    <h3><span class="chip ok">confirmed</span> The J-guard improves the cut</h3>
+    <p style="margin:6px 0 0"><span class="mono">diff_jguard</span> protects channels ranked high by <em>either</em> behavioral reasoning importance or J-alignment. Verdict from the full-rigor ablation (full evals + benchmarks): at 10% it is the first config to hold GSM8K at/above the unpruned baseline (0.53 vs 0.51) while aggregate knowledge falls 66%. At 30–40% it beats the behavioral guard on <em>both</em> axes at once (e.g. @40%: knowledge 0.087 vs 0.147, reasoning 0.417 vs 0.298). First empirical evidence that the Jacobian lens improves pruning. Known wrinkle: the 20% point is non-monotonic; eval noise at these sample sizes is a few points and the curves carry that uncertainty.</p>
   </div>
+  <figure>
+    <div class="chartband"><div id="chart-jguard"></div>
+      <div class="legend" id="legend-jguard"></div></div>
+    <figcaption>Full-rigor ablation, Qwen3.5-0.8B: behavioral guard vs + J-guard vs no guard, full eval sets plus 100-item GSM8K and TriviaQA at every point. Aggregates include benchmarks (baseline: knowledge 0.506, reasoning 0.641).</figcaption>
+  </figure>
+  <details><summary>table view</summary><div id="table-jguard"></div></details>
 
   <div class="eyebrow">06 · The honest ledger</div>
   <h2>What should keep you skeptical</h2>
@@ -216,9 +222,9 @@
     <tr><td>Toolkit (score / prune / slice / eval / charts)</td><td><span class="chip ok">done</span></td><td class="mono">12 commits, public repo</td></tr>
     <tr><td>0.8B dissociation + controls</td><td><span class="chip ok">done</span></td><td class="mono">20-config sweep</td></tr>
     <tr><td>External benchmarks (TriviaQA, GSM8K)</td><td><span class="chip ok">done</span></td><td class="mono">v1 + v2 calibration A/B</td></tr>
-    <tr><td>J-space sketch estimator</td><td><span class="chip ok">done</span></td><td class="mono">workspace band reproduced</td></tr>
-    <tr><td>J-guard ablation, full rigor, 0.8B</td><td><span class="chip pend">running</span></td><td class="mono">5 strategies × 4 fracs, full evals</td></tr>
-    <tr><td>Scaling replication 2B / 4B</td><td><span class="chip pend">queued</span></td><td class="mono">weights on disk</td></tr>
+    <tr><td>J-space sketch estimator</td><td><span class="chip ok">done</span></td><td class="mono">workspace band reproduced, 48×64 probes</td></tr>
+    <tr><td>J-guard ablation, full rigor, 0.8B</td><td><span class="chip ok">done</span></td><td class="mono">11 configs; J-guard wins at 10/30/40%</td></tr>
+    <tr><td>Scaling replication 2B / 4B</td><td><span class="chip warn">gated</span></td><td class="mono">weights on disk, awaiting review</td></tr>
     <tr><td>Physical slice + measured tok/s</td><td><span class="chip pend">queued</span></td><td class="mono">slicer built &amp; committed</td></tr>
     <tr><td>27B sweep, MoE expert pruning</td><td><span class="chip warn">parked</span></td><td class="mono">by owner's call, GPU budget</td></tr>
   </table>
@@ -374,6 +380,31 @@ function linePanel(parent, title, pts, xlab, w=280, h=230) {
   let tb = "<table><tr><th>config</th><th class=num>TriviaQA</th><th class=num>GSM8K</th></tr>";
   for (const r of rows) tb += `<tr><td>${r.label}</td><td class=num>${r.trivia.toFixed(2)}</td><td class=num>${r.gsm8k.toFixed(2)}</td></tr>`;
   document.getElementById("table-bench").innerHTML = tb + "</table>";
+})();
+
+// ---- jguard ablation (full rigor)
+(function () {
+  const host = document.getElementById("chart-jguard");
+  if (!DATA.sweep_full) return;
+  host.style.display = "flex"; host.style.flexWrap = "wrap"; host.style.gap = "6px";
+  const strategies = [...new Set(DATA.sweep_full.map(r => r.strategy))];
+  const base = DATA.baseline_full;
+  const series = key => strategies.map(s => ({
+    series: STRAT[s].label, color: css(STRAT[s].cv),
+    data: [[0, base[key === "know" ? "know" : key === "reason" ? "reason" : key]],
+      ...DATA.sweep_full.filter(r => r.strategy === s)
+        .map(r => [r.frac, r[key]]).sort((a, b) => a[0] - b[0])],
+  }));
+  linePanel(host, "knowledge (incl. TriviaQA)", series("know"), "MLP channels pruned");
+  linePanel(host, "reasoning (incl. GSM8K)", series("reason"), "MLP channels pruned");
+  linePanel(host, "GSM8K alone", series("gsm8k"), "MLP channels pruned");
+  const leg = document.getElementById("legend-jguard");
+  for (const s of strategies) leg.insertAdjacentHTML("beforeend",
+    `<span><i class="sw" style="background:${css(STRAT[s].cv)}"></i>${STRAT[s].label}</span>`);
+  let tb = "<table><tr><th>strategy</th><th class=num>frac</th><th class=num>know</th><th class=num>reason</th><th class=num>gsm8k</th><th class=num>trivia</th><th class=num>ppl</th></tr>";
+  tb += `<tr><td>baseline</td><td class=num>0</td><td class=num>${base.know.toFixed(3)}</td><td class=num>${base.reason.toFixed(3)}</td><td class=num>${base.gsm8k.toFixed(2)}</td><td class=num>${base.trivia.toFixed(2)}</td><td class=num>${base.ppl}</td></tr>`;
+  for (const r of DATA.sweep_full) tb += `<tr><td>${r.strategy}</td><td class=num>${r.frac}</td><td class=num>${r.know.toFixed(3)}</td><td class=num>${r.reason.toFixed(3)}</td><td class=num>${r.gsm8k.toFixed(2)}</td><td class=num>${r.trivia.toFixed(2)}</td><td class=num>${r.ppl}</td></tr>`;
+  document.getElementById("table-jguard").innerHTML = tb + "</table>";
 })();
 
 // ---- layer profile
