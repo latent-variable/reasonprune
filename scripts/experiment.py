@@ -134,6 +134,14 @@ def build_mask(strategy: str, frac: float, scores: dict) -> np.ndarray:
     if strategy == "diff":
         return select_channels(differential(i_know, i_reason), frac,
                                protect=i_reason)
+    if strategy == "diff_jguard":
+        # J-space guard: protection = max of the behavioral reasoning rank and
+        # the Jacobian-transport alignment rank (workspace-feeding channels).
+        jalign = scores["jspace"]
+        rank = lambda a: np.argsort(np.argsort(a, axis=1), axis=1) / a.shape[1]
+        protect = np.maximum(rank(i_reason), rank(jalign))
+        return select_channels(differential(i_know, i_reason), frac,
+                               protect=protect)
     if strategy == "diff_noguard":
         return select_channels(differential(i_know, i_reason), frac)
     if strategy == "know":
@@ -148,8 +156,24 @@ def build_mask(strategy: str, frac: float, scores: dict) -> np.ndarray:
     raise ValueError(f"unknown strategy {strategy}")
 
 
+def cmd_jscore(args):
+    from reasonprune.jlens import collect_jspace
+    model, tokenizer = load_model(args.model)
+    reason = reason_calib_items()
+    t0 = time.time()
+    jalign = collect_jspace(model, tokenizer, reason,
+                            n_prompts=args.jprompts, n_probes=args.jprobes)
+    print(f"jspace alignment done in {time.time()-t0:.0f}s", flush=True)
+    save_scores(out_dir(args.model) / "jspace.npz", jspace=jalign)
+    print("per-layer alignment p50:",
+          np.round(np.median(jalign, axis=1), 3).tolist())
+
+
 def cmd_sweep(args):
     scores = load_scores(out_dir(args.model) / "scores.npz")
+    jpath = out_dir(args.model) / "jspace.npz"
+    if jpath.exists():
+        scores.update(load_scores(jpath))
     results_path = out_dir(args.model) / f"sweep{args.suffix}.jsonl"
     done = set()
     if results_path.exists():
@@ -237,7 +261,7 @@ def cmd_sweep_moe(args):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("cmd", choices=["baseline", "score", "sweep",
-                                   "score-moe", "sweep-moe"])
+                                   "score-moe", "sweep-moe", "jscore"])
     p.add_argument("--model", default="qwen-0.8b")
     p.add_argument("--limit", type=int, default=None)
     p.add_argument("--bench-limit", type=int, default=0,
@@ -246,11 +270,14 @@ def main():
     p.add_argument("--strategies", default="diff,know,lowmag,random")
     p.add_argument("--fracs", default="0.1,0.2,0.3")
     p.add_argument("--suffix", default="", help="results filename suffix")
+    p.add_argument("--jprompts", type=int, default=48)
+    p.add_argument("--jprobes", type=int, default=64)
     p.add_argument("--mem-limit-gb", type=float, default=72.0)
     args = p.parse_args()
     guard_memory(args.mem_limit_gb)
     {"baseline": cmd_baseline, "score": cmd_score, "sweep": cmd_sweep,
-     "score-moe": cmd_score_moe, "sweep-moe": cmd_sweep_moe}[args.cmd](args)
+     "score-moe": cmd_score_moe, "sweep-moe": cmd_sweep_moe,
+     "jscore": cmd_jscore}[args.cmd](args)
 
 
 if __name__ == "__main__":
