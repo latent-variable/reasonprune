@@ -8,6 +8,7 @@ neutral text sample as a coherence sanity check.
 from __future__ import annotations
 
 import json
+import re
 import time
 from pathlib import Path
 
@@ -45,8 +46,26 @@ def strip_thinking(text: str) -> str:
     return text.strip()
 
 
+_NUM_RE = re.compile(r"-?\$?\d[\d,]*\.?\d*")
+
+
+def _final_number(text: str) -> str | None:
+    if "####" in text:
+        text = text.split("####")[-1]
+    nums = _NUM_RE.findall(text)
+    if not nums:
+        return None
+    return nums[-1].replace(",", "").replace("$", "").rstrip(".")
+
+
 def check_item(pred: str, item: Item) -> bool:
     pred = strip_thinking(pred)
+    if item.meta.get("check") == "final_number":
+        got = _final_number(pred)
+        try:
+            return got is not None and float(got) == float(item.answer)
+        except ValueError:
+            return False
     if item.meta.get("check") == "json_tool":
         # Tool-call items: parse the first JSON object and compare structurally.
         try:
@@ -69,7 +88,8 @@ def run_eval(model, tokenizer, items: list[Item], max_tokens: int = 64,
     t0 = time.time()
     for it in items:
         prompt = format_prompt(tokenizer, it.prompt)
-        out = generate(model, tokenizer, prompt=prompt, max_tokens=max_tokens,
+        out = generate(model, tokenizer, prompt=prompt,
+                       max_tokens=int(it.meta.get("max_tokens", max_tokens)),
                        sampler=sampler, verbose=False)
         ok = check_item(out, it)
         per_kind.setdefault(it.kind, []).append(int(ok))

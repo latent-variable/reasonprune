@@ -17,7 +17,7 @@ from pathlib import Path
 import mlx.core as mx
 import numpy as np
 
-from .capture import InstrumentedMLP, instrument, reset_all
+from .capture import InstrumentedMLP, down_col_norms, instrument, reset_all
 from .datagen import Item
 from .evalharness import format_prompt
 
@@ -47,8 +47,7 @@ def collect_importance(model, tokenizer, items: list[Item]) -> np.ndarray:
     rows = []
     for w in wrappers:
         act_rms = w.stats()["rms"]                     # [d_inter]
-        w_norm = mx.linalg.norm(
-            w.down_proj.weight.astype(mx.float32), axis=0)  # [d_inter]
+        w_norm = down_col_norms(w)                     # [d_inter]
         rows.append(np.array(act_rms * w_norm, copy=False))
     return np.stack(rows)
 

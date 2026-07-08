@@ -25,7 +25,8 @@ from mlx_lm import load
 
 from reasonprune.config import DATA_DIR, MODELS, RESULTS_DIR
 from reasonprune.evalharness import load_items, run_eval, perplexity
-from reasonprune.prune import apply_mask, random_mask, select_channels
+from reasonprune.prune import (apply_mask, apply_runtime_mask, random_mask,
+                               select_channels)
 from reasonprune.score import (collect_importance, differential, load_scores,
                                save_scores)
 
@@ -45,16 +46,22 @@ def load_model(model_key: str):
     return model, tokenizer
 
 
-def eval_sets(limit: int | None):
+def eval_sets(limit: int | None, bench_limit: int = 0):
     know = load_items(DATA_DIR / "knowledge.eval.jsonl")
     reason = load_items(DATA_DIR / "reasoning.eval.jsonl")
     if limit:
         know, reason = know[:limit], reason[:limit]
-    return know + reason
+    items = know + reason
+    if bench_limit:
+        for f in sorted((DATA_DIR / "bench").glob("*.jsonl")):
+            items += load_items(f)[:bench_limit]
+    return items
 
 
-def full_eval(model, tokenizer, limit: int | None, max_tokens: int) -> dict:
-    res = run_eval(model, tokenizer, eval_sets(limit), max_tokens=max_tokens)
+def full_eval(model, tokenizer, limit: int | None, max_tokens: int,
+              bench_limit: int = 0) -> dict:
+    res = run_eval(model, tokenizer, eval_sets(limit, bench_limit),
+                   max_tokens=max_tokens)
     if NEUTRAL_TEXT_FILE.exists():
         res["ppl_neutral"] = perplexity(model, tokenizer,
                                         NEUTRAL_TEXT_FILE.read_text())
@@ -63,7 +70,8 @@ def full_eval(model, tokenizer, limit: int | None, max_tokens: int) -> dict:
 
 def cmd_baseline(args):
     model, tokenizer = load_model(args.model)
-    res = full_eval(model, tokenizer, args.limit, args.max_tokens)
+    res = full_eval(model, tokenizer, args.limit, args.max_tokens,
+                    args.bench_limit)
     res["config"] = {"model": args.model, "strategy": "baseline", "frac": 0.0}
     path = out_dir(args.model) / "baseline.json"
     path.write_text(json.dumps(res, indent=1))
@@ -116,29 +124,27 @@ def cmd_sweep(args):
         for line in results_path.read_text().splitlines():
             c = json.loads(line)["config"]
             done.add((c["strategy"], c["frac"]))
+    model, tokenizer = load_model(args.model)
     for strategy in args.strategies.split(","):
         for frac in [float(f) for f in args.fracs.split(",")]:
             if (strategy, frac) in done:
                 print(f"skip {strategy}@{frac} (done)")
                 continue
-            model, tokenizer = load_model(args.model)
             mask = build_mask(strategy, frac, scores)
-            n = apply_mask(model, mask)
+            n = apply_runtime_mask(model, mask)
             print(f"=== {strategy} frac={frac}: pruned {n} channels "
                   f"({n/mask.size:.1%} of MLP hidden)", flush=True)
-            res = full_eval(model, tokenizer, args.limit, args.max_tokens)
+            res = full_eval(model, tokenizer, args.limit, args.max_tokens,
+                            args.bench_limit)
             res["config"] = {"model": args.model, "strategy": strategy,
                              "frac": frac, "n_pruned": n}
             del res["records"]
             with results_path.open("a") as f:
                 f.write(json.dumps(res) + "\n")
-            print(json.dumps(res["kinds"], indent=1), flush=True)
             print(f"knowledge={res['knowledge_acc']:.3f} "
                   f"reasoning={res['reasoning_acc']:.3f} "
                   f"ppl={res.get('ppl_neutral')}", flush=True)
-            del model, tokenizer
-            gc.collect()
-            mx.clear_cache()
+            apply_runtime_mask(model, None)
 
 
 def cmd_score_moe(args):
@@ -182,7 +188,8 @@ def cmd_sweep_moe(args):
             n = apply_expert_mask(model, mask)
             print(f"=== {strategy} frac={frac}: masked {n}/{mask.size} experts",
                   flush=True)
-            res = full_eval(model, tokenizer, args.limit, args.max_tokens)
+            res = full_eval(model, tokenizer, args.limit, args.max_tokens,
+                            args.bench_limit)
             res["config"] = {"model": args.model, "strategy": strategy,
                              "frac": frac, "n_pruned": n, "unit": "expert"}
             del res["records"]
@@ -201,6 +208,8 @@ def main():
                                    "score-moe", "sweep-moe"])
     p.add_argument("--model", default="qwen-0.8b")
     p.add_argument("--limit", type=int, default=None)
+    p.add_argument("--bench-limit", type=int, default=0,
+                   help="items per data/bench/*.jsonl set (0 = skip bench)")
     p.add_argument("--max-tokens", type=int, default=64)
     p.add_argument("--strategies", default="diff,know,lowmag,random")
     p.add_argument("--fracs", default="0.1,0.2,0.3")

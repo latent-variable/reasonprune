@@ -18,6 +18,13 @@ def _swiglu(g: mx.array, u: mx.array) -> mx.array:
     return nn.silu(g) * u
 
 
+def _out_features(linear: nn.Module) -> int:
+    """Output dim of a Linear or QuantizedLinear (packed weight width differs)."""
+    if hasattr(linear, "group_size"):  # QuantizedLinear: scales are unpacked
+        return linear.scales.shape[0]
+    return linear.weight.shape[0]
+
+
 class InstrumentedMLP(nn.Module):
     """Drop-in replacement for Qwen3NextMLP that accumulates channel stats."""
 
@@ -27,13 +34,18 @@ class InstrumentedMLP(nn.Module):
         self.up_proj = mlp.up_proj
         self.down_proj = mlp.down_proj
         self.skip_first = skip_first
-        d_inter = self.gate_proj.weight.shape[0]
+        d_inter = _out_features(self.gate_proj)
         self.sum_abs = mx.zeros((d_inter,), dtype=mx.float32)
         self.sum_sq = mx.zeros((d_inter,), dtype=mx.float32)
         self.count = 0
+        # Runtime channel mask (1 = keep). Equivalent to zeroing gate/up rows
+        # and down columns, but works unchanged on quantized weights.
+        self.channel_mask = None
 
     def __call__(self, x: mx.array) -> mx.array:
         h = _swiglu(self.gate_proj(x), self.up_proj(x))
+        if self.channel_mask is not None:
+            h = h * self.channel_mask
         # Stats over token positions, skipping attention-sink prefix.
         flat = h.reshape(-1, h.shape[-1])
         if flat.shape[0] > self.skip_first:
@@ -55,6 +67,17 @@ class InstrumentedMLP(nn.Module):
         self.sum_abs = mx.zeros_like(self.sum_abs)
         self.sum_sq = mx.zeros_like(self.sum_sq)
         self.count = 0
+
+
+def down_col_norms(mlp) -> mx.array:
+    """L2 norm of down_proj columns (per hidden channel), quant-aware."""
+    w = mlp.down_proj
+    if hasattr(w, "group_size"):
+        dense = mx.dequantize(w.weight, w.scales, w.biases,
+                              group_size=w.group_size, bits=w.bits)
+    else:
+        dense = w.weight
+    return mx.linalg.norm(dense.astype(mx.float32), axis=0)
 
 
 def decoder_layers(model) -> list:

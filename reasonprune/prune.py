@@ -58,6 +58,25 @@ def random_mask(shape: tuple, frac: float, seed: int = 0) -> np.ndarray:
     return mask
 
 
+def apply_runtime_mask(model, mask: np.ndarray | None) -> int:
+    """Set per-layer channel masks on instrumented MLPs (quant-friendly,
+    reversible: pass None-mask rows or a zero mask to clear). Returns #pruned."""
+    from .capture import instrument
+    wrappers = instrument(model)
+    if mask is None:
+        for w in wrappers:
+            w.channel_mask = None
+        return 0
+    total = 0
+    for w, layer_mask in zip(wrappers, mask):
+        if layer_mask.any():
+            w.channel_mask = mx.array((~layer_mask).astype(np.float32))
+            total += int(layer_mask.sum())
+        else:
+            w.channel_mask = None
+    return total
+
+
 def apply_mask(model, mask: np.ndarray) -> int:
     """Zero the masked channels in-place. Returns #channels pruned."""
     layers = decoder_layers(model)
