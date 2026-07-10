@@ -70,46 +70,48 @@ def transport_vectors(model, tokenizer, prompts: list[str],
     # (the fast Metal kernel has no VJP): use_kernel=not self.training.
     model.train(True)
 
-    for prompt in prompts:
-        tokens = tokenizer.encode(prompt)[:max_len]
-        S = len(tokens)
-        if S <= SKIP_FIRST + 2:
-            continue
-        hidden0 = tm.embed_tokens(mx.array(tokens)[None])
-        fa_mask, ssm_mask = _masks_for(tm, hidden0)
-        valid = mx.zeros((1, S, 1))
-        valid[:, SKIP_FIRST:S - 1, :] = 1.0
-        n_valid = S - 1 - SKIP_FIRST
+    try:
+        for prompt in prompts:
+            tokens = tokenizer.encode(prompt)[:max_len]
+            S = len(tokens)
+            if S <= SKIP_FIRST + 2:
+                continue
+            hidden0 = tm.embed_tokens(mx.array(tokens)[None])
+            fa_mask, ssm_mask = _masks_for(tm, hidden0)
+            valid = mx.zeros((1, S, 1))
+            valid[:, SKIP_FIRST:S - 1, :] = 1.0
+            n_valid = S - 1 - SKIP_FIRST
 
-        def fwd(eps_list):
-            x = hidden0
-            for layer, eps in zip(layers, eps_list):
-                mask = ssm_mask if layer.is_linear else fa_mask
-                x = layer(x + eps, mask=mask, cache=None)
-            return tm.norm(x)
+            def fwd(eps_list):
+                x = hidden0
+                for layer, eps in zip(layers, eps_list):
+                    mask = ssm_mask if layer.is_linear else fa_mask
+                    x = layer(x + eps, mask=mask, cache=None)
+                return tm.norm(x)
 
-        zeros = [mx.zeros_like(hidden0) for _ in range(L)]
-        for k in range(n_probes):
-            u = probes[k]
+            zeros = [mx.zeros_like(hidden0) for _ in range(L)]
+            for k in range(n_probes):
+                u = probes[k]
 
-            def scalar_fn(*eps_list):
-                out = fwd(list(eps_list))          # [1, S, d]
-                # cotangent = u at every target position (sum over t' >= t
-                # happens implicitly through causality: dh_out[t']/deps[t]=0
-                # for t' < t, so grad at t = sum over t' >= t).
-                return (out * u).sum()
+                def scalar_fn(*eps_list):
+                    out = fwd(list(eps_list))          # [1, S, d]
+                    # cotangent = u at every target position (sum over t' >= t
+                    # happens implicitly through causality: dh_out[t']/deps[t]=0
+                    # for t' < t, so grad at t = sum over t' >= t).
+                    return (out * u).sum()
 
-            grads = mx.grad(scalar_fn, argnums=tuple(range(L)))(*zeros)
-            g = mx.stack([(gr * valid).sum(axis=1)[0] / n_valid
-                          for gr in grads])        # [L, d]
-            acc[:, k, :] = acc[:, k, :] + g.astype(mx.float32)
-            mx.eval(acc)
-        mx.clear_cache()
-        n_prompts += 1
-        print(f"  jlens prompt {n_prompts}/{len(prompts)} "
-              f"({_time.time()-t0:.0f}s elapsed, "
-              f"peak {mx.get_peak_memory()/1e9:.1f}GB)", flush=True)
-    model.train(False)
+                grads = mx.grad(scalar_fn, argnums=tuple(range(L)))(*zeros)
+                g = mx.stack([(gr * valid).sum(axis=1)[0] / n_valid
+                              for gr in grads])        # [L, d]
+                acc[:, k, :] = acc[:, k, :] + g.astype(mx.float32)
+                mx.eval(acc)
+            mx.clear_cache()
+            n_prompts += 1
+            print(f"  jlens prompt {n_prompts}/{len(prompts)} "
+                  f"({_time.time()-t0:.0f}s elapsed, "
+                  f"peak {mx.get_peak_memory()/1e9:.1f}GB)", flush=True)
+    finally:
+        model.train(False)
     return np.array(acc / max(n_prompts, 1))
 
 
