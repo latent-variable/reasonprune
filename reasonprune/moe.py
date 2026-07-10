@@ -90,13 +90,15 @@ def collect_expert_saliency(model, tokenizer, items, format_prompt,
     for w in wrappers:
         w.reset_stats()
         w.capture = True
-    for it in items:
-        text = format_prompt(tokenizer, it.prompt) + it.answer
-        tokens = tokenizer.encode(text)[:max_len]
-        out = model(mx.array(tokens)[None])
-        mx.eval(out)
-    for w in wrappers:
-        w.capture = False
+    try:
+        for it in items:
+            text = format_prompt(tokenizer, it.prompt) + it.answer
+            tokens = tokenizer.encode(text)[:max_len]
+            out = model(mx.array(tokens)[None])
+            mx.eval(out)
+    finally:
+        for w in wrappers:
+            w.capture = False
     return np.stack([w.mean_saliency() for w in wrappers])
 
 
